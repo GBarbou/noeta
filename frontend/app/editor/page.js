@@ -1042,7 +1042,10 @@ export default function EditorPage() {
         setConfig(data);
 
 
-        if (data?.models?.length) setSelectedModel(data.models[0].id);
+        if (data?.models?.length) {
+          const preferred = data.models.find((m) => m.id === "gemini-3-flash");
+          setSelectedModel(preferred ? preferred.id : data.models[0].id);
+        }
 
 
       })
@@ -5881,6 +5884,7 @@ export default function EditorPage() {
               <div>
 
 
+                <div style={{ display: "none" }}>
                 <div style={{ fontFamily: "var(--mono)", fontSize: 10, textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--mid)", marginBottom: 8 }}>Μοντέλο</div>
 
 
@@ -5894,6 +5898,7 @@ export default function EditorPage() {
 
 
                 </select>
+                </div>
 
 
               </div>
