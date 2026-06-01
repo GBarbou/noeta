@@ -4224,8 +4224,16 @@ async def download_bundle(session_id: str):
         z.write(session.original_path, f"{filename}_ORIGINAL.docx")
         z.write(corrected_path, f"{filename}_CORRECTED.docx")
         
-        # Try to include report if it exists already
+        # Generate report on-demand if not already present
         report_path = OUTPUT_DIR / f"{session_id}_diff_report.html"
+        if not report_path.exists():
+            verify_and_generate_report(
+                session.original_path,
+                session.working_path,
+                session.corrections,
+                session_id,
+                session.original_path.name.replace("_original", ""),
+            )
         if report_path.exists():
             z.write(report_path, f"{filename}_DIFF_REPORT.html")
         
