@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(python -c \"from dotenv import dotenv_values; v=dotenv_values\\('c:/Users/konst/Desktop/App/.env'\\); print\\(v.get\\('APP_PASSWORD',''\\)\\)\")",
+      "Bash(curl -s -X POST http://localhost:8000/api/upload -H 'X-App-Password: __CMDSUB_OUTPUT__' -F file=@c:/Users/konst/Desktop/App/test_upload.docx)",
+      "Bash(python -c \"import main\")",
+      "Bash(node -e \"const fs = require\\('fs'\\); const code = fs.readFileSync\\('frontend/app/editor/page.js', 'utf-8'\\); try { new Function\\(code\\); console.log\\('OK'\\); } catch\\(e\\) { console.log\\('SYNTAX ERROR:', e.message\\); }\")",
+      "Bash(npx acorn *)",
+      "Bash(npx next *)",
+      "PowerShell($lines = Get-Content \"c:\\\\Users\\\\konst\\\\Desktop\\\\App\\\\frontend\\\\app\\\\editor\\\\page.js\"; $lines[0..2389] | Set-Content \"c:\\\\Users\\\\konst\\\\Desktop\\\\App\\\\frontend\\\\app\\\\editor\\\\page.js\" -Encoding utf8; $finalCount = \\(Get-Content 'c:\\\\Users\\\\konst\\\\Desktop\\\\App\\\\frontend\\\\app\\\\editor\\\\page.js'\\).Count; Write-Output \"Done: $finalCount lines\")",
+      "Bash(python3)",
+      "Bash(python3 fix_encoding.py)",
+      "Bash(python3 fix_hooks_and_encoding.py)",
+      "Bash(python3 fix_hooks_v2.py)"
+    ]
+  }
+}

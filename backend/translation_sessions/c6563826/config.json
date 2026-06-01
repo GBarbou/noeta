@@ -1,0 +1,92 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: φιλοσοφικό δοκίμιο / ακαδημαϊκό\nΘέμα: Το κείμενο αναλύει τη συναισθηματική βάση των ηθικών εννοιών. Υποστηρίζει ότι οι ηθικές κρίσεις (π.χ. καλό ή κακό) πηγάζουν από συναισθήματα επιδοκιμασίας ή αγανάκτησης και αποτελούν γενικεύσεις της τάσης ορισμένων φαινομένων να προκαλούν αυτά τα συναισθήματα.\nΕποχή/Πλαίσιο: Τέλη 19ου - αρχές 20ού αιώνα (πλαίσιο ηθικού υποκειμενισμού/εμοτιβισμού)\nΎφος: ακαδημαϊκό, φιλοσοφικό, τυπικό\nΣημειώσεις: Η κύρια δυσκολία έγκειται στην ακριβή απόδοση της φιλοσοφικής και λογικής ορολογίας (π.χ. 'predicate', 'subject', 'attribution') και στη διατήρηση της αυστηρής εννοιολογικής διάκρισης μεταξύ 'sensation' (αίσθηση/αίσθημα) και 'emotion' (συναίσθημα). Ο μακροπερίοδος λόγος και η πυκνότητα των νοημάτων πρέπει να αποδοθούν με σαφήνεια στα ελληνικά, διατηρώντας το ακαδημαϊκό και θεωρητικό βάρος του πρωτοτύπου.",
+  "glossary": [
+    {
+      "source": "moral concepts",
+      "target": "ηθικές έννοιες",
+      "note": "term"
+    },
+    {
+      "source": "indignation",
+      "target": "αγανάκτηση",
+      "note": "term"
+    },
+    {
+      "source": "approval",
+      "target": "επιδοκιμασία",
+      "note": "term"
+    },
+    {
+      "source": "moral judgment",
+      "target": "ηθική κρίση",
+      "note": "term"
+    },
+    {
+      "source": "predicate",
+      "target": "κατηγόρημα",
+      "note": "term"
+    },
+    {
+      "source": "subject",
+      "target": "υποκείμενο",
+      "note": "term"
+    },
+    {
+      "source": "sensation",
+      "target": "αίσθηση / αίσθημα",
+      "note": "term"
+    },
+    {
+      "source": "emotion",
+      "target": "συναίσθημα",
+      "note": "term"
+    },
+    {
+      "source": "emotions",
+      "target": "συναισθήματα",
+      "note": "term"
+    },
+    {
+      "source": "phenomena",
+      "target": "φαινόμενα",
+      "note": "term"
+    },
+    {
+      "source": "acts",
+      "target": "πράξεις",
+      "note": "term"
+    },
+    {
+      "source": "sensations",
+      "target": "αισθήσεις",
+      "note": "term"
+    },
+    {
+      "source": "feeling",
+      "target": "αίσθημα",
+      "note": "term"
+    },
+    {
+      "source": "mind",
+      "target": "νους",
+      "note": "term"
+    },
+    {
+      "source": "pleasure",
+      "target": "ευχαρίστηση",
+      "note": "term"
+    },
+    {
+      "source": "judgment",
+      "target": "κρίση",
+      "note": "term"
+    },
+    {
+      "source": "tendency",
+      "target": "τάση",
+      "note": "term"
+    }
+  ],
+  "model": "gemini-pro-latest"
+}

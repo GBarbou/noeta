@@ -1,0 +1,622 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: Λογοτεχνικό (Διηγήματα τρόμου/υπερφυσικού)\nΘέμα: Κλασικές ιστορίες φαντασμάτων όπου ακαδημαϊκοί και αρχαιοδίφες έρχονται αντιμέτωποι με σκοτεινές, υπερφυσικές δυνάμεις μέσω αρχαίων χειρογράφων, κειμηλίων και γρίφων.\nΕποχή/Πλαίσιο: Βικτωριανή και Εδουαρδιανή εποχή (τέλη 19ου - αρχές 20ού αιώνα).\nΎφος: Λογοτεχνικό, ακαδημαϊκό, επίσημο, ατμοσφαιρικό με ελαφρώς αρχαΐζον λεξιλόγιο.\nΣημειώσεις: Ιδιαίτερη προσοχή απαιτείται στη μετάφραση των λατινικών φράσεων και των κρυπτογραφημάτων, τα οποία πρέπει να παραμείνουν στο λατινικό αλφάβητο (με ελληνική απόδοση/επεξήγηση σε υποσημείωση ή παρένθεση) προκειμένου να λειτουργεί οπτικά και λογικά ο γρίφος. Το ύφος πρέπει να διατηρήσει την επισημότητα, την ακαδημαϊκή χροιά και την υποβλητική ατμόσφαιρα της βρετανικής λογοτεχνίας τρόμου των αρχών του 20ού αιώνα. Απαιτείται επίσης ακρίβεια στην απόδοση των εξειδικευμένων εκκλησιαστικών και αρχιτεκτονικών όρων.",
+  "glossary": [
+    {
+      "source": "Antiquary",
+      "target": "Αρχαιοδίφης",
+      "note": "Για τον τίτλο του βιβλίου (Ghost Stories of an Antiquary)."
+    },
+    {
+      "source": "Sacristan",
+      "target": "Νεωκόρος / Σακριστάνος",
+      "note": "Εκκλησιαστικός όρος."
+    },
+    {
+      "source": "Scrap-book",
+      "target": "Λεύκωμα",
+      "note": "Για τον τίτλο του πρώτου διηγήματος (Canon Alberic's Scrap-book)."
+    },
+    {
+      "source": "Post-chaise",
+      "target": "Ταχυδρομική άμαξα",
+      "note": "Ιστορικός όρος μεταφοράς."
+    },
+    {
+      "source": "Cryptogram",
+      "target": "Κρυπτογράφημα",
+      "note": "Αναφορά στον γρίφο του Ηγούμενου Θωμά."
+    },
+    {
+      "source": "M. R. James",
+      "target": "Μ. Ρ. Τζέιμς",
+      "note": "person"
+    },
+    {
+      "source": "Canon Alberic de Mauléon",
+      "target": "Κανόνας Αλμπερίκ ντε Μολεόν",
+      "note": "person"
+    },
+    {
+      "source": "Bishop John de Mauléon",
+      "target": "Επίσκοπος Τζον ντε Μολεόν",
+      "note": "person"
+    },
+    {
+      "source": "Dennistoun",
+      "target": "Ντένιστουν",
+      "note": "person"
+    },
+    {
+      "source": "Pierre",
+      "target": "Πιέρ",
+      "note": "person"
+    },
+    {
+      "source": "Bertrand",
+      "target": "Μπερτράν",
+      "note": "person"
+    },
+    {
+      "source": "Mr Minor-Canon Quatremain",
+      "target": "Κύριος Ελάσσων-Κανόνας Κουάτρεμεϊν",
+      "note": "person"
+    },
+    {
+      "source": "King Solomon",
+      "target": "Βασιλιάς Σολομών",
+      "note": "person"
+    },
+    {
+      "source": "Gehazi",
+      "target": "Γιεζή",
+      "note": "person"
+    },
+    {
+      "source": "Isaiah",
+      "target": "Ησαΐας",
+      "note": "person"
+    },
+    {
+      "source": "Mr Abney",
+      "target": "Κύριος Άμπνεϊ",
+      "note": "person"
+    },
+    {
+      "source": "Stephen Elliott",
+      "target": "Στίβεν Έλιοτ",
+      "note": "person"
+    },
+    {
+      "source": "Mrs Bunch",
+      "target": "Κυρία Μπαντς",
+      "note": "person"
+    },
+    {
+      "source": "Parkes",
+      "target": "Παρκς",
+      "note": "person"
+    },
+    {
+      "source": "Mrs Ellis",
+      "target": "Κυρία Έλις",
+      "note": "person"
+    },
+    {
+      "source": "Jevanny",
+      "target": "Τζεβάνι",
+      "note": "person"
+    },
+    {
+      "source": "Giovanni Paoli",
+      "target": "Τζιοβάνι Πάολι",
+      "note": "person"
+    },
+    {
+      "source": "Censorinus",
+      "target": "Κηνσορίνος",
+      "note": "person"
+    },
+    {
+      "source": "Simon Magus",
+      "target": "Σίμων ο Μάγος",
+      "note": "person"
+    },
+    {
+      "source": "Hermes Trismegistus",
+      "target": "Ερμής ο Τρισμέγιστος",
+      "note": "person"
+    },
+    {
+      "source": "Phoebe Stanley",
+      "target": "Φοίβη Στάνλεϊ",
+      "note": "person"
+    },
+    {
+      "source": "Anderson",
+      "target": "Άντερσον",
+      "note": "person"
+    },
+    {
+      "source": "Mag Nicolas Francken",
+      "target": "Μαγ Νίκολας Φράνκεν",
+      "note": "person"
+    },
+    {
+      "source": "Bishop Jörgen Friis",
+      "target": "Επίσκοπος Γιόργκεν Φρις",
+      "note": "person"
+    },
+    {
+      "source": "Rasmus Nielsen",
+      "target": "Ράσμους Νίλσεν",
+      "note": "person"
+    },
+    {
+      "source": "St John",
+      "target": "Άγιος Ιωάννης",
+      "note": "person"
+    },
+    {
+      "source": "Herr Kristensen",
+      "target": "Χερ Κρίστενσεν",
+      "note": "person"
+    },
+    {
+      "source": "Sagförer Herr Anders Jensen",
+      "target": "Δικηγόρος Χερ Άντερς Γιένσεν",
+      "note": "person"
+    },
+    {
+      "source": "Emily",
+      "target": "Έμιλι",
+      "note": "person"
+    },
+    {
+      "source": "Zechariah",
+      "target": "Ζαχαρίας",
+      "note": "person"
+    },
+    {
+      "source": "Job",
+      "target": "Ιώβ",
+      "note": "person"
+    },
+    {
+      "source": "John",
+      "target": "Ιωάννης",
+      "note": "person"
+    },
+    {
+      "source": "Joachim Trithemius",
+      "target": "Ιωακείμ Τριθέμιους",
+      "note": "person"
+    },
+    {
+      "source": "Abbot Thomas",
+      "target": "Ηγούμενος Τόμας",
+      "note": "person"
+    },
+    {
+      "source": "Selenius",
+      "target": "Σελένιους",
+      "note": "person"
+    },
+    {
+      "source": "Bacon",
+      "target": "Μπέικον",
+      "note": "person"
+    },
+    {
+      "source": "Gregory",
+      "target": "Γκρέγκορι",
+      "note": "person"
+    },
+    {
+      "source": "Mr Somerton",
+      "target": "Κύριος Σόμερτον",
+      "note": "person"
+    },
+    {
+      "source": "Brown",
+      "target": "Μπράουν",
+      "note": "person"
+    },
+    {
+      "source": "Lord D——",
+      "target": "Λόρδος Ντ——",
+      "note": "person"
+    },
+    {
+      "source": "Eliezer",
+      "target": "Ελιέζερ",
+      "note": "person"
+    },
+    {
+      "source": "Rebekah",
+      "target": "Ρεβέκκα",
+      "note": "person"
+    },
+    {
+      "source": "Jacob",
+      "target": "Ιακώβ",
+      "note": "person"
+    },
+    {
+      "source": "Rachel",
+      "target": "Ραχήλ",
+      "note": "person"
+    },
+    {
+      "source": "St Bertrand de Comminges",
+      "target": "Σεν Μπερτράν ντε Κομένζ",
+      "note": "place"
+    },
+    {
+      "source": "Viborg",
+      "target": "Βίμποργκ",
+      "note": "place"
+    },
+    {
+      "source": "Felixstowe",
+      "target": "Φίλιξστοου",
+      "note": "place"
+    },
+    {
+      "source": "Toulouse",
+      "target": "Τουλούζη",
+      "note": "place"
+    },
+    {
+      "source": "Bagnères-de-Luchon",
+      "target": "Μπανιέρ-ντε-Λουσόν",
+      "note": "place"
+    },
+    {
+      "source": "Auch",
+      "target": "Ος",
+      "note": "place"
+    },
+    {
+      "source": "Pyrenees",
+      "target": "Πυρηναία",
+      "note": "place"
+    },
+    {
+      "source": "France",
+      "target": "Γαλλία",
+      "note": "place"
+    },
+    {
+      "source": "Cambridge",
+      "target": "Κέιμπριτζ",
+      "note": "place"
+    },
+    {
+      "source": "Nîmes",
+      "target": "Νιμ",
+      "note": "place"
+    },
+    {
+      "source": "South America",
+      "target": "Νότια Αμερική",
+      "note": "place"
+    },
+    {
+      "source": "Babylon",
+      "target": "Βαβυλώνα",
+      "note": "place"
+    },
+    {
+      "source": "St Papoul",
+      "target": "Σεν Παπούλ",
+      "note": "place"
+    },
+    {
+      "source": "Aswarby Hall",
+      "target": "Έπαυλη Άσγουορμπι",
+      "note": "place"
+    },
+    {
+      "source": "Lincolnshire",
+      "target": "Λίνκολνσαϊρ",
+      "note": "place"
+    },
+    {
+      "source": "Warwickshire",
+      "target": "Γουόργουικσαϊρ",
+      "note": "place"
+    },
+    {
+      "source": "Aswarby",
+      "target": "Άσγουορμπι",
+      "note": "place"
+    },
+    {
+      "source": "Levant",
+      "target": "Λεβάντες",
+      "note": "place"
+    },
+    {
+      "source": "Dublin",
+      "target": "Δουβλίνο",
+      "note": "place"
+    },
+    {
+      "source": "Aarhuus",
+      "target": "Άαρχους",
+      "note": "place"
+    },
+    {
+      "source": "Silkeborg",
+      "target": "Σίλκεμποργκ",
+      "note": "place"
+    },
+    {
+      "source": "Parsbury",
+      "target": "Πάρσμπερι",
+      "note": "place"
+    },
+    {
+      "source": "Steinfeld",
+      "target": "Στάινφελντ",
+      "note": "place"
+    },
+    {
+      "source": "Chapeau Rouge",
+      "target": "Σαπό Ρουζ",
+      "note": "place"
+    },
+    {
+      "source": "Baekkelund",
+      "target": "Μπέκελουντ",
+      "note": "place"
+    },
+    {
+      "source": "Hald",
+      "target": "Χαλντ",
+      "note": "place"
+    },
+    {
+      "source": "National Review",
+      "target": "National Review",
+      "note": "org"
+    },
+    {
+      "source": "Pall Mall Magazine",
+      "target": "Pall Mall Magazine",
+      "note": "org"
+    },
+    {
+      "source": "King’s College",
+      "target": "Κινγκς Κόλετζ",
+      "note": "org"
+    },
+    {
+      "source": "Chapter",
+      "target": "Κεφάλαιο",
+      "note": "org"
+    },
+    {
+      "source": "Wentworth Collection",
+      "target": "Συλλογή Γουέντγουορθ",
+      "note": "org"
+    },
+    {
+      "source": "Presbyterian",
+      "target": "Πρεσβυτεριανή Εκκλησία",
+      "note": "org"
+    },
+    {
+      "source": "Gentleman’s Magazine",
+      "target": "Gentleman’s Magazine",
+      "note": "org"
+    },
+    {
+      "source": "Critical Museum",
+      "target": "Critical Museum",
+      "note": "org"
+    },
+    {
+      "source": "St Michan’s Church",
+      "target": "Εκκλησία του Αγίου Μίχαν",
+      "note": "org"
+    },
+    {
+      "source": "Shelburnian Library",
+      "target": "Βιβλιοθήκη Σέλμπερνιαν",
+      "note": "org"
+    },
+    {
+      "source": "Holy Roman Church",
+      "target": "Αγία Ρωμαϊκή Εκκλησία",
+      "note": "org"
+    },
+    {
+      "source": "Phœnix",
+      "target": "Φοίνιξ",
+      "note": "org"
+    },
+    {
+      "source": "Ghost Stories of an Antiquary",
+      "target": "Ιστορίες Φαντασμάτων ενός Αρχαιοδίφη",
+      "note": "title"
+    },
+    {
+      "source": "Oh, Whistle, and I’ll Come to You",
+      "target": "Ω, Σφύριξε, και θα Έρθω σε Σένα",
+      "note": "title"
+    },
+    {
+      "source": "The Treasure of Abbot Thomas",
+      "target": "Ο Θησαυρός του Ηγούμενου Τόμας",
+      "note": "title"
+    },
+    {
+      "source": "Canon Alberic’s Scrap-book",
+      "target": "Το Λεύκωμα του Κανόνα Αλμπερίκ",
+      "note": "title"
+    },
+    {
+      "source": "Lost Hearts",
+      "target": "Χαμένες Καρδιές",
+      "note": "title"
+    },
+    {
+      "source": "Number 13",
+      "target": "Νούμερο 13",
+      "note": "title"
+    },
+    {
+      "source": "Old St Paul’s",
+      "target": "Παλιός Άγιος Παύλος",
+      "note": "title"
+    },
+    {
+      "source": "On the Words of Our Lord",
+      "target": "Περί των Λόγων του Κυρίου Ημών",
+      "note": "title"
+    },
+    {
+      "source": "Gallia Christiana",
+      "target": "Gallia Christiana",
+      "note": "title"
+    },
+    {
+      "source": "Ecclesiasticus",
+      "target": "Σοφία Σειράχ",
+      "note": "title"
+    },
+    {
+      "source": "Robinson Crusoe",
+      "target": "Ροβινσώνας Κρούσος",
+      "note": "title"
+    },
+    {
+      "source": "Clementine Recognitions",
+      "target": "Κλημέντια Αναγνωρίσματα",
+      "note": "title"
+    },
+    {
+      "source": "The Mezzotint",
+      "target": "Η Χαλκογραφία",
+      "note": "title"
+    },
+    {
+      "source": "Apocalypse",
+      "target": "Αποκάλυψη",
+      "note": "title"
+    },
+    {
+      "source": "Mysteries of Udolpho",
+      "target": "Τα Μυστήρια του Ουντόλφο",
+      "note": "title"
+    },
+    {
+      "source": "Psalter",
+      "target": "Ψαλτήρι",
+      "note": "title"
+    },
+    {
+      "source": "Steganographia",
+      "target": "Στεγανογραφία",
+      "note": "title"
+    },
+    {
+      "source": "Cryptographia",
+      "target": "Κρυπτογραφία",
+      "note": "title"
+    },
+    {
+      "source": "de Augmentis Scientiarum",
+      "target": "de Augmentis Scientiarum",
+      "note": "title"
+    },
+    {
+      "source": "Sertum",
+      "target": "Sertum",
+      "note": "title"
+    },
+    {
+      "source": "verger",
+      "target": "νεωκόρος",
+      "note": "term"
+    },
+    {
+      "source": "missal",
+      "target": "λειτουργικό βιβλίο",
+      "note": "term"
+    },
+    {
+      "source": "crucifix",
+      "target": "εσταυρωμένος",
+      "note": "term"
+    },
+    {
+      "source": "hurdy-gurdy",
+      "target": "λατέρνα",
+      "note": "term"
+    },
+    {
+      "source": "brazier",
+      "target": "μαγκάλι",
+      "note": "term"
+    },
+    {
+      "source": "portmanteau",
+      "target": "βαλίτσα",
+      "note": "term"
+    },
+    {
+      "source": "bagman",
+      "target": "πλασιέ",
+      "note": "term"
+    },
+    {
+      "source": "crowbar",
+      "target": "λοστός",
+      "note": "term"
+    },
+    {
+      "source": "cipher",
+      "target": "κρυπτογράφημα",
+      "note": "term"
+    },
+    {
+      "source": "well-head",
+      "target": "στόμιο πηγαδιού",
+      "note": "term"
+    },
+    {
+      "source": "cloister",
+      "target": "περιστύλιο",
+      "note": "term"
+    },
+    {
+      "source": "effigy",
+      "target": "ομοίωμα",
+      "note": "term"
+    },
+    {
+      "source": "wine-cellar",
+      "target": "κάβα",
+      "note": "term"
+    },
+    {
+      "source": "note-book",
+      "target": "σημειωματάριο",
+      "note": "term"
+    },
+    {
+      "source": "camera",
+      "target": "φωτογραφική μηχανή",
+      "note": "term"
+    },
+    {
+      "source": "stalls",
+      "target": "στασίδια",
+      "note": "term"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

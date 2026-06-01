@@ -1,0 +1,652 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: Λογοτεχνικό (Επιστημονική Φαντασία / Φιλοσοφικό Μυθιστόρημα)\nΘέμα: Η ψυχολογική και φιλοσοφική κρίση ενός συγγραφέα που πιστεύει ότι η ανθρωπότητα μεταλλάσσεται από κοσμικές ακτίνες των Αρειανών, για να συνειδητοποιήσει τελικά ότι ο ίδιος και η οικογένειά του ανήκουν σε αυτό το νέο, ανώτερο είδος.\nΕποχή/Πλαίσιο: Δεκαετία 1930 (έκδοση 1937), περίοδος του Μεσοπολέμου. Περιέχει αναφορές σε επιστημονικές ανακαλύψεις της εποχής (κβαντική φυσική, κοσμικές ακτίνες) και στο κοινωνικοπολιτικό κλίμα πριν τον Β' Παγκόσμιο Πόλεμο.\nΎφος: Λογοτεχνικό, φιλοσοφικό, εσωστρεφές, με στοιχεία επιστημονικής και θεολογικής ορολογίας.\nΣημειώσεις: Το κείμενο συνδυάζει την ψυχολογική αφήγηση με επιστημονικούς όρους της δεκαετίας του '30 και θεολογικές/φιλοσοφικές συζητήσεις. Ιδιαίτερη προσοχή χρειάζεται στην απόδοση του όρου 'fey', ο οποίος αναλύεται εκτενώς από τον πρωταγωνιστή ως μέρος του λεξιλογίου του, καθώς και στη διατήρηση του ελαφρώς αρχαΐζοντος και στοχαστικού ύφους του H.G. Wells. Επίσης, οι διάλογοι στη λέσχη (Planetarium Club) έχουν ένα χαρακτηριστικό βρετανικό φλέγμα που πρέπει να αποδοθεί φυσικά στα ελληνικά.",
+  "glossary": [
+    {
+      "source": "Star-Begotten",
+      "target": "Αστρογέννητοι",
+      "note": "Ο τίτλος του βιβλίου, αναφέρεται στη νέα γενιά ανθρώπων."
+    },
+    {
+      "source": "Biological Fantasia",
+      "target": "Βιολογική Φαντασία",
+      "note": "Ο υπότιτλος του έργου."
+    },
+    {
+      "source": "fey",
+      "target": "αλλόκοτη / εξωπραγματική / νεραϊδένια",
+      "note": "Λέξη-κλειδί στο κείμενο που περιγράφει την απόκοσμη φύση της συζύγου του. Απαιτεί προσοχή στην απόδοση ώστε να διατηρηθεί η αίσθηση του 'changeling'."
+    },
+    {
+      "source": "Martianized",
+      "target": "Αρειανικά μεταλλαγμένοι / Εκμαρσιανισμένοι",
+      "note": "Νεολογισμός του συγγραφέα για όσους έχουν επηρεαστεί από τις κοσμικές ακτίνες."
+    },
+    {
+      "source": "cosmic rays",
+      "target": "κοσμικές ακτίνες",
+      "note": "Επιστημονικός όρος της φυσικής."
+    },
+    {
+      "source": "Grand Parade of Humanity",
+      "target": "Η Μεγάλη Παρέλαση της Ανθρωπότητας",
+      "note": "Ο τίτλος του ημιτελούς ιστορικού έργου του πρωταγωνιστή."
+    },
+    {
+      "source": "H.G. Wells",
+      "target": "Χ. Τζ. Γουέλς",
+      "note": "person"
+    },
+    {
+      "source": "Winston Spencer Churchill",
+      "target": "Ουίνστον Σπένσερ Τσόρτσιλ",
+      "note": "person"
+    },
+    {
+      "source": "Joseph Davis",
+      "target": "Τζόζεφ Ντέιβις",
+      "note": "person"
+    },
+    {
+      "source": "Abraham",
+      "target": "Αβραάμ",
+      "note": "person"
+    },
+    {
+      "source": "Isaac",
+      "target": "Ισαάκ",
+      "note": "person"
+    },
+    {
+      "source": "Jacob",
+      "target": "Ιακώβ",
+      "note": "person"
+    },
+    {
+      "source": "Adam",
+      "target": "Αδάμ",
+      "note": "person"
+    },
+    {
+      "source": "Eve",
+      "target": "Εύα",
+      "note": "person"
+    },
+    {
+      "source": "Cain",
+      "target": "Κάιν",
+      "note": "person"
+    },
+    {
+      "source": "Abel",
+      "target": "Άβελ",
+      "note": "person"
+    },
+    {
+      "source": "Noah",
+      "target": "Νώε",
+      "note": "person"
+    },
+    {
+      "source": "Samuel",
+      "target": "Σαμουήλ",
+      "note": "person"
+    },
+    {
+      "source": "Solomon",
+      "target": "Σολομών",
+      "note": "person"
+    },
+    {
+      "source": "David",
+      "target": "Δαβίδ",
+      "note": "person"
+    },
+    {
+      "source": "Mr. Cleverkins",
+      "target": "Κύριος Εξυπνάκιας",
+      "note": "person"
+    },
+    {
+      "source": "Jonah",
+      "target": "Ιωνάς",
+      "note": "person"
+    },
+    {
+      "source": "King Richard",
+      "target": "Βασιλιάς Ριχάρδος",
+      "note": "person"
+    },
+    {
+      "source": "Saladin",
+      "target": "Σαλαδίνος",
+      "note": "person"
+    },
+    {
+      "source": "Alexander",
+      "target": "Αλέξανδρος",
+      "note": "person"
+    },
+    {
+      "source": "Caesar",
+      "target": "Καίσαρας",
+      "note": "person"
+    },
+    {
+      "source": "Jenghiz Khan",
+      "target": "Τζένγκις Χαν",
+      "note": "person"
+    },
+    {
+      "source": "Darius",
+      "target": "Δαρείος",
+      "note": "person"
+    },
+    {
+      "source": "Paul de Kruif",
+      "target": "Πολ ντε Κρουίφ",
+      "note": "person"
+    },
+    {
+      "source": "Goya",
+      "target": "Γκόγια",
+      "note": "person"
+    },
+    {
+      "source": "Wiertz",
+      "target": "Βιέρτς",
+      "note": "person"
+    },
+    {
+      "source": "Napoleon",
+      "target": "Ναπολέων",
+      "note": "person"
+    },
+    {
+      "source": "Winwood Reade",
+      "target": "Γουίνγουντ Ριντ",
+      "note": "person"
+    },
+    {
+      "source": "Aristotle",
+      "target": "Αριστοτέλης",
+      "note": "person"
+    },
+    {
+      "source": "Cantuar",
+      "target": "Καντουάρ",
+      "note": "person"
+    },
+    {
+      "source": "Ebor",
+      "target": "Έμπορ",
+      "note": "person"
+    },
+    {
+      "source": "Pope",
+      "target": "Πάπας",
+      "note": "person"
+    },
+    {
+      "source": "Mary",
+      "target": "Μαίρη",
+      "note": "person"
+    },
+    {
+      "source": "Rodhammer",
+      "target": "Ρόντχαμερ",
+      "note": "person"
+    },
+    {
+      "source": "Lucretius",
+      "target": "Λουκρήτιος",
+      "note": "person"
+    },
+    {
+      "source": "Rutherford",
+      "target": "Ράδερφορντ",
+      "note": "person"
+    },
+    {
+      "source": "Bragg",
+      "target": "Μπραγκ",
+      "note": "person"
+    },
+    {
+      "source": "Niels Bohr",
+      "target": "Νιλς Μπορ",
+      "note": "person"
+    },
+    {
+      "source": "Dr. Holdman Stedding",
+      "target": "Δρ. Χόλντμαν Στέντινγκ",
+      "note": "person"
+    },
+    {
+      "source": "Keppel",
+      "target": "Κέπελ",
+      "note": "person"
+    },
+    {
+      "source": "G. B. Query",
+      "target": "Τζ. Μπ. Κουέρι",
+      "note": "person"
+    },
+    {
+      "source": "Horatius",
+      "target": "Οράτιος",
+      "note": "person"
+    },
+    {
+      "source": "Octavius",
+      "target": "Οκταβιανός",
+      "note": "person"
+    },
+    {
+      "source": "Justinian",
+      "target": "Ιουστινιανός",
+      "note": "person"
+    },
+    {
+      "source": "H. V. Morton",
+      "target": "Χ. Β. Μόρτον",
+      "note": "person"
+    },
+    {
+      "source": "Durer",
+      "target": "Ντύρερ",
+      "note": "person"
+    },
+    {
+      "source": "Leonard",
+      "target": "Λεονάρντο",
+      "note": "person"
+    },
+    {
+      "source": "La Motte Fouque",
+      "target": "Λα Μοτ Φουκέ",
+      "note": "person"
+    },
+    {
+      "source": "London",
+      "target": "Λονδίνο",
+      "note": "place"
+    },
+    {
+      "source": "New York",
+      "target": "Νέα Υόρκη",
+      "note": "place"
+    },
+    {
+      "source": "Eastern Levant",
+      "target": "Ανατολικό Λεβάντε",
+      "note": "place"
+    },
+    {
+      "source": "Garden of Eden",
+      "target": "Κήπος της Εδέμ",
+      "note": "place"
+    },
+    {
+      "source": "St. Hobart's",
+      "target": "Σεντ Χόμπαρτς",
+      "note": "place"
+    },
+    {
+      "source": "Camborne Hall",
+      "target": "Κάμπορν Χολ",
+      "note": "place"
+    },
+    {
+      "source": "Oxford",
+      "target": "Οξφόρδη",
+      "note": "place"
+    },
+    {
+      "source": "plain of Shinar",
+      "target": "Πεδιάδα του Σενναάρ",
+      "note": "place"
+    },
+    {
+      "source": "Tower of Babel",
+      "target": "Πύργος της Βαβέλ",
+      "note": "place"
+    },
+    {
+      "source": "Prado",
+      "target": "Πράδο",
+      "note": "place"
+    },
+    {
+      "source": "Brussels",
+      "target": "Βρυξέλλες",
+      "note": "place"
+    },
+    {
+      "source": "Picadilly Station",
+      "target": "Σταθμός Πικαντίλι",
+      "note": "place"
+    },
+    {
+      "source": "Lower Regent Street",
+      "target": "Λόουερ Ρίτζεντ Στριτ",
+      "note": "place"
+    },
+    {
+      "source": "Outer Hebrides",
+      "target": "Εξωτερικές Εβρίδες",
+      "note": "place"
+    },
+    {
+      "source": "Glasgow",
+      "target": "Γλασκώβη",
+      "note": "place"
+    },
+    {
+      "source": "Bloomsbury",
+      "target": "Μπλούμσμπερι",
+      "note": "place"
+    },
+    {
+      "source": "Victoria",
+      "target": "Βικτώρια",
+      "note": "place"
+    },
+    {
+      "source": "Paris",
+      "target": "Παρίσι",
+      "note": "place"
+    },
+    {
+      "source": "Cornwall",
+      "target": "Κορνουάλη",
+      "note": "place"
+    },
+    {
+      "source": "Matterhorn",
+      "target": "Μάτερχορν",
+      "note": "place"
+    },
+    {
+      "source": "Gorpel",
+      "target": "Γκόρπελ",
+      "note": "place"
+    },
+    {
+      "source": "Wall Street",
+      "target": "Γουόλ Στριτ",
+      "note": "place"
+    },
+    {
+      "source": "City",
+      "target": "Σίτι",
+      "note": "place"
+    },
+    {
+      "source": "Han",
+      "target": "Αν",
+      "note": "place"
+    },
+    {
+      "source": "America",
+      "target": "Αμερική",
+      "note": "place"
+    },
+    {
+      "source": "Mars",
+      "target": "Άρης",
+      "note": "place"
+    },
+    {
+      "source": "Persia",
+      "target": "Περσία",
+      "note": "place"
+    },
+    {
+      "source": "Egypt",
+      "target": "Αίγυπτος",
+      "note": "place"
+    },
+    {
+      "source": "India",
+      "target": "Ινδία",
+      "note": "place"
+    },
+    {
+      "source": "Greece",
+      "target": "Ελλάδα",
+      "note": "place"
+    },
+    {
+      "source": "Rome",
+      "target": "Ρώμη",
+      "note": "place"
+    },
+    {
+      "source": "Mediterranean",
+      "target": "Μεσόγειος",
+      "note": "place"
+    },
+    {
+      "source": "Chatto & Windus",
+      "target": "Τσάτο & Γουίντους",
+      "note": "org"
+    },
+    {
+      "source": "Viking Press",
+      "target": "Βάικινγκ Πρες",
+      "note": "org"
+    },
+    {
+      "source": "Planetarium Club",
+      "target": "Λέσχη Πλανητάριουμ",
+      "note": "org"
+    },
+    {
+      "source": "Pantechnicon Hall",
+      "target": "Αίθουσα Παντέκνικον",
+      "note": "org"
+    },
+    {
+      "source": "Exchange",
+      "target": "Χρηματιστήριο",
+      "note": "org"
+    },
+    {
+      "source": "Turf",
+      "target": "Ιππόδρομος",
+      "note": "org"
+    },
+    {
+      "source": "Casino",
+      "target": "Καζίνο",
+      "note": "org"
+    },
+    {
+      "source": "Wiertz Museum",
+      "target": "Μουσείο Βιέρτς",
+      "note": "org"
+    },
+    {
+      "source": "A Biological Fantasia",
+      "target": "Μια Βιολογική Φαντασία",
+      "note": "title"
+    },
+    {
+      "source": "Green Pastures",
+      "target": "Πράσινα Λιβάδια",
+      "note": "title"
+    },
+    {
+      "source": "Wood's Natural History",
+      "target": "Φυσική Ιστορία του Γουντ",
+      "note": "title"
+    },
+    {
+      "source": "King Richard and Saladin",
+      "target": "Βασιλιάς Ριχάρδος και Σαλαδίνος",
+      "note": "title"
+    },
+    {
+      "source": "The Singing Seamen",
+      "target": "Οι Τραγουδιστές Ναυτικοί",
+      "note": "title"
+    },
+    {
+      "source": "Smite with Hammer, Smite with Sword",
+      "target": "Χτύπα με Σφυρί, Χτύπα με Σπαθί",
+      "note": "title"
+    },
+    {
+      "source": "The Mighty Riders",
+      "target": "Οι Ισχυροί Καβαλάρηδες",
+      "note": "title"
+    },
+    {
+      "source": "The Heritage of Mankind, the Promise and the Struggle",
+      "target": "Η Κληρονομιά της Ανθρωπότητας, η Υπόσχεση και ο Αγώνας",
+      "note": "title"
+    },
+    {
+      "source": "Flood, Fire, and Pestilence",
+      "target": "Πλημμύρα, Φωτιά και Λοιμός",
+      "note": "title"
+    },
+    {
+      "source": "Microbe Hunters",
+      "target": "Κυνηγοί Μικροβίων",
+      "note": "title"
+    },
+    {
+      "source": "The Martyrdom of Man",
+      "target": "Το Μαρτύριο του Ανθρώπου",
+      "note": "title"
+    },
+    {
+      "source": "Youth the Conqueror",
+      "target": "Η Νεότητα ο Κατακτητής",
+      "note": "title"
+    },
+    {
+      "source": "Undine",
+      "target": "Ουντίν",
+      "note": "title"
+    },
+    {
+      "source": "The Grandeur That Was Rome",
+      "target": "Το Μεγαλείο που Ήταν η Ρώμη",
+      "note": "title"
+    },
+    {
+      "source": "The Glorious Succession",
+      "target": "Η Ένδοξη Διαδοχή",
+      "note": "title"
+    },
+    {
+      "source": "Sword and Cross",
+      "target": "Σπαθί και Σταυρός",
+      "note": "title"
+    },
+    {
+      "source": "The Undying Past",
+      "target": "Το Αθάνατο Παρελθόν",
+      "note": "title"
+    },
+    {
+      "source": "Our Mighty Heritage",
+      "target": "Η Ισχυρή μας Κληρονομιά",
+      "note": "title"
+    },
+    {
+      "source": "The Pageant of Mankind",
+      "target": "Η Πομπή της Ανθρωπότητας",
+      "note": "title"
+    },
+    {
+      "source": "electrons",
+      "target": "ηλεκτρόνια",
+      "note": "term"
+    },
+    {
+      "source": "neutrons",
+      "target": "νετρόνια",
+      "note": "term"
+    },
+    {
+      "source": "positrons",
+      "target": "ποζιτρόνια",
+      "note": "term"
+    },
+    {
+      "source": "photons",
+      "target": "φωτόνια",
+      "note": "term"
+    },
+    {
+      "source": "protons",
+      "target": "πρωτόνια",
+      "note": "term"
+    },
+    {
+      "source": "Gamma rays",
+      "target": "ακτίνες Γάμμα",
+      "note": "term"
+    },
+    {
+      "source": "X rays",
+      "target": "ακτίνες Χ",
+      "note": "term"
+    },
+    {
+      "source": "atoms",
+      "target": "άτομα",
+      "note": "term"
+    },
+    {
+      "source": "Martians",
+      "target": "Αρειανοί",
+      "note": "term"
+    },
+    {
+      "source": "Black Death",
+      "target": "Μαύρος Θάνατος",
+      "note": "term"
+    },
+    {
+      "source": "Punic Wars",
+      "target": "Καρχηδονιακοί Πόλεμοι",
+      "note": "term"
+    },
+    {
+      "source": "Pax Romana",
+      "target": "Ρωμαϊκή Ειρήνη",
+      "note": "term"
+    },
+    {
+      "source": "materialism",
+      "target": "υλισμός",
+      "note": "term"
+    },
+    {
+      "source": "spiritual",
+      "target": "πνευματικός",
+      "note": "term"
+    },
+    {
+      "source": "science",
+      "target": "επιστήμη",
+      "note": "term"
+    },
+    {
+      "source": "biology",
+      "target": "βιολογία",
+      "note": "term"
+    },
+    {
+      "source": "omnipotence",
+      "target": "παντοδυναμία",
+      "note": "term"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

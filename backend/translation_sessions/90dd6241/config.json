@@ -1,0 +1,402 @@
+{
+  "source_language": "English (με ένα γαλλικό απόφθεγμα στην αρχή)",
+  "document_brief": "Τύπος: Λογοτεχνικό (Εναλλακτική ιστορία / Τρόμου / Weird Fiction)\nΘέμα: Η αφήγηση ενός ψυχολογικά ασταθούς άνδρα σε μια εναλλακτική Αμερική του 1920, ο οποίος περιγράφει τις κοινωνικές αλλαγές, τα εγκαίνια ενός κυβερνητικού θαλάμου αυτοκτονίας και την εμμονή του με το καταραμένο βιβλίο «Ο Βασιλιάς με τα Κίτρινα».\nΕποχή/Πλαίσιο: Γράφτηκε το 1895 (απόσπασμα από το διήγημα 'The Repairer of Reputations' του Robert W. Chambers) και διαδραματίζεται σε ένα φανταστικό, μελλοντικό για την εποχή συγγραφής 1920.\nΎφος: Λογοτεχνικό, επίσημο, με εναλλαγές μεταξύ ψυχρής, σχεδόν δημοσιογραφικής ιστορικής καταγραφής και παραληρηματικής, συναισθηματικά φορτισμένης αφήγησης (αναξιόπιστος αφηγητής).\nΣημειώσεις: Το κείμενο ξεκινά με ένα γαλλικό απόφθεγμα το οποίο συνήθως διατηρείται στο πρωτότυπο με ελληνική μετάφραση σε υποσημείωση. Η μεγαλύτερη πρόκληση είναι η απόδοση του ύφους του αναξιόπιστου αφηγητή: η μετάβαση από την ψυχρή περιγραφή της εναλλακτικής ιστορίας της Αμερικής, στον απόλυτο τρόμο και την εμμονή όταν αναφέρεται στο βιβλίο. Προσοχή στην απόδοση των στρατιωτικών και κυβερνητικών βαθμών/τίτλων (π.χ. Inspector-General of Police, Surgeon-General) ώστε να ταιριάζουν στο αμερικανικό σύστημα αλλά να είναι φυσικοί στα ελληνικά. Επίσης, η λέξη 'negro' στο πλαίσιο της εποχής (1895) μεταφράζεται συνήθως ως 'νέγρικος' ή 'των μαύρων' ανάλογα με τις κατευθυντήριες γραμμές του εκδότη για ιστορικά κείμενα.",
+  "glossary": [
+    {
+      "source": "The King in Yellow",
+      "target": "Ο Βασιλιάς με τα Κίτρινα",
+      "note": "Καθιερωμένη απόδοση του τίτλου του βιβλίου/θεατρικού έργου."
+    },
+    {
+      "source": "Government Lethal Chamber",
+      "target": "Κυβερνητικός Θάλαμος Θανάτου / Κυβερνητικός Θάλαμος Ευθανασίας",
+      "note": "Απαιτείται ένας όρος που να ακούγεται γραφειοκρατικός αλλά και μακάβριος."
+    },
+    {
+      "source": "Pallid Mask",
+      "target": "Ωχρή Μάσκα",
+      "note": "Σημαντικό σύμβολο της μυθολογίας του έργου."
+    },
+    {
+      "source": "Armourer",
+      "target": "Οπλοποιός / Κατασκευαστής πανοπλιών",
+      "note": "Αναφέρεται στο επάγγελμα του Hawberk στην επιγραφή του καταστήματος."
+    },
+    {
+      "source": "President Winthrop",
+      "target": "Πρόεδρος Γουίνθροπ",
+      "note": "person"
+    },
+    {
+      "source": "General Von Gartenlaube",
+      "target": "Στρατηγός Φον Γκαρτενλάουμπε",
+      "note": "person"
+    },
+    {
+      "source": "Dr. Archer",
+      "target": "Δρ. Άρτσερ",
+      "note": "person"
+    },
+    {
+      "source": "Boris Yvain",
+      "target": "Μπόρις Ιβάν",
+      "note": "person"
+    },
+    {
+      "source": "Colonel Livingston",
+      "target": "Συνταγματάρχης Λίβινγκστον",
+      "note": "person"
+    },
+    {
+      "source": "General Blount",
+      "target": "Στρατηγός Μπλάουντ",
+      "note": "person"
+    },
+    {
+      "source": "Major-General Hamilton",
+      "target": "Υποστράτηγος Χάμιλτον",
+      "note": "person"
+    },
+    {
+      "source": "Admiral Buffby",
+      "target": "Ναύαρχος Μπάφμπι",
+      "note": "person"
+    },
+    {
+      "source": "Surgeon-General Lanceford",
+      "target": "Γενικός Χειρουργός Λάνσφορντ",
+      "note": "person"
+    },
+    {
+      "source": "Senator Wyse",
+      "target": "Γερουσιαστής Γουάις",
+      "note": "person"
+    },
+    {
+      "source": "Senator Franklin",
+      "target": "Γερουσιαστής Φράνκλιν",
+      "note": "person"
+    },
+    {
+      "source": "Hawberk",
+      "target": "Χόμπερκ",
+      "note": "person"
+    },
+    {
+      "source": "United States",
+      "target": "Ηνωμένες Πολιτείες",
+      "note": "place"
+    },
+    {
+      "source": "Germany",
+      "target": "Γερμανία",
+      "note": "place"
+    },
+    {
+      "source": "Samoan Islands",
+      "target": "Νησιά Σαμόα",
+      "note": "place"
+    },
+    {
+      "source": "Norfolk",
+      "target": "Νόρφολκ",
+      "note": "place"
+    },
+    {
+      "source": "State of New Jersey",
+      "target": "Πολιτεία του Νιου Τζέρσεϊ",
+      "note": "place"
+    },
+    {
+      "source": "Cuba",
+      "target": "Κούβα",
+      "note": "place"
+    },
+    {
+      "source": "Hawaii",
+      "target": "Χαβάη",
+      "note": "place"
+    },
+    {
+      "source": "Samoa",
+      "target": "Σαμόα",
+      "note": "place"
+    },
+    {
+      "source": "West",
+      "target": "Δύση",
+      "note": "place"
+    },
+    {
+      "source": "Chicago",
+      "target": "Σικάγο",
+      "note": "place"
+    },
+    {
+      "source": "New York",
+      "target": "Νέα Υόρκη",
+      "note": "place"
+    },
+    {
+      "source": "France",
+      "target": "Γαλλία",
+      "note": "place"
+    },
+    {
+      "source": "England",
+      "target": "Αγγλία",
+      "note": "place"
+    },
+    {
+      "source": "Suanee",
+      "target": "Σουάνι",
+      "note": "place"
+    },
+    {
+      "source": "Italy",
+      "target": "Ιταλία",
+      "note": "place"
+    },
+    {
+      "source": "Spain",
+      "target": "Ισπανία",
+      "note": "place"
+    },
+    {
+      "source": "Belgium",
+      "target": "Βέλγιο",
+      "note": "place"
+    },
+    {
+      "source": "Russia",
+      "target": "Ρωσία",
+      "note": "place"
+    },
+    {
+      "source": "Caucasus",
+      "target": "Καύκασος",
+      "note": "place"
+    },
+    {
+      "source": "Washington Square",
+      "target": "Πλατεία Ουάσινγκτον",
+      "note": "place"
+    },
+    {
+      "source": "Madison Avenue",
+      "target": "Λεωφόρος Μάντισον",
+      "note": "place"
+    },
+    {
+      "source": "Carcosa",
+      "target": "Καρκόσα",
+      "note": "place"
+    },
+    {
+      "source": "lake of Hali",
+      "target": "Λίμνη του Χάλι",
+      "note": "place"
+    },
+    {
+      "source": "Paris",
+      "target": "Παρίσι",
+      "note": "place"
+    },
+    {
+      "source": "London",
+      "target": "Λονδίνο",
+      "note": "place"
+    },
+    {
+      "source": "Wooster Street",
+      "target": "Οδός Γούστερ",
+      "note": "place"
+    },
+    {
+      "source": "South Fifth Avenue",
+      "target": "Νότια Πέμπτη Λεωφόρος",
+      "note": "place"
+    },
+    {
+      "source": "University Place",
+      "target": "Γιουνιβέρσιτι Πλέις",
+      "note": "place"
+    },
+    {
+      "source": "Fourth Street",
+      "target": "Τέταρτη Οδός",
+      "note": "place"
+    },
+    {
+      "source": "Washington Park",
+      "target": "Πάρκο Ουάσινγκτον",
+      "note": "place"
+    },
+    {
+      "source": "Brooklyn",
+      "target": "Μπρούκλιν",
+      "note": "place"
+    },
+    {
+      "source": "Governor’s Island",
+      "target": "Νησί του Κυβερνήτη",
+      "note": "place"
+    },
+    {
+      "source": "North River",
+      "target": "Βόρειος Ποταμός",
+      "note": "place"
+    },
+    {
+      "source": "Fifth Avenue",
+      "target": "Πέμπτη Λεωφόρος",
+      "note": "place"
+    },
+    {
+      "source": "Bleecker Street",
+      "target": "Οδός Μπλίκερ",
+      "note": "place"
+    },
+    {
+      "source": "Government of the United States",
+      "target": "Κυβέρνηση των Ηνωμένων Πολιτειών",
+      "note": "org"
+    },
+    {
+      "source": "General Staff",
+      "target": "Γενικό Επιτελείο",
+      "note": "org"
+    },
+    {
+      "source": "United States National Academy of Design",
+      "target": "Εθνική Ακαδημία Σχεδίου των Ηνωμένων Πολιτειών",
+      "note": "org"
+    },
+    {
+      "source": "National Mounted Police",
+      "target": "Εθνική Έφιππη Αστυνομία",
+      "note": "org"
+    },
+    {
+      "source": "Congress of Religions",
+      "target": "Συνέδριο των Θρησκειών",
+      "note": "org"
+    },
+    {
+      "source": "National Free Hospital",
+      "target": "Εθνικό Δωρεάν Νοσοκομείο",
+      "note": "org"
+    },
+    {
+      "source": "National Guard",
+      "target": "Εθνοφρουρά",
+      "note": "org"
+    },
+    {
+      "source": "Fates",
+      "target": "Μοίρες",
+      "note": "title"
+    },
+    {
+      "source": "Dodge Statue",
+      "target": "Άγαλμα του Ντοτζ",
+      "note": "title"
+    },
+    {
+      "source": "Lethal Chamber",
+      "target": "Θάλαμος Θανάτου",
+      "note": "term"
+    },
+    {
+      "source": "Elevated Railroads",
+      "target": "Υπέργειοι Σιδηρόδρομοι",
+      "note": "term"
+    },
+    {
+      "source": "suicide",
+      "target": "αυτοκτονία",
+      "note": "term"
+    },
+    {
+      "source": "squadron",
+      "target": "ίλη / μοίρα",
+      "note": "term"
+    },
+    {
+      "source": "lancers",
+      "target": "λογχοφόροι",
+      "note": "term"
+    },
+    {
+      "source": "hussars",
+      "target": "ουσάροι",
+      "note": "term"
+    },
+    {
+      "source": "garrison",
+      "target": "φρουρά",
+      "note": "term"
+    },
+    {
+      "source": "commandant",
+      "target": "διοικητής",
+      "note": "term"
+    },
+    {
+      "source": "military aid",
+      "target": "στρατιωτικός ακόλουθος",
+      "note": "term"
+    },
+    {
+      "source": "Surgeon-General",
+      "target": "Γενικός Χειρουργός",
+      "note": "term"
+    },
+    {
+      "source": "self-destruction",
+      "target": "αυτοκαταστροφή",
+      "note": "term"
+    },
+    {
+      "source": "self-preservation",
+      "target": "αυτοσυντήρηση",
+      "note": "term"
+    },
+    {
+      "source": "cavalry",
+      "target": "ιππικό",
+      "note": "term"
+    },
+    {
+      "source": "architecture",
+      "target": "αρχιτεκτονική",
+      "note": "term"
+    },
+    {
+      "source": "Secretary of Fine Arts",
+      "target": "Υπουργός Καλών Τεχνών",
+      "note": "term"
+    },
+    {
+      "source": "Secretary of Forestry and Game Preservation",
+      "target": "Υπουργός Δασών και Προστασίας Θηραμάτων",
+      "note": "term"
+    },
+    {
+      "source": "Secretary of War",
+      "target": "Υπουργός Πολέμου",
+      "note": "term"
+    },
+    {
+      "source": "Inspector-General of Police",
+      "target": "Γενικός Επιθεωρητής Αστυνομίας",
+      "note": "term"
+    },
+    {
+      "source": "Commissioner of Public Works",
+      "target": "Επίτροπος Δημοσίων Έργων",
+      "note": "term"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

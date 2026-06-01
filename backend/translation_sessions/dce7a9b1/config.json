@@ -1,0 +1,547 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: Λογοτεχνικό (Αστυνομική λογοτεχνία μυστηρίου/υπερφυσικού)\nΘέμα: Μια συλλογή αστυνομικών ιστοριών με πρωταγωνιστή τον εκκεντρικό ντετέκτιβ Moris Klaw, ο οποίος λύνει μυστηριώδη εγκλήματα που σχετίζονται με αρχαιότητες, χρησιμοποιώντας «ψυχική φωτογραφία» και αποκρυφιστικές μεθόδους.\nΕποχή/Πλαίσιο: Αρχές 20ού αιώνα (Εδουαρδιανή εποχή), Αγγλία (Λονδίνο). Έντονο στοιχείο αποικιοκρατίας, αρχαιοκαπηλίας και ενδιαφέροντος για τον αποκρυφισμό και την Αιγυπτιολογία.\nΎφος: Λογοτεχνικό, ατμοσφαιρικό, ελαφρώς αρχαϊκό. Επίσημο ύφος από τον αφηγητή, σε έντονη αντίθεση με τον ιδιόρρυθμο, ξενικό και συχνά ασύντακτο τρόπο ομιλίας του πρωταγωνιστή Moris Klaw.\nΣημειώσεις: Η μεγαλύτερη πρόκληση είναι η απόδοση της ομιλίας του Moris Klaw. Μιλάει με περίεργη σύνταξη, ξενική προφορά και χρησιμοποιεί ασυνήθιστες εκφράσεις (π.χ. 'Who snorts?', 'I shall now make you laugh'). Αυτό πρέπει να αποδοθεί στα ελληνικά με τρόπο που να δείχνει την εκκεντρικότητά του, ίσως με ελαφρώς λανθασμένη σύνταξη ή υπερβολικά επίσημο λεξιλόγιο σε λάθος πλαίσιο, χωρίς όμως να γίνεται ακατανόητο. Επίσης, απαιτείται προσοχή στην απόδοση των αποκρυφιστικών/θεοσοφικών όρων της εποχής και στη διατήρηση της σκοτεινής, γοτθικής ατμόσφαιρας του κειμένου.",
+  "glossary": [
+    {
+      "source": "Dream Detective",
+      "target": "Ντετέκτιβ των Ονείρων",
+      "note": "Τίτλος του βιβλίου"
+    },
+    {
+      "source": "odic force",
+      "target": "ωδική δύναμη",
+      "note": "Αποκρυφιστικός/παραψυχολογικός όρος του 19ου αιώνα"
+    },
+    {
+      "source": "etheric storm",
+      "target": "αιθερική θύελλα",
+      "note": "Ψυχικός όρος που χρησιμοποιεί ο πρωταγωνιστής"
+    },
+    {
+      "source": "psychic photograph",
+      "target": "ψυχική φωτογραφία / νοητική φωτογραφία",
+      "note": "Η μέθοδος εξιχνίασης του Klaw"
+    },
+    {
+      "source": "Athenean Harp",
+      "target": "Αθηναϊκή Άρπα",
+      "note": "Το φονικό τεχνούργημα του πρώτου επεισοδίου"
+    },
+    {
+      "source": "Potsherd of Anubis",
+      "target": "Όστρακο του Άνουβι",
+      "note": "Αρχαιολογικό εύρημα"
+    },
+    {
+      "source": "Blue Rajah",
+      "target": "Γαλάζιος Ραγιάς",
+      "note": "Όνομα πολύτιμου λίθου (διαμαντιού)"
+    },
+    {
+      "source": "commissionaire",
+      "target": "θυρωρός / φύλακας",
+      "note": "Υπάλληλος του μουσείου"
+    },
+    {
+      "source": "pantechnicon van",
+      "target": "φορτηγό μετακομίσεων",
+      "note": "Βρετανικός όρος για μεγάλο όχημα μεταφοράς επίπλων"
+    },
+    {
+      "source": "Sax Rohmer",
+      "target": "Σαξ Ρόμερ",
+      "note": "person"
+    },
+    {
+      "source": "Moris Klaw",
+      "target": "Μόρις Κλο",
+      "note": "person"
+    },
+    {
+      "source": "Martin Coram",
+      "target": "Μάρτιν Κόραμ",
+      "note": "person"
+    },
+    {
+      "source": "Searles",
+      "target": "Σερλς",
+      "note": "person"
+    },
+    {
+      "source": "Conway",
+      "target": "Κόνγουεϊ",
+      "note": "person"
+    },
+    {
+      "source": "Beale",
+      "target": "Μπιλ",
+      "note": "person"
+    },
+    {
+      "source": "Hilda Coram",
+      "target": "Χίλντα Κόραμ",
+      "note": "person"
+    },
+    {
+      "source": "Douglas Glade",
+      "target": "Ντάγκλας Γκλέιντ",
+      "note": "person"
+    },
+    {
+      "source": "Isis Klaw",
+      "target": "Ίσις Κλο",
+      "note": "person"
+    },
+    {
+      "source": "John Macalister",
+      "target": "Τζον Μακάλιστερ",
+      "note": "person"
+    },
+    {
+      "source": "Grimsby",
+      "target": "Γκρίμσμπι",
+      "note": "person"
+    },
+    {
+      "source": "J.E. Wilson Clifford",
+      "target": "Τζ. Ε. Γουίλσον Κλίφορντ",
+      "note": "person"
+    },
+    {
+      "source": "Mark Lesty",
+      "target": "Μαρκ Λέστι",
+      "note": "person"
+    },
+    {
+      "source": "Halesowen",
+      "target": "Χέιλσοουεν",
+      "note": "person"
+    },
+    {
+      "source": "Professor Sheraton",
+      "target": "Καθηγητής Σέρατον",
+      "note": "person"
+    },
+    {
+      "source": "Ali",
+      "target": "Αλί",
+      "note": "person"
+    },
+    {
+      "source": "Louis Zeda",
+      "target": "Λούις Ζέντα",
+      "note": "person"
+    },
+    {
+      "source": "Gautami Chinje",
+      "target": "Γκαουτάμι Τσίντζε",
+      "note": "person"
+    },
+    {
+      "source": "Mr. Anderson",
+      "target": "Κύριος Άντερσον",
+      "note": "person"
+    },
+    {
+      "source": "Sir John Carron",
+      "target": "Σερ Τζον Κάρον",
+      "note": "person"
+    },
+    {
+      "source": "Sir Michael Cayley",
+      "target": "Σερ Μάικλ Κέιλι",
+      "note": "person"
+    },
+    {
+      "source": "Gaekwar of Nizam",
+      "target": "Γκαεκουάρ του Νιζάμ",
+      "note": "person"
+    },
+    {
+      "source": "Shan Haufmann",
+      "target": "Σαν Χάουφμαν",
+      "note": "person"
+    },
+    {
+      "source": "Greta",
+      "target": "Γκρέτα",
+      "note": "person"
+    },
+    {
+      "source": "Lal",
+      "target": "Λαλ",
+      "note": "person"
+    },
+    {
+      "source": "Schwart Sam",
+      "target": "Σβαρτ Σαμ",
+      "note": "person"
+    },
+    {
+      "source": "Costa",
+      "target": "Κόστα",
+      "note": "person"
+    },
+    {
+      "source": "Corpus Chris",
+      "target": "Κόρπους Κρις",
+      "note": "person"
+    },
+    {
+      "source": "Otter Brearley",
+      "target": "Ότερ Μπρίρλι",
+      "note": "person"
+    },
+    {
+      "source": "Khamus",
+      "target": "Χάμους",
+      "note": "person"
+    },
+    {
+      "source": "Ailsa Brearley",
+      "target": "Έιλσα Μπρίρλι",
+      "note": "person"
+    },
+    {
+      "source": "Fairbank",
+      "target": "Φέρμπανκ",
+      "note": "person"
+    },
+    {
+      "source": "Paduano Zelloni",
+      "target": "Παντουάνο Ζελόνι",
+      "note": "person"
+    },
+    {
+      "source": "Lucrece Borgia",
+      "target": "Λουκρητία Βοργία",
+      "note": "person"
+    },
+    {
+      "source": "Cæsar Borgia",
+      "target": "Καίσαρας Βοργίας",
+      "note": "person"
+    },
+    {
+      "source": "Sir Menzies",
+      "target": "Σερ Μένζις",
+      "note": "person"
+    },
+    {
+      "source": "Mark Twain",
+      "target": "Μαρκ Τουέιν",
+      "note": "person"
+    },
+    {
+      "source": "London",
+      "target": "Λονδίνο",
+      "note": "place"
+    },
+    {
+      "source": "Menzies Museum",
+      "target": "Μουσείο Μένζις",
+      "note": "place"
+    },
+    {
+      "source": "South Grafton Square",
+      "target": "Πλατεία Σάουθ Γκράφτον",
+      "note": "place"
+    },
+    {
+      "source": "Greek Room",
+      "target": "Ελληνικό Δωμάτιο",
+      "note": "place"
+    },
+    {
+      "source": "Bronze Room",
+      "target": "Χάλκινο Δωμάτιο",
+      "note": "place"
+    },
+    {
+      "source": "Egyptian Room",
+      "target": "Αιγυπτιακό Δωμάτιο",
+      "note": "place"
+    },
+    {
+      "source": "Wapping Old Stairs",
+      "target": "Γουάπινγκ Ολντ Στέαρς",
+      "note": "place"
+    },
+    {
+      "source": "Central Criminal Court",
+      "target": "Κεντρικό Ποινικό Δικαστήριο",
+      "note": "place"
+    },
+    {
+      "source": "Gold Coast",
+      "target": "Χρυσή Ακτή",
+      "note": "place"
+    },
+    {
+      "source": "Arctic Lapland",
+      "target": "Αρκτική Λαπωνία",
+      "note": "place"
+    },
+    {
+      "source": "Temple of Pallas",
+      "target": "Ναός της Παλλάδας",
+      "note": "place"
+    },
+    {
+      "source": "Florence",
+      "target": "Φλωρεντία",
+      "note": "place"
+    },
+    {
+      "source": "Rome",
+      "target": "Ρώμη",
+      "note": "place"
+    },
+    {
+      "source": "Vatican Library",
+      "target": "Βιβλιοθήκη του Βατικανού",
+      "note": "place"
+    },
+    {
+      "source": "Copthall House",
+      "target": "Κόπτχολ Χάους",
+      "note": "place"
+    },
+    {
+      "source": "Copthall Avenue",
+      "target": "Λεωφόρος Κόπτχολ",
+      "note": "place"
+    },
+    {
+      "source": "E.C.",
+      "target": "E.C.",
+      "note": "place"
+    },
+    {
+      "source": "Egypt",
+      "target": "Αίγυπτος",
+      "note": "place"
+    },
+    {
+      "source": "Bubastis",
+      "target": "Βούβαστις",
+      "note": "place"
+    },
+    {
+      "source": "Cairo",
+      "target": "Κάιρο",
+      "note": "place"
+    },
+    {
+      "source": "India",
+      "target": "Ινδία",
+      "note": "place"
+    },
+    {
+      "source": "Hotel Astoria",
+      "target": "Ξενοδοχείο Αστόρια",
+      "note": "place"
+    },
+    {
+      "source": "Strand",
+      "target": "Στραντ",
+      "note": "place"
+    },
+    {
+      "source": "Paris",
+      "target": "Παρίσι",
+      "note": "place"
+    },
+    {
+      "source": "Mexican border",
+      "target": "Μεξικανικά σύνορα",
+      "note": "place"
+    },
+    {
+      "source": "Daily Cable",
+      "target": "Daily Cable",
+      "note": "org"
+    },
+    {
+      "source": "New Scotland Yard",
+      "target": "Νέα Σκότλαντ Γιαρντ",
+      "note": "org"
+    },
+    {
+      "source": "B.M.",
+      "target": "Βρετανικό Μουσείο",
+      "note": "org"
+    },
+    {
+      "source": "Cook’s",
+      "target": "Cook's",
+      "note": "org"
+    },
+    {
+      "source": "Central London Electric Lighting Company",
+      "target": "Εταιρεία Ηλεκτροφωτισμού Κεντρικού Λονδίνου",
+      "note": "org"
+    },
+    {
+      "source": "Pickford",
+      "target": "Pickford",
+      "note": "org"
+    },
+    {
+      "source": "Jamrach’s",
+      "target": "Jamrach's",
+      "note": "org"
+    },
+    {
+      "source": "The Dream Detective",
+      "target": "Ο Ντετέκτιβ των Ονείρων",
+      "note": "title"
+    },
+    {
+      "source": "Case of the Tragedies in the Greek Room",
+      "target": "Η Υπόθεση των Τραγωδιών στο Ελληνικό Δωμάτιο",
+      "note": "title"
+    },
+    {
+      "source": "Case of the Potsherd of Anubis",
+      "target": "Η Υπόθεση του Οστράκου του Άνουβι",
+      "note": "title"
+    },
+    {
+      "source": "Case of the Crusader’s Ax",
+      "target": "Η Υπόθεση του Τσεκουριού του Σταυροφόρου",
+      "note": "title"
+    },
+    {
+      "source": "Case of the Ivory Statue",
+      "target": "Η Υπόθεση του Ελεφάντινου Αγάλματος",
+      "note": "title"
+    },
+    {
+      "source": "Case of the Blue Rajah",
+      "target": "Η Υπόθεση του Γαλάζιου Ραγιά",
+      "note": "title"
+    },
+    {
+      "source": "Case of the Whispering Poplars",
+      "target": "Η Υπόθεση των Λευκών που Ψιθυρίζουν",
+      "note": "title"
+    },
+    {
+      "source": "Case of the Chord in G",
+      "target": "Η Υπόθεση της Συγχορδίας σε Σολ",
+      "note": "title"
+    },
+    {
+      "source": "Case of the Headless Mummies",
+      "target": "Η Υπόθεση των Ακέφαλων Μουμιών",
+      "note": "title"
+    },
+    {
+      "source": "Case of the Haunting of Grange",
+      "target": "Η Υπόθεση του Στοιχειώματος του Γκρέιντζ",
+      "note": "title"
+    },
+    {
+      "source": "Case of the Veil of Isis",
+      "target": "Η Υπόθεση του Πέπλου της Ίσιδας",
+      "note": "title"
+    },
+    {
+      "source": "The Jumping Frog",
+      "target": "Ο Βάτραχος που Πηδούσε",
+      "note": "title"
+    },
+    {
+      "source": "The Hymn of Dedication",
+      "target": "Ο Ύμνος της Αφιέρωσης",
+      "note": "title"
+    },
+    {
+      "source": "curator",
+      "target": "έφορος",
+      "note": "term"
+    },
+    {
+      "source": "inspector",
+      "target": "επιθεωρητής",
+      "note": "term"
+    },
+    {
+      "source": "plain-clothes man",
+      "target": "αστυνομικός με πολιτικά",
+      "note": "term"
+    },
+    {
+      "source": "detective",
+      "target": "ντετέκτιβ",
+      "note": "term"
+    },
+    {
+      "source": "tell-tale watch",
+      "target": "ρολόι ελέγχου",
+      "note": "term"
+    },
+    {
+      "source": "sensitive plate",
+      "target": "ευαίσθητη πλάκα",
+      "note": "term"
+    },
+    {
+      "source": "etheric photograph",
+      "target": "αιθερική φωτογραφία",
+      "note": "term"
+    },
+    {
+      "source": "mental negative",
+      "target": "νοητικό αρνητικό",
+      "note": "term"
+    },
+    {
+      "source": "plaster of Paris",
+      "target": "γύψος",
+      "note": "term"
+    },
+    {
+      "source": "pantechnicon",
+      "target": "φορτηγό μετακομίσεων",
+      "note": "term"
+    },
+    {
+      "source": "potsherd",
+      "target": "όστρακο",
+      "note": "term"
+    },
+    {
+      "source": "hieroglyphics",
+      "target": "ιερογλυφικά",
+      "note": "term"
+    },
+    {
+      "source": "mummy",
+      "target": "μούμια",
+      "note": "term"
+    },
+    {
+      "source": "scarabs",
+      "target": "σκαραβαίοι",
+      "note": "term"
+    },
+    {
+      "source": "papyrus",
+      "target": "πάπυρος",
+      "note": "term"
+    },
+    {
+      "source": "sarcophagi",
+      "target": "σαρκοφάγοι",
+      "note": "term"
+    },
+    {
+      "source": "somnambulistic",
+      "target": "υπνοβατικός",
+      "note": "term"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

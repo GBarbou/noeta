@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Αναφορά Αλλαγών - 17018272.docx</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .header h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .header .meta { color: #64748b; font-size: 0.875rem; }
+        .status {
+            background: #ef4444;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-weight: 600;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .stat {
+            background: #f1f5f9;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-value { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
+        .stat-label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; }
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .change {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .change.unmatched {
+            border-color: #fecaca;
+            background: #fef2f2;
+        }
+        .change-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        .change-type {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        .change-type.replace { background: #fef3c7; color: #92400e; }
+        .change-type.insert { background: #d1fae5; color: #065f46; }
+        .change-type.delete { background: #fee2e2; color: #991b1b; }
+        .change-position { font-size: 0.75rem; color: #64748b; }
+        .change-content { font-family: 'Courier New', monospace; font-size: 0.875rem; }
+        .context { color: #64748b; }
+        .deleted { background: #fee2e2; color: #991b1b; text-decoration: line-through; padding: 0.125rem 0.25rem; border-radius: 2px; }
+        .inserted { background: #d1fae5; color: #065f46; padding: 0.125rem 0.25rem; border-radius: 2px; }
+        .warning-box {
+            background: #fef2f2;
+            border: 2px solid #ef4444;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box h3 { color: #dc2626; margin-bottom: 0.5rem; }
+        .footer {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.75rem;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📄 Αναφορά Αλλαγών</h1>
+            <div class="meta">
+                <div><strong>Αρχείο:</strong> 17018272.docx</div>
+                <div><strong>Session:</strong> 17018272</div>
+                <div><strong>Ημερομηνία:</strong> 08/03/2026 21:22</div>
+            </div>
+            <div class="status">⚠️ ΠΡΟΣΟΧΗ - Βρέθηκαν μη εγκεκριμένες αλλαγές</div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Συνολικές Αλλαγές</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Εγκεκριμένες</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" style="color: #ef4444">3</div>
+                    <div class="stat-label">Μη Εγκεκριμένες</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">217</div>
+                    <div class="stat-label">Χαρακτήρες (Αρχικό)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <h3>⚠️ Μη Εγκεκριμένες Αλλαγές</h3>
+            <p>Οι παρακάτω αλλαγές ΔΕΝ αντιστοιχούν σε καμία εγκεκριμένη διόρθωση. Το download έχει μπλοκαριστεί για την προστασία σας.</p>
+        </div>
+        <div class="section">
+            <h2>🚫 Μη Εγκεκριμένες Αλλαγές (3)</h2>
+
+            <div class="change unmatched">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">Θέση: 91</span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ρνανε στο αρχειο που αποθηκευω</span><span class="deleted"> εν</span><span class="inserted">, ενώ φαινονται στο σαιτ οπ</span><span class="context">ω φαινονται στο σαιτ οπως επισ</span>
+                </div>
+            </div>
+
+            <div class="change unmatched">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">Θέση: 95</span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ε στο αρχειο που αποθηκευω ενω</span><span class="deleted"> </span><span class="inserted">ς επισης δεν ε</span><span class="context">φαινονται στο σαιτ οπως επισης</span>
+                </div>
+            </div>
+
+            <div class="change unmatched">
+                <div class="change-header">
+                    <span class="change-type delete">delete</span>
+                    <span class="change-position">Θέση: 98</span>
+                </div>
+                <div class="change-content">
+                    <span class="context">το αρχειο που αποθηκευω ενω φα</span><span class="deleted">ινονται στο σαιτ οπως επισης δεν εφα</span><span class="context">ρμοζονται ουτε στο εδιτορ στο </span>
+                </div>
+            </div>
+</div>
+        <div class="section">
+            <h2>✓ Εγκεκριμένες Αλλαγές (3)</h2>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 1
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ές που κάνω χειροκίνητα στο κε</span><span class="deleted">ι</span><span class="inserted">ί</span><span class="context">μενο στο εδιτορ δεν περνανε στ</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Λείπει ο τόνος.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 1
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">περνανε στο αρχειο που αποθηκε</span><span class="deleted">υ</span><span class="inserted">ύ</span><span class="context">ω ενω φαινονται στο σαιτ οπως </span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Χρειάζεται κόμμα πριν την αντιθετική σύνδεση.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 1
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">στο εδιτορ στο γουεμπ οι διορθ</span><span class="deleted">ω</span><span class="inserted">ώ</span><span class="context">σεις που ενοτπιζονται στη δεξι</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Χρειάζεται κόμμα πριν την αντιθετική σύνδεση.
+                </div>
+            </div>
+</div>
+        <div class="footer">
+            ProofreadAI Diff Report • 2026 • Session: 17018272
+        </div>
+    </div>
+</body>
+</html>

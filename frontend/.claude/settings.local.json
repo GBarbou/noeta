@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ping:*)",
+      "Bash(curl:*)",
+      "Bash(timeout:*)",
+      "Bash(powershell:*)"
+    ]
+  }
+}

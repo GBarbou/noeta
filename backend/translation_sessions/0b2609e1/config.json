@@ -1,0 +1,117 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: Λογοτεχνικό (Μυθιστόρημα επιστημονικής/φιλοσοφικής φαντασίας)\nΘέμα: Εισαγωγή στον κεντρικό χαρακτήρα, τον Τζόζεφ Ντέιβις, και στην πνευματική του εξέλιξη από την παιδική ηλικία. Περιγράφεται η σταδιακή αμφισβήτηση της θρησκευτικής του ανατροφής και η γέννηση μιας παράξενης ιδέας στο μυαλό του.\nΕποχή/Πλαίσιο: Αρχές έως μέσα του 20ού αιώνα (Αγγλία, μεσοπόλεμος/εδουαρδιανή εποχή)\nΎφος: Λογοτεχνικό, ελαφρώς επίσημο και στοχαστικό\nΣημειώσεις: Ο μεταφραστής πρέπει να αποδώσει με ακρίβεια τη λεπτή βρετανική ειρωνεία, ειδικά στις παραγράφους που αφορούν τη θρησκευτική εκπαίδευση του πρωταγωνιστή. Η μετάβαση από την αφελή παιδική οπτική στην εφηβική αμφισβήτηση απαιτεί προσεκτικό χειρισμό του τόνου. Οι όροι που σχετίζονται με το αγγλικό εκπαιδευτικό σύστημα (π.χ. 'public schools') ίσως χρειαστούν μια μικρή προσαρμογή ή ελεύθερη απόδοση (π.χ. 'ιδιωτικά κολέγια'), καθώς η λέξη 'δημόσια' στα ελληνικά έχει εντελώς διαφορετική σημασία σε αυτό το πλαίσιο.",
+  "glossary": [
+    {
+      "source": "Planetarium Club",
+      "target": "Λέσχη Πλανητάριουμ",
+      "note": "org"
+    },
+    {
+      "source": "Wood's Natural History",
+      "target": "Φυσική Ιστορία του Γουντ",
+      "note": "title"
+    },
+    {
+      "source": "St. Hobart's school",
+      "target": "Σχολείο Σεντ Χόμπαρτς",
+      "note": "org"
+    },
+    {
+      "source": "Camborne Hall",
+      "target": "Κάμπορν Χολ",
+      "note": "org"
+    },
+    {
+      "source": "Joseph Davis",
+      "target": "Τζόζεφ Ντέιβις",
+      "note": "person"
+    },
+    {
+      "source": "Abraham",
+      "target": "Αβραάμ",
+      "note": "person"
+    },
+    {
+      "source": "Isaac",
+      "target": "Ισαάκ",
+      "note": "person"
+    },
+    {
+      "source": "Jacob",
+      "target": "Ιακώβ",
+      "note": "person"
+    },
+    {
+      "source": "Adam",
+      "target": "Αδάμ",
+      "note": "person"
+    },
+    {
+      "source": "Eve",
+      "target": "Εύα",
+      "note": "person"
+    },
+    {
+      "source": "Cain",
+      "target": "Κάιν",
+      "note": "person"
+    },
+    {
+      "source": "Abel",
+      "target": "Άβελ",
+      "note": "person"
+    },
+    {
+      "source": "Noah",
+      "target": "Νώε",
+      "note": "person"
+    },
+    {
+      "source": "Samuel",
+      "target": "Σαμουήλ",
+      "note": "person"
+    },
+    {
+      "source": "Solomon",
+      "target": "Σολομών",
+      "note": "person"
+    },
+    {
+      "source": "David",
+      "target": "Δαβίδ",
+      "note": "person"
+    },
+    {
+      "source": "Wood",
+      "target": "Γουντ",
+      "note": "person"
+    },
+    {
+      "source": "Eastern Levant",
+      "target": "Ανατολικό Λεβάντε",
+      "note": "place"
+    },
+    {
+      "source": "Garden of Eden",
+      "target": "Κήπος της Εδέμ",
+      "note": "place"
+    },
+    {
+      "source": "Oxford",
+      "target": "Οξφόρδη",
+      "note": "place"
+    },
+    {
+      "source": "Green Pastures",
+      "target": "Πράσινα Λιβάδια",
+      "note": "title"
+    },
+    {
+      "source": "Bible",
+      "target": "Βίβλος",
+      "note": "title"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

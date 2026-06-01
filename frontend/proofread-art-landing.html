@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROOFREAD AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #D64933;
+      --black: #1A1A1A;
+      --cream: #F5F0E1;
+      --gray: #4A4A48;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      background-color: var(--cream);
+      font-family: 'IBM Plex Mono', monospace;
+      overflow-x: hidden;
+      cursor: crosshair;
+    }
+    
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10000;
+      opacity: 0.4;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+    
+    .font-display {
+      font-family: 'Bebas Neue', sans-serif;
+    }
+    
+    /* Navigation - minimal, floating */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      mix-blend-mode: difference;
+    }
+    
+    nav .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      color: var(--cream);
+      letter-spacing: 0.1em;
+      text-decoration: none;
+    }
+    
+    nav .enter {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream);
+      text-decoration: none;
+      border: 1px solid var(--cream);
+      padding: 10px 20px;
+      transition: all 0.3s;
+    }
+    
+    nav .enter:hover {
+      background: var(--cream);
+      color: var(--black);
+    }
+
+    /* Hero - Full screen poster */
+    .hero {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .hero-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: contrast(1.1) saturate(0.9);
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(26,26,26,0.3) 0%,
+        rgba(26,26,26,0) 30%,
+        rgba(26,26,26,0) 70%,
+        rgba(26,26,26,0.5) 100%
+      );
+    }
+    
+    .hero-text {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .hero-text h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(80px, 18vw, 280px);
+      line-height: 0.85;
+      color: var(--cream);
+      text-shadow: 
+        4px 4px 0 var(--black),
+        8px 8px 0 var(--red);
+      letter-spacing: -0.02em;
+    }
+    
+    .hero-text h1 .line-2 {
+      display: block;
+      color: var(--red);
+      text-shadow: 
+        4px 4px 0 var(--black),
+        -2px -2px 0 var(--cream);
+    }
+    
+    .scroll-indicator {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--cream);
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* Manifesto Section */
+    .manifesto {
+      min-height: 100vh;
+      background: var(--black);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+    }
+    
+    .manifesto-left {
+      padding: 15vh 8vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .manifesto-left .number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 200px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.3;
+      position: absolute;
+      top: 10vh;
+      left: 5vw;
+    }
+    
+    .manifesto-left h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(48px, 8vw, 120px);
+      color: var(--cream);
+      line-height: 0.95;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    
+    .manifesto-left p {
+      font-size: 14px;
+      line-height: 2;
+      color: var(--cream);
+      opacity: 0.7;
+      max-width: 400px;
+    }
+    
+    .manifesto-right {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .manifesto-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(20%) contrast(1.1);
+    }
+    
+    .manifesto-right::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--red);
+      mix-blend-mode: multiply;
+      opacity: 0.4;
+    }
+
+    /* Typography break */
+    .type-break {
+      background: var(--red);
+      padding: 30px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .type-break .scroll-text {
+      display: flex;
+      animation: scroll 20s linear infinite;
+      white-space: nowrap;
+    }
+    
+    .type-break span {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 60px;
+      color: var(--cream);
+      margin-right: 60px;
+      opacity: 0.9;
+    }
+    
+    .type-break span.outline {
+      -webkit-text-stroke: 1px var(--cream);
+      color: transparent;
+    }
+    
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Gallery Section */
+    .gallery {
+      min-height: 100vh;
+      background: var(--cream);
+      position: relative;
+      padding: 15vh 0;
+    }
+    
+    .gallery-title {
+      position: absolute;
+      top: 10vh;
+      left: 5vw;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(60px, 12vw, 180px);
+      color: var(--black);
+      line-height: 0.9;
+      z-index: 2;
+    }
+    
+    .gallery-title span {
+      display: block;
+      margin-left: 15vw;
+      color: var(--red);
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(8, 10vh);
+      gap: 20px;
+      padding: 0 5vw;
+      margin-top: 25vh;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border: 3px solid var(--black);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .gallery-item:hover {
+      transform: scale(1.02) rotate(-0.5deg);
+      z-index: 10;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .gallery-item.item-1 {
+      grid-column: 1 / 6;
+      grid-row: 1 / 5;
+    }
+    
+    .gallery-item.item-2 {
+      grid-column: 7 / 13;
+      grid-row: 2 / 6;
+    }
+    
+    .gallery-item.item-3 {
+      grid-column: 2 / 7;
+      grid-row: 5 / 9;
+    }
+    
+    .gallery-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: var(--black);
+      color: var(--cream);
+      padding: 15px 25px;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    
+    /* Feature callouts - scattered */
+    .feature-float {
+      position: absolute;
+      background: var(--black);
+      color: var(--cream);
+      padding: 30px;
+      max-width: 280px;
+      border: 2px solid var(--red);
+    }
+    
+    .feature-float.f1 {
+      top: 35vh;
+      right: 8vw;
+      transform: rotate(3deg);
+    }
+    
+    .feature-float.f2 {
+      bottom: 15vh;
+      right: 15vw;
+      transform: rotate(-2deg);
+    }
+    
+    .feature-float h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: var(--red);
+    }
+    
+    .feature-float p {
+      font-size: 11px;
+      line-height: 1.8;
+      opacity: 0.8;
+    }
+
+    /* Process Section - Editorial */
+    .process {
+      min-height: 100vh;
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .process-bg-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(150px, 30vw, 500px);
+      color: var(--red);
+      opacity: 0.08;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    
+    .process-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      min-height: 100vh;
+    }
+    
+    .process-step {
+      flex: 1;
+      border-right: 1px solid rgba(245,240,225,0.1);
+      padding: 15vh 4vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background 0.4s;
+    }
+    
+    .process-step:hover {
+      background: rgba(214,73,51,0.1);
+    }
+    
+    .process-step:last-child {
+      border-right: none;
+    }
+    
+    .step-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 120px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.5;
+    }
+    
+    .step-content h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 42px;
+      color: var(--cream);
+      margin-bottom: 20px;
+      letter-spacing: 0.05em;
+    }
+    
+    .step-content p {
+      font-size: 12px;
+      line-height: 2;
+      color: var(--cream);
+      opacity: 0.6;
+      max-width: 200px;
+    }
+    
+    .step-icon {
+      width: 60px;
+      height: 60px;
+      border: 2px solid var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--cream);
+      margin-top: 40px;
+    }
+
+    /* CTA Section - Poster */
+    .cta {
+      min-height: 100vh;
+      background: var(--red);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .cta-texture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='4' fill='%231A1A1A' fill-opacity='0.15'/%3E%3Ccircle cx='36' cy='36' r='4' fill='%231A1A1A' fill-opacity='0.15'/%3E%3Ccircle cx='6' cy='36' r='2' fill='%231A1A1A' fill-opacity='0.1'/%3E%3Ccircle cx='36' cy='6' r='2' fill='%231A1A1A' fill-opacity='0.1'/%3E%3C/svg%3E");
+    }
+    
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+      padding: 40px;
+    }
+    
+    .cta-content h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(60px, 12vw, 160px);
+      color: var(--cream);
+      line-height: 0.9;
+      text-shadow: 
+        4px 4px 0 var(--black),
+        8px 8px 0 rgba(0,0,0,0.2);
+      margin-bottom: 60px;
+    }
+    
+    .cta-content h2 span {
+      display: block;
+      color: var(--black);
+      text-shadow: 
+        2px 2px 0 var(--cream),
+        4px 4px 0 rgba(0,0,0,0.2);
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--black);
+      color: var(--cream);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      letter-spacing: 0.1em;
+      padding: 25px 80px;
+      border: 4px solid var(--cream);
+      text-decoration: none;
+      position: relative;
+      transition: all 0.3s;
+      box-shadow: 8px 8px 0 var(--cream);
+    }
+    
+    .cta-button:hover {
+      transform: translate(4px, 4px);
+      box-shadow: 4px 4px 0 var(--cream);
+    }
+    
+    .cta-subtext {
+      margin-top: 40px;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: 0.7;
+    }
+    
+    /* Corner decorations */
+    .corner-stamp {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border: 3px solid var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 14px;
+      color: var(--cream);
+      letter-spacing: 0.1em;
+      line-height: 1.3;
+    }
+    
+    .corner-stamp.top-left {
+      top: 40px;
+      left: 40px;
+      transform: rotate(-5deg);
+    }
+    
+    .corner-stamp.bottom-right {
+      bottom: 40px;
+      right: 40px;
+      transform: rotate(5deg);
+    }
+
+    /* Footer - Minimal */
+    footer {
+      background: var(--black);
+      padding: 60px 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 4px solid var(--red);
+    }
+    
+    footer .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      color: var(--cream);
+      letter-spacing: 0.1em;
+    }
+    
+    footer nav {
+      position: static;
+      mix-blend-mode: normal;
+      display: flex;
+      gap: 40px;
+    }
+    
+    footer nav a {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream);
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.3s;
+    }
+    
+    footer nav a:hover {
+      opacity: 1;
+    }
+    
+    footer .credit {
+      font-size: 10px;
+      color: var(--cream);
+      opacity: 0.4;
+      letter-spacing: 0.1em;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .manifesto {
+        grid-template-columns: 1fr;
+      }
+      
+      .manifesto-right {
+        height: 50vh;
+      }
+      
+      .gallery-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      
+      .gallery-item {
+        height: 50vh;
+      }
+      
+      .process-content {
+        flex-direction: column;
+      }
+      
+      .process-step {
+        border-right: none;
+        border-bottom: 1px solid rgba(245,240,225,0.1);
+        min-height: 50vh;
+      }
+      
+      .feature-float {
+        position: relative;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        margin: 20px 5vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#" class="logo">PROOFREAD AI</a>
+    <a href="#" class="enter">Είσοδος</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="gbarbou_retro_propaganda_poster_illustration_mid-20th-century_fa6394c1-300e-4adf-b458-b4c2bf2320bf_2.png" alt="Hero" class="hero-image">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>
+        ΛΑΘΗ
+        <span class="line-2">ΤΕΛΟΣ.</span>
+      </h1>
+    </div>
+    <div class="scroll-indicator">Scroll ↓</div>
+  </section>
+
+  <!-- Manifesto -->
+  <section class="manifesto">
+    <div class="manifesto-left">
+      <span class="number">01</span>
+      <h2>ΤΑ ΛΑΘΗ<br>ΕΙΝΑΙ Ο<br>ΕΧΘΡΟΣ.</h2>
+      <p>
+        Κάθε τυπογραφικό σφάλμα είναι μια ρωγμή στην αξιοπιστία σου. 
+        Κάθε συντακτική αστοχία είναι θόρυβος στο μήνυμά σου.
+        <br><br>
+        Εμείς τα βλέπουμε όλα. Εσύ διορθώνεις.
+      </p>
+    </div>
+    <div class="manifesto-right">
+      <img src="gbarbou_retro_propaganda_poster_for_a_proofreading_service_st_7821f467-4f5d-4cec-9d0b-caae683b1141_2__1_.png" alt="Magnifying">
+    </div>
+  </section>
+
+  <!-- Typography Break -->
+  <div class="type-break">
+    <div class="scroll-text">
+      <span>ΟΡΘΟΓΡΑΦΙΑ</span>
+      <span class="outline">ΣΥΝΤΑΞΗ</span>
+      <span>ΥΦΟΣ</span>
+      <span class="outline">ΣΤΙΞΗ</span>
+      <span>ΤΟΝΙΣΜΟΣ</span>
+      <span class="outline">ΑΚΡΙΒΕΙΑ</span>
+      <span>ΟΡΘΟΓΡΑΦΙΑ</span>
+      <span class="outline">ΣΥΝΤΑΞΗ</span>
+      <span>ΥΦΟΣ</span>
+      <span class="outline">ΣΤΙΞΗ</span>
+      <span>ΤΟΝΙΣΜΟΣ</span>
+      <span class="outline">ΑΚΡΙΒΕΙΑ</span>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <h2 class="gallery-title">
+      ΠΩΣ
+      <span>ΔΟΥΛΕΥΕΙ</span>
+    </h2>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item item-1">
+        <img src="gbarbou_retro_propaganda_poster_illustration_mid-20th-century_fa6394c1-300e-4adf-b458-b4c2bf2320bf_2.png" alt="Process 1">
+        <div class="gallery-label">01 — Ανέβασε το έγγραφο</div>
+      </div>
+      
+      <div class="gallery-item item-2">
+        <img src="background.png" alt="Process 2">
+        <div class="gallery-label">02 — AI Ανάλυση</div>
+      </div>
+      
+      <div class="gallery-item item-3">
+        <img src="gbarbou_retro_propaganda_poster_for_a_proofreading_service_st_7821f467-4f5d-4cec-9d0b-caae683b1141_2__1_.png" alt="Process 3">
+        <div class="gallery-label">03 — Έλεγξε & Αποδέξου</div>
+      </div>
+    </div>
+    
+    <div class="feature-float f1">
+      <h3>99.2%</h3>
+      <p>Ακρίβεια εντοπισμού λαθών σε ελληνικά κείμενα κάθε είδους.</p>
+    </div>
+    
+    <div class="feature-float f2">
+      <h3>&lt;30"</h3>
+      <p>Χρόνος ανάλυσης για έγγραφα έως 10.000 λέξεις.</p>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process">
+    <div class="process-bg-text">ΔΙΟΡΘΩΣΗ</div>
+    
+    <div class="process-content">
+      <div class="process-step">
+        <span class="step-number">01</span>
+        <div class="step-content">
+          <h3>ΑΝΕΒΑΣΕ</h3>
+          <p>Σύρε το .docx αρχείο σου ή επικόλλησε κείμενο απευθείας.</p>
+          <div class="step-icon">↑</div>
+        </div>
+      </div>
+      
+      <div class="process-step">
+        <span class="step-number">02</span>
+        <div class="step-content">
+          <h3>ΑΝΑΛΥΣΗ</h3>
+          <p>Η AI εξετάζει κάθε λέξη, κάθε πρόταση, κάθε σημείο στίξης.</p>
+          <div class="step-icon">◎</div>
+        </div>
+      </div>
+      
+      <div class="process-step">
+        <span class="step-number">03</span>
+        <div class="step-content">
+          <h3>ΕΛΕΓΞΕ</h3>
+          <p>Δες κάθε διόρθωση με πλήρη επεξήγηση. Αποδέξου ή απέρριψε.</p>
+          <div class="step-icon">✓</div>
+        </div>
+      </div>
+      
+      <div class="process-step">
+        <span class="step-number">04</span>
+        <div class="step-content">
+          <h3>ΚΑΤΕΒΑΣΕ</h3>
+          <p>Λάβε το τελικό διορθωμένο έγγραφο σε μορφή .docx.</p>
+          <div class="step-icon">↓</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta-texture"></div>
+    
+    <div class="corner-stamp top-left">
+      100%<br>ΕΛΛΗΝΙΚΑ
+    </div>
+    
+    <div class="corner-stamp bottom-right">
+      AI<br>POWERED
+    </div>
+    
+    <div class="cta-content">
+      <h2>
+        Η ΑΚΡΙΒΕΙΑ
+        <span>ΕΙΝΑΙ Η ΝΙΚΗ.</span>
+      </h2>
+      <a href="#" class="cta-button">ΞΕΚΙΝΑ ΔΩΡΕΑΝ →</a>
+      <p class="cta-subtext">Χωρίς πιστωτική κάρτα • 5 έγγραφα δωρεάν</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="logo">PROOFREAD AI</div>
+    <nav>
+      <a href="#">Χαρακτηριστικά</a>
+      <a href="#">Τιμολόγηση</a>
+      <a href="#">Επικοινωνία</a>
+      <a href="#">Όροι</a>
+    </nav>
+    <div class="credit">© 2025 — Κατασκευή στην Ελλάδα</div>
+  </footer>
+
+</body>
+</html>

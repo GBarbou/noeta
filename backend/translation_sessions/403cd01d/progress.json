@@ -1,0 +1,466 @@
+{
+  "status": "scanned",
+  "progress": 0,
+  "total_chunks": 0,
+  "source_language": "English",
+  "document_brief": "Τύπος: λογοτεχνικό (διήγημα φανταστικής/τρόμου λογοτεχνίας)\nΘέμα: Το κείμενο είναι η εισαγωγή του διηγήματος 'The Repairer of Reputations' από τη συλλογή 'The King in Yellow' (1895) του Robert W. Chambers. Περιγράφει μια εναλλακτική/φανταστική Αμερική του 1920 και εισάγει τον αφηγητή, ο οποίος έχει διαβάσει το μυθικό, καταστροφικό βιβλίο 'The King in Yellow'.\nΕποχή/Πλαίσιο: Γραμμένο το 1895, με αφηγηματικό πλαίσιο σε εναλλακτικό μέλλον (1899–1920). Ανήκει στο είδος του weird fiction / gothic horror της αμερικανικής λογοτεχνίας του 19ου αιώνα.\nΎφος: λογοτεχνικό, ύψηλο ύφος, με στοιχεία αφηγηματικής πρωτοπρόσωπης φωνής· συνδυάζει ρεαλιστική περιγραφή με στοιχεία τρόμου και φανταστικού\nΣημειώσεις: 1. ΓΑΛΛΙΚΗ ΕΠΙΓΡΑΦΗ: Το κείμενο ανοίγει με γαλλικό απόφθεγμα που πρέπει να αποδοθεί στα ελληνικά με διατήρηση της αφοριστικής του χροιάς. 2. ΕΝΑΛΛΑΚΤΙΚΗ ΙΣΤΟΡΙΑ: Το κείμενο περιγράφει φανταστικά ιστορικά γεγονότα (πόλεμος με Γερμανία, κατάληψη Norfolk κ.λπ.) που πρέπει να αποδοθούν ως πραγματικά εντός του κόσμου της αφήγησης. 3. ΚΥΒΕΡΝΗΤΙΚΟΙ ΤΙΤΛΟΙ: Πολλοί τίτλοι αξιωματούχων είναι φανταστικοί (Secretary of Fine Arts κ.λπ.) και χρειάζονται συνεπή απόδοση. 4. ΣΤΡΑΤΙΩΤΙΚΟΙ ΒΑΘΜΟΙ: Να αποδοθούν με τους καθιερωμένους ελληνικούς στρατιωτικούς βαθμούς (Colonel = Συνταγματάρχης, Major-General = Υποστράτηγος, Admiral = Ναύαρχος κ.λπ.). 5. ΤΟΠΩΝΥΜΙΑ ΝΕΑ ΥΟΡΚΗΣ: Οδοί και πλατείες να διατηρηθούν στα αγγλικά ή να μεταγραφούν (Washington Square, Fifth Avenue κ.λπ.). 6. ΜΥΘΟΛΟΓΙΑ CARCOSA: Οι αναφορές στον κόσμο του King in Yellow (Carcosa, Hali, Pallid Mask, black stars) είναι εξαιρετικά σημαντικές για τη συνέχεια της συλλογής και πρέπει να αποδοθούν με συνέπεια. 7. ΎΦΟΣ: Το κείμενο εναλλάσσει ψυχρή, σχεδόν γραφειοκρατική περιγραφή (πολιτικά/κοινωνικά γεγονότα) με έντονα συναισθηματικές και τρομακτικές παραγράφους (The King in Yellow). Αυτή η αντίθεση πρέπει να διατηρηθεί στη μετάφραση. 8. ΡΑΤΣΙΣΤΙΚΕΣ/ΠΡΟΒΛΗΜΑΤΙΚΕΣ ΑΝΑΦΟΡΕΣ: Το κείμενο περιέχει αναφορές εποχής που σήμερα θεωρούνται προσβλητικές (exclusion of foreign-born Jews, negro state of Suanee). Να αποδοθούν πιστά ως ιστορικό ντοκουμέντο χωρίς λογοκρισία. 9. ΧΡΟΝΟΛΟΓΙΚΗ ΣΥΓΧΥΣΗ: Ο αφηγητής αναφέρεται σε γεγονότα του 1899 και 1900 ως παρελθόν, ενώ η κύρια αφήγηση είναι το 1920· να διατηρηθεί η χρονολογική δομή. 10. 'paid my tuition': Ιδιωματική έκφραση που σημαίνει 'πλήρωσα τον λογαριασμό'· ο γιατρός το λέει αστειευόμενος.",
+  "glossary": [
+    {
+      "source": "The King in Yellow",
+      "target": "Ο Βασιλιάς εν Κιτρίνω",
+      "note": "Ο καθιερωμένος τίτλος στη διεθνή βιβλιογραφία· εναλλακτικά 'Ο Κίτρινος Βασιλιάς'"
+    },
+    {
+      "source": "Lethal Chamber",
+      "target": "Θάλαμος Ευθανασίας / Θανατηφόρος Θάλαμος",
+      "note": "Κεντρικό στοιχείο της πλοκής· ο όρος 'Θάλαμος Ευθανασίας' αποδίδει καλύτερα το νόημα, αλλά το 'Θανατηφόρος Θάλαμος' είναι πιο κοντά στο πρωτότυπο"
+    },
+    {
+      "source": "Pallid Mask",
+      "target": "Χλωμό Προσωπείο / Ωχρή Μάσκα",
+      "note": "Μυθικό αντικείμενο της σειράς Carcosa· να διατηρηθεί η ατμόσφαιρα"
+    },
+    {
+      "source": "Carcosa",
+      "target": "Κάρκοσα",
+      "note": "Μεταγραφή του φανταστικού τοπωνυμίου"
+    },
+    {
+      "source": "Hali",
+      "target": "Χάλι",
+      "note": "Μεταγραφή της μυθικής λίμνης"
+    },
+    {
+      "source": "black stars",
+      "target": "μαύρα άστρα",
+      "note": "Χαρακτηριστικό στοιχείο της μυθολογίας Carcosa"
+    },
+    {
+      "source": "twin suns",
+      "target": "δίδυμοι ήλιοι",
+      "note": ""
+    },
+    {
+      "source": "weird fiction",
+      "target": "παράξενη/υπερφυσική λογοτεχνία",
+      "note": "Είδος λογοτεχνίας"
+    },
+    {
+      "source": "armourer",
+      "target": "οπλουργός / θωρακοποιός",
+      "note": "Κατασκευαστής/επισκευαστής πανοπλιών και όπλων"
+    },
+    {
+      "source": "Tariff and Labour questions",
+      "target": "ζητήματα δασμών και εργασίας",
+      "note": ""
+    },
+    {
+      "source": "General Staff",
+      "target": "Γενικό Επιτελείο",
+      "note": ""
+    },
+    {
+      "source": "territorial reserve",
+      "target": "εδαφική εφεδρεία",
+      "note": ""
+    },
+    {
+      "source": "coaling station",
+      "target": "σταθμός ανεφοδιασμού άνθρακα",
+      "note": "Ναυτικός όρος εποχής"
+    },
+    {
+      "source": "Elevated Railroads",
+      "target": "υπερυψωμένοι σιδηρόδρομοι",
+      "note": "Χαρακτηριστικό στοιχείο της Νέας Υόρκης της εποχής"
+    },
+    {
+      "source": "Dodge Statue",
+      "target": "άγαλμα Dodge",
+      "note": "Ιστορική αναφορά"
+    },
+    {
+      "source": "Secretary of Fine Arts",
+      "target": "Υπουργός Καλών Τεχνών",
+      "note": "Φανταστική κυβερνητική θέση"
+    },
+    {
+      "source": "Secretary of Forestry and Game Preservation",
+      "target": "Υπουργός Δασοκομίας και Προστασίας Θηραμάτων",
+      "note": ""
+    },
+    {
+      "source": "National Mounted Police",
+      "target": "Εθνική Έφιππη Αστυνομία",
+      "note": ""
+    },
+    {
+      "source": "hollow square",
+      "target": "κοίλο τετράγωνο",
+      "note": "Στρατιωτικός σχηματισμός"
+    },
+    {
+      "source": "raised tribune",
+      "target": "υπερυψωμένο βήμα / εξέδρα",
+      "note": ""
+    },
+    {
+      "source": "hussars",
+      "target": "ουσάροι / ιππείς",
+      "note": "Είδος ελαφρού ιππικού"
+    },
+    {
+      "source": "lancers",
+      "target": "λογχοφόροι / λανσιέροι",
+      "note": "Είδος ιππικού"
+    },
+    {
+      "source": "Ionic columns",
+      "target": "Ιωνικοί κίονες",
+      "note": "Αρχιτεκτονικός όρος"
+    },
+    {
+      "source": "the Fates",
+      "target": "οι Μοίρες",
+      "note": "Μυθολογική αναφορά"
+    },
+    {
+      "source": "millennium",
+      "target": "χιλιετία / χιλιετής βασιλεία",
+      "note": "Εδώ με θρησκευτική/ουτοπική χροιά"
+    },
+    {
+      "source": "literary anarchists",
+      "target": "λογοτεχνικοί αναρχικοί",
+      "note": ""
+    },
+    {
+      "source": "self-destruction / suicide",
+      "target": "αυτοκτονία / αυτοχειρία",
+      "note": "Να διατηρηθεί η διάκριση όπου υπάρχει"
+    },
+    {
+      "source": "convalescence",
+      "target": "ανάρρωση",
+      "note": ""
+    },
+    {
+      "source": "private asylum",
+      "target": "ιδιωτικό άσυλο / ιδιωτική ψυχιατρική κλινική",
+      "note": ""
+    },
+    {
+      "source": "insanity",
+      "target": "παραφροσύνη / τρέλα / ψυχική νόσος",
+      "note": "Να επιλεγεί ανάλογα με το ύφος"
+    },
+    {
+      "source": "Ne raillons pas les fous; leur folie dure plus longtemps que la nôtre",
+      "target": "Ας μην κοροϊδεύουμε τους τρελούς· η τρέλα τους διαρκεί περισσότερο από τη δική μας",
+      "note": "Γαλλικό απόφθεγμα που χρησιμεύει ως επιγραφή· αποδίδεται στον Villiers de l'Isle-Adam"
+    },
+    {
+      "source": "Voila toute la différence",
+      "target": "Αυτή είναι όλη η διαφορά",
+      "note": "Συνέχεια του γαλλικού αποφθέγματος"
+    },
+    {
+      "source": "President Winthrop",
+      "target": "Πρόεδρος Γουίνθροπ",
+      "note": "person"
+    },
+    {
+      "source": "General Von Gartenlaube",
+      "target": "Στρατηγός Φον Γκάρτενλαουμπε",
+      "note": "person"
+    },
+    {
+      "source": "Dr. Archer",
+      "target": "Δρ. Άρτσερ",
+      "note": "person"
+    },
+    {
+      "source": "Boris Yvain",
+      "target": "Μπόρις Υβαίν",
+      "note": "person"
+    },
+    {
+      "source": "Colonel Livingston",
+      "target": "Συνταγματάρχης Λίβινγκστον",
+      "note": "person"
+    },
+    {
+      "source": "General Blount",
+      "target": "Στρατηγός Μπλαντ",
+      "note": "person"
+    },
+    {
+      "source": "Major-General Hamilton",
+      "target": "Αντιστράτηγος Χάμιλτον",
+      "note": "person"
+    },
+    {
+      "source": "Admiral Buffby",
+      "target": "Ναύαρχος Μπάφμπι",
+      "note": "person"
+    },
+    {
+      "source": "Surgeon-General Lanceford",
+      "target": "Αρχίατρος Λάνσφορντ",
+      "note": "person"
+    },
+    {
+      "source": "Senator Wyse",
+      "target": "Γερουσιαστής Γουάιζ",
+      "note": "person"
+    },
+    {
+      "source": "Senator Franklin",
+      "target": "Γερουσιαστής Φράνκλιν",
+      "note": "person"
+    },
+    {
+      "source": "Hawberk",
+      "target": "Χόουμπερκ",
+      "note": "person"
+    },
+    {
+      "source": "United States",
+      "target": "Ηνωμένες Πολιτείες",
+      "note": "place"
+    },
+    {
+      "source": "Germany",
+      "target": "Γερμανία",
+      "note": "place"
+    },
+    {
+      "source": "Samoan Islands",
+      "target": "Νησιά Σαμόα",
+      "note": "place"
+    },
+    {
+      "source": "Samoa",
+      "target": "Σαμόα",
+      "note": "place"
+    },
+    {
+      "source": "Norfolk",
+      "target": "Νόρφολκ",
+      "note": "place"
+    },
+    {
+      "source": "New Jersey",
+      "target": "Νιου Τζέρσεϊ",
+      "note": "place"
+    },
+    {
+      "source": "Cuba",
+      "target": "Κούβα",
+      "note": "place"
+    },
+    {
+      "source": "Hawaii",
+      "target": "Χαβάη",
+      "note": "place"
+    },
+    {
+      "source": "Chicago",
+      "target": "Σικάγο",
+      "note": "place"
+    },
+    {
+      "source": "New York",
+      "target": "Νέα Υόρκη",
+      "note": "place"
+    },
+    {
+      "source": "France",
+      "target": "Γαλλία",
+      "note": "place"
+    },
+    {
+      "source": "England",
+      "target": "Αγγλία",
+      "note": "place"
+    },
+    {
+      "source": "Italy",
+      "target": "Ιταλία",
+      "note": "place"
+    },
+    {
+      "source": "Spain",
+      "target": "Ισπανία",
+      "note": "place"
+    },
+    {
+      "source": "Belgium",
+      "target": "Βέλγιο",
+      "note": "place"
+    },
+    {
+      "source": "Russia",
+      "target": "Ρωσία",
+      "note": "place"
+    },
+    {
+      "source": "Caucasus",
+      "target": "Καύκασος",
+      "note": "place"
+    },
+    {
+      "source": "Washington Square",
+      "target": "Πλατεία Ουάσινγκτον",
+      "note": "place"
+    },
+    {
+      "source": "Madison Avenue",
+      "target": "Λεωφόρος Μάντισον",
+      "note": "place"
+    },
+    {
+      "source": "Paris",
+      "target": "Παρίσι",
+      "note": "place"
+    },
+    {
+      "source": "London",
+      "target": "Λονδίνο",
+      "note": "place"
+    },
+    {
+      "source": "Wooster Street",
+      "target": "Οδός Γούστερ",
+      "note": "place"
+    },
+    {
+      "source": "South Fifth Avenue",
+      "target": "Νότια Πέμπτη Λεωφόρος",
+      "note": "place"
+    },
+    {
+      "source": "Fifth Avenue",
+      "target": "Πέμπτη Λεωφόρος",
+      "note": "place"
+    },
+    {
+      "source": "Fourth Street",
+      "target": "Τέταρτη Οδός",
+      "note": "place"
+    },
+    {
+      "source": "University Place",
+      "target": "Πλατεία Πανεπιστημίου",
+      "note": "place"
+    },
+    {
+      "source": "Bleecker Street",
+      "target": "Οδός Μπλίκερ",
+      "note": "place"
+    },
+    {
+      "source": "Governor's Island",
+      "target": "Νήσος του Κυβερνήτη",
+      "note": "place"
+    },
+    {
+      "source": "North River",
+      "target": "Βόρειος Ποταμός",
+      "note": "place"
+    },
+    {
+      "source": "Washington Park",
+      "target": "Πάρκο Ουάσινγκτον",
+      "note": "place"
+    },
+    {
+      "source": "Brooklyn",
+      "target": "Μπρούκλιν",
+      "note": "place"
+    },
+    {
+      "source": "Lake of Hali",
+      "target": "Λίμνη του Χάλι",
+      "note": "place"
+    },
+    {
+      "source": "Suanee",
+      "target": "Σουάνι",
+      "note": "place"
+    },
+    {
+      "source": "United States National Academy of Design",
+      "target": "Εθνική Ακαδημία Σχεδίου των Ηνωμένων Πολιτειών",
+      "note": "org"
+    },
+    {
+      "source": "National Free Hospital",
+      "target": "Εθνικό Δωρεάν Νοσοκομείο",
+      "note": "org"
+    },
+    {
+      "source": "National Guard",
+      "target": "Εθνική Φρουρά",
+      "note": "org"
+    },
+    {
+      "source": "Government Lethal Chamber",
+      "target": "Κυβερνητικός Θάλαμος Θανάτου",
+      "note": "term"
+    },
+    {
+      "source": "suicide",
+      "target": "αυτοκτονία",
+      "note": "term"
+    },
+    {
+      "source": "Anarchy",
+      "target": "Αναρχία",
+      "note": "term"
+    },
+    {
+      "source": "Congress of Religions",
+      "target": "Συνέδριο Θρησκειών",
+      "note": "term"
+    },
+    {
+      "source": "Secretary of War",
+      "target": "Υπουργός Πολέμου",
+      "note": "term"
+    },
+    {
+      "source": "Commissioner of Public Works",
+      "target": "Επίτροπος Δημοσίων Έργων",
+      "note": "term"
+    },
+    {
+      "source": "Inspector-General of Police",
+      "target": "Γενικός Επιθεωρητής Αστυνομίας",
+      "note": "term"
+    },
+    {
+      "source": "Fates",
+      "target": "Μοίρες",
+      "note": "term"
+    }
+  ],
+  "translated": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "filename": "test_ Ne raillons pas les fous.docx",
+  "is_docx": true,
+  "error_message": ""
+}

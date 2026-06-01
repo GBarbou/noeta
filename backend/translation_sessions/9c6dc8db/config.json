@@ -1,0 +1,457 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: λογοτεχνικό (ιστορικό μυθιστόρημα)\nΘέμα: Η ιστορία του Όττο, γιου ενός βίαιου βαρόνου του Μεσαίωνα, ο οποίος ανατρέφεται σε ένα ειρηνικό μοναστήρι, ακρωτηριάζεται από τον εχθρό του πατέρα του, αλλά τελικά θριαμβεύει χάρη στην καλοσύνη και τη σοφία του. Το έργο αντιπαραβάλλει τη βαρβαρότητα της εποχής με την πνευματικότητα και την ειρήνη.\nΕποχή/Πλαίσιο: Ευρωπαϊκός Μεσαίωνας (13ος αιώνας, Αγία Ρωμαϊκή Αυτοκρατορία / Γερμανία, κατά τη βασιλεία του Αυτοκράτορα Ροδόλφου των Αψβούργων).\nΎφος: λογοτεχνικό, αφηγηματικό, με ελαφρώς αρχαϊκό και επικό ύφος, κατάλληλο για νεανικό αλλά και ενήλικο κοινό.\nΣημειώσεις: Το αγγλικό κείμενο χρησιμοποιεί αρχαϊκές αντωνυμίες και ρηματικούς τύπους (π.χ. thou, dost, hast, art) για να προσδώσει μεσαιωνικό χρώμα. Στα ελληνικά, αυτό μπορεί να αποδοθεί με μια ελαφρώς πιο λόγια ή προσεγμένη δημοτική, αποφεύγοντας όμως την υπερβολική καθαρεύουσα, ώστε να παραμείνει προσιτό. Απαιτείται προσοχή στη μεταγραφή των γερμανικών ονομάτων και τοπωνυμίων. Η λατινική φράση στο τέλος ('Manus argentea quam manus ferrea melior est') πρέπει να διατηρηθεί ως έχει, με την προσθήκη της μετάφρασης 'Το ασημένιο χέρι είναι καλύτερο από το σιδερένιο χέρι' σε υποσημείωση.",
+  "glossary": [
+    {
+      "source": "Drachenhausen",
+      "target": "Ντράχενχαουζεν",
+      "note": "Σημαίνει 'Το σπίτι του Δράκου'. Προτείνεται μεταγραφή και ίσως επεξηγηματική υποσημείωση."
+    },
+    {
+      "source": "Trutz-Drachen",
+      "target": "Τρουτς-Ντράχεν",
+      "note": "Σημαίνει 'Αυτός που αψηφά τον Δράκο'."
+    },
+    {
+      "source": "The White Cross on the Hill",
+      "target": "Ο Λευκός Σταυρός στον Λόφο",
+      "note": "Αναφορά στο μοναστήρι."
+    },
+    {
+      "source": "One-eyed Hans",
+      "target": "Μονόφθαλμος Χανς",
+      "note": "Προσωνύμιο χαρακτήρα."
+    },
+    {
+      "source": "Robber baron",
+      "target": "Ληστής βαρόνος / Βαρόνος-ληστής",
+      "note": "Ιστορικός όρος (Raubritter)."
+    },
+    {
+      "source": "Vuelph",
+      "target": "Βέλφος",
+      "note": "Ιστορικός όρος (Welf/Guelph)."
+    },
+    {
+      "source": "Silver Hand",
+      "target": "Ασημένιο Χέρι",
+      "note": "Βασικό στοιχείο του τίτλου και της πλοκής."
+    },
+    {
+      "source": "Howard Pyle",
+      "target": "Χάουαρντ Πάιλ",
+      "note": "person"
+    },
+    {
+      "source": "Otto",
+      "target": "Ότο",
+      "note": "person"
+    },
+    {
+      "source": "Brother John",
+      "target": "Αδελφός Τζον",
+      "note": "person"
+    },
+    {
+      "source": "Schwartz Carl",
+      "target": "Σβαρτς Καρλ",
+      "note": "person"
+    },
+    {
+      "source": "Baron Conrad",
+      "target": "Βαρόνος Κόνραντ",
+      "note": "person"
+    },
+    {
+      "source": "Gretchen",
+      "target": "Γκρέτσεν",
+      "note": "person"
+    },
+    {
+      "source": "Hans",
+      "target": "Χανς",
+      "note": "person"
+    },
+    {
+      "source": "Hill-man",
+      "target": "Άνθρωπος του Λόφου",
+      "note": "person"
+    },
+    {
+      "source": "Baroness Matilda",
+      "target": "Βαρόνη Ματίλντα",
+      "note": "person"
+    },
+    {
+      "source": "Ursela",
+      "target": "Ούρσουλα",
+      "note": "person"
+    },
+    {
+      "source": "Master Rudolph",
+      "target": "Μάστερ Ρούντολφ",
+      "note": "person"
+    },
+    {
+      "source": "Master Nicholas",
+      "target": "Μάστερ Νίκολας",
+      "note": "person"
+    },
+    {
+      "source": "Abbot Otto",
+      "target": "Ηγούμενος Ότο",
+      "note": "person"
+    },
+    {
+      "source": "Emperor Frederick",
+      "target": "Αυτοκράτορας Φρειδερίκος",
+      "note": "person"
+    },
+    {
+      "source": "Otto of Wolbergen",
+      "target": "Ότο του Βόλμπεργκεν",
+      "note": "person"
+    },
+    {
+      "source": "Brother Benedict",
+      "target": "Αδελφός Μπένεντικτ",
+      "note": "person"
+    },
+    {
+      "source": "Baron Frederick",
+      "target": "Βαρόνος Φρειδερίκος",
+      "note": "person"
+    },
+    {
+      "source": "Baron Casper",
+      "target": "Βαρόνος Κάσπερ",
+      "note": "person"
+    },
+    {
+      "source": "Baron Nicholas",
+      "target": "Βαρόνος Νίκολας",
+      "note": "person"
+    },
+    {
+      "source": "Brother Emmanuel",
+      "target": "Αδελφός Εμμανουήλ",
+      "note": "person"
+    },
+    {
+      "source": "Angel Gabriel",
+      "target": "Άγγελος Γαβριήλ",
+      "note": "person"
+    },
+    {
+      "source": "Virgin",
+      "target": "Παρθένος",
+      "note": "person"
+    },
+    {
+      "source": "St. Joseph",
+      "target": "Άγιος Ιωσήφ",
+      "note": "person"
+    },
+    {
+      "source": "Christ Child",
+      "target": "Θείο Βρέφος",
+      "note": "person"
+    },
+    {
+      "source": "Brother Ignatius",
+      "target": "Αδελφός Ιγνάτιος",
+      "note": "person"
+    },
+    {
+      "source": "Brother Fritz",
+      "target": "Αδελφός Φριτς",
+      "note": "person"
+    },
+    {
+      "source": "Hilda",
+      "target": "Χίλντα",
+      "note": "person"
+    },
+    {
+      "source": "Count Rudolph of Hapsburg",
+      "target": "Κόμης Ρούντολφ των Αψβούργων",
+      "note": "person"
+    },
+    {
+      "source": "Baron Henry",
+      "target": "Βαρόνος Χένρι",
+      "note": "person"
+    },
+    {
+      "source": "Hans Schmidt",
+      "target": "Χανς Σμιτ",
+      "note": "person"
+    },
+    {
+      "source": "Casper",
+      "target": "Κάσπερ",
+      "note": "person"
+    },
+    {
+      "source": "Palestine",
+      "target": "Παλαιστίνη",
+      "note": "place"
+    },
+    {
+      "source": "Castle Drachenhausen",
+      "target": "Κάστρο Ντράχενχαουζεν",
+      "note": "place"
+    },
+    {
+      "source": "Keiserberg",
+      "target": "Κάιζερμπεργκ",
+      "note": "place"
+    },
+    {
+      "source": "Castle Trutz-Drachen",
+      "target": "Κάστρο Τρουτς-Ντράχεν",
+      "note": "place"
+    },
+    {
+      "source": "Baron's Hall",
+      "target": "Αίθουσα του Βαρόνου",
+      "note": "place"
+    },
+    {
+      "source": "Roderhausen",
+      "target": "Ρόντερχαουζεν",
+      "note": "place"
+    },
+    {
+      "source": "Melchior Tower",
+      "target": "Πύργος του Μελχιόρ",
+      "note": "place"
+    },
+    {
+      "source": "Gruenstaldt",
+      "target": "Γκρούνσταλντ",
+      "note": "place"
+    },
+    {
+      "source": "Staffenburgen",
+      "target": "Στάφενμπουργκεν",
+      "note": "place"
+    },
+    {
+      "source": "River Rhine",
+      "target": "Ποταμός Ρήνος",
+      "note": "place"
+    },
+    {
+      "source": "St. Michaelsburg",
+      "target": "Σεντ Μάικλσμπουργκ",
+      "note": "place"
+    },
+    {
+      "source": "White Cross on the Hill",
+      "target": "Λευκός Σταυρός στον Λόφο",
+      "note": "place"
+    },
+    {
+      "source": "valley of Gruenhoffen",
+      "target": "Κοιλάδα του Γκρούνχοφεν",
+      "note": "place"
+    },
+    {
+      "source": "Germany",
+      "target": "Γερμανία",
+      "note": "place"
+    },
+    {
+      "source": "Imperial Court",
+      "target": "Αυτοκρατορική Αυλή",
+      "note": "place"
+    },
+    {
+      "source": "Vuelphs",
+      "target": "Βέλφοι",
+      "note": "org"
+    },
+    {
+      "source": "Roderburgs",
+      "target": "Ρόντερμπουργκ",
+      "note": "org"
+    },
+    {
+      "source": "Universal Mother Church",
+      "target": "Καθολική Μητέρα Εκκλησία",
+      "note": "org"
+    },
+    {
+      "source": "OTTO OF THE SILVER HAND",
+      "target": "ΟΤΟ Ο ΑΣΗΜΟΧΕΡΗΣ",
+      "note": "title"
+    },
+    {
+      "source": "middle ages",
+      "target": "μεσαίωνας",
+      "note": "term"
+    },
+    {
+      "source": "monastery",
+      "target": "μοναστήρι",
+      "note": "term"
+    },
+    {
+      "source": "belfry",
+      "target": "καμπαναριό",
+      "note": "term"
+    },
+    {
+      "source": "portcullis",
+      "target": "καταρράκτης πύλης",
+      "note": "term"
+    },
+    {
+      "source": "drawbridge",
+      "target": "κινητή γέφυρα",
+      "note": "term"
+    },
+    {
+      "source": "serfs",
+      "target": "δουλοπάροικοι",
+      "note": "term"
+    },
+    {
+      "source": "bartizan",
+      "target": "πυργίσκος",
+      "note": "term"
+    },
+    {
+      "source": "watch-tower",
+      "target": "παρατηρητήριο",
+      "note": "term"
+    },
+    {
+      "source": "courtyard",
+      "target": "αυλή",
+      "note": "term"
+    },
+    {
+      "source": "windlass",
+      "target": "βαρούλκο",
+      "note": "term"
+    },
+    {
+      "source": "dungeon",
+      "target": "μπουντρούμι",
+      "note": "term"
+    },
+    {
+      "source": "retainers",
+      "target": "ακόλουθοι",
+      "note": "term"
+    },
+    {
+      "source": "armor",
+      "target": "πανοπλία",
+      "note": "term"
+    },
+    {
+      "source": "lances",
+      "target": "λόγχες",
+      "note": "term"
+    },
+    {
+      "source": "sanctuary",
+      "target": "άσυλο",
+      "note": "term"
+    },
+    {
+      "source": "men-at-arms",
+      "target": "οπλίτες",
+      "note": "term"
+    },
+    {
+      "source": "cross-bow",
+      "target": "βαλλίστρα",
+      "note": "term"
+    },
+    {
+      "source": "pike",
+      "target": "ακόντιο",
+      "note": "term"
+    },
+    {
+      "source": "refectory",
+      "target": "τραπεζαρία",
+      "note": "term"
+    },
+    {
+      "source": "corselet",
+      "target": "θώρακας",
+      "note": "term"
+    },
+    {
+      "source": "helmet",
+      "target": "κράνος",
+      "note": "term"
+    },
+    {
+      "source": "chain armor",
+      "target": "αλυσιδωτή πανοπλία",
+      "note": "term"
+    },
+    {
+      "source": "bascinet",
+      "target": "βασινέτο",
+      "note": "term"
+    },
+    {
+      "source": "jerkin",
+      "target": "δερμάτινο γιλέκο",
+      "note": "term"
+    },
+    {
+      "source": "quiver",
+      "target": "φαρέτρα",
+      "note": "term"
+    },
+    {
+      "source": "rope ladder",
+      "target": "ανεμόσκαλα",
+      "note": "term"
+    },
+    {
+      "source": "bolt",
+      "target": "βέλος βαλλίστρας",
+      "note": "term"
+    },
+    {
+      "source": "breast-plate",
+      "target": "θώρακας",
+      "note": "term"
+    },
+    {
+      "source": "burghers",
+      "target": "αστοί",
+      "note": "term"
+    },
+    {
+      "source": "caravan",
+      "target": "καραβάνι",
+      "note": "term"
+    },
+    {
+      "source": "tribute",
+      "target": "φόρος υποτέλειας",
+      "note": "term"
+    },
+    {
+      "source": "parchment",
+      "target": "περγαμηνή",
+      "note": "term"
+    },
+    {
+      "source": "arbelast",
+      "target": "βαλλίστρα",
+      "note": "term"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

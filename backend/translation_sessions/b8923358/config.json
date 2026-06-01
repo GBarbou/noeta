@@ -1,0 +1,397 @@
+{
+  "source_language": "Modern Greek (Katharevousa-influenced)",
+  "document_brief": "Τύπος: μυθιστόρημα\nΘέμα: Μια ιστορική και θρησκευτική αφήγηση που εστιάζει στη ζωή του Αποστόλου Πέτρου, τις πολιτικές εντάσεις μεταξύ Αράβων και Εβραίων στην εποχή του Ηρώδη, και τη μεταμορφωτική δύναμη της διδασκαλίας του Χριστού.\nΕποχή/Πλαίσιο: Ρωμαϊκή εποχή, 1ος αιώνας μ.Χ., Παλαιστίνη και Αραβία.\nΎφος: λογοτεχνικό, ιστορικό, με ελαφρώς αρχαΐζοντα/λόγια στοιχεία (καθαρεύουσα)\nΣημειώσεις: Το κείμενο αποτελεί μετάφραση του έργου του Lloyd Douglas. Η απόδοση στα Νέα Ελληνικά πρέπει να ισορροπεί ανάμεσα στη λόγια παράδοση της ελληνικής θρησκευτικής γραμματείας και τη ζωντάνια της σύγχρονης λογοτεχνικής αφήγησης. Ιδιαίτερη προσοχή απαιτείται στην ορολογία των ρωμαϊκών τίτλων και των βιβλικών τοπωνυμίων.",
+  "glossary": [
+    {
+      "source": "The Big Fisherman",
+      "target": "Ο Μέγας Ψαράς",
+      "note": "title"
+    },
+    {
+      "source": "Arnon",
+      "target": "Άρνον",
+      "note": "person"
+    },
+    {
+      "source": "Voldi",
+      "target": "Βόλντι",
+      "note": "person"
+    },
+    {
+      "source": "Antipas",
+      "target": "Αντίπας",
+      "note": "person"
+    },
+    {
+      "source": "Petra",
+      "target": "Πέτρα",
+      "note": "place"
+    },
+    {
+      "source": "Sanhedrin",
+      "target": "Σανχεδρίν (Συνέδριο)",
+      "note": "org"
+    },
+    {
+      "source": "Procurator",
+      "target": "Προκουράτωρ (Επίτροπος)",
+      "note": "title"
+    },
+    {
+      "source": "Catacombs",
+      "target": "Κατακόμβες",
+      "note": "place"
+    },
+    {
+      "source": "Ο ΜΕΓΑΛΟΣ ΨΑΡΑΣ",
+      "target": "Ο ΜΕΓΑΛΟΣ ΨΑΡΑΣ",
+      "note": "title"
+    },
+    {
+      "source": "Χριστού",
+      "target": "Χριστός",
+      "note": "person"
+    },
+    {
+      "source": "Πέτρος",
+      "target": "Πέτρος",
+      "note": "person"
+    },
+    {
+      "source": "Lloyd Douglas",
+      "target": "Λόιντ Ντάγκλας",
+      "note": "person"
+    },
+    {
+      "source": "Αραβίας",
+      "target": "Αραβία",
+      "note": "place"
+    },
+    {
+      "source": "Νεκρής Θάλασσας",
+      "target": "Νεκρά Θάλασσα",
+      "note": "place"
+    },
+    {
+      "source": "Αρέτα",
+      "target": "Αρέτας",
+      "note": "person"
+    },
+    {
+      "source": "Άρνον",
+      "target": "Άρνον",
+      "note": "person"
+    },
+    {
+      "source": "Κεδάρ",
+      "target": "Κεδάρ",
+      "note": "person"
+    },
+    {
+      "source": "Ιλντεράν",
+      "target": "Ιλντεράν",
+      "note": "person"
+    },
+    {
+      "source": "Ζεντί",
+      "target": "Ζεντί",
+      "note": "person"
+    },
+    {
+      "source": "Ηρώδη",
+      "target": "Ηρώδης",
+      "note": "person"
+    },
+    {
+      "source": "Πέτρας",
+      "target": "Πέτρα",
+      "note": "place"
+    },
+    {
+      "source": "Ιερουσαλήμ",
+      "target": "Ιερουσαλήμ",
+      "note": "place"
+    },
+    {
+      "source": "Χαλδαία",
+      "target": "Χαλδαία",
+      "note": "place"
+    },
+    {
+      "source": "Μαμβρή",
+      "target": "Μαμβρή",
+      "note": "place"
+    },
+    {
+      "source": "Αβραάμ",
+      "target": "Αβραάμ",
+      "note": "person"
+    },
+    {
+      "source": "Σάρα",
+      "target": "Σάρα",
+      "note": "person"
+    },
+    {
+      "source": "Ισμαήλ",
+      "target": "Ισμαήλ",
+      "note": "person"
+    },
+    {
+      "source": "Ισαάκ",
+      "target": "Ισαάκ",
+      "note": "person"
+    },
+    {
+      "source": "Άγαρ",
+      "target": "Άγαρ",
+      "note": "person"
+    },
+    {
+      "source": "Ιορδάνη",
+      "target": "Ιορδάνης",
+      "note": "place"
+    },
+    {
+      "source": "Μεσόγειο",
+      "target": "Μεσόγειος",
+      "note": "place"
+    },
+    {
+      "source": "Γάζα",
+      "target": "Γάζα",
+      "note": "place"
+    },
+    {
+      "source": "Δαμασκό",
+      "target": "Δαμασκός",
+      "note": "place"
+    },
+    {
+      "source": "Ιακώβ",
+      "target": "Ιακώβ",
+      "note": "person"
+    },
+    {
+      "source": "Αίγυπτο",
+      "target": "Αίγυπτος",
+      "note": "place"
+    },
+    {
+      "source": "Δήμος",
+      "target": "Δήμος",
+      "note": "person"
+    },
+    {
+      "source": "Βάρου",
+      "target": "Βάρος",
+      "note": "person"
+    },
+    {
+      "source": "Γιοέλ",
+      "target": "Γιοέλ",
+      "note": "person"
+    },
+    {
+      "source": "Συμεών του Μακαβαίου",
+      "target": "Συμεών ο Μακαβαίος",
+      "note": "person"
+    },
+    {
+      "source": "Ιουδαίας",
+      "target": "Ιουδαία",
+      "note": "place"
+    },
+    {
+      "source": "Ρώμη",
+      "target": "Ρώμη",
+      "note": "place"
+    },
+    {
+      "source": "Θουκυδίδη",
+      "target": "Θουκυδίδης",
+      "note": "person"
+    },
+    {
+      "source": "Ιστορία του Πελοποννησιακού Πολέμου",
+      "target": "Ιστορία του Πελοποννησιακού Πολέμου",
+      "note": "title"
+    },
+    {
+      "source": "Σωσθένη",
+      "target": "Σωσθένης",
+      "note": "person"
+    },
+    {
+      "source": "Σανχεδρίν",
+      "target": "Σανχεδρίν",
+      "note": "org"
+    },
+    {
+      "source": "Τιβέριο",
+      "target": "Τιβέριος",
+      "note": "person"
+    },
+    {
+      "source": "Αύγουστος",
+      "target": "Αύγουστος",
+      "note": "person"
+    },
+    {
+      "source": "Αντίπα",
+      "target": "Αντίπας",
+      "note": "person"
+    },
+    {
+      "source": "Ναζαρέτ",
+      "target": "Ναζαρέτ",
+      "note": "place"
+    },
+    {
+      "source": "Ιησούς",
+      "target": "Ιησούς",
+      "note": "person"
+    },
+    {
+      "source": "Βόλντι",
+      "target": "Βόλντι",
+      "note": "person"
+    },
+    {
+      "source": "Εφραίμ",
+      "target": "Εφραίμ",
+      "note": "person"
+    },
+    {
+      "source": "Βηθσαϊδά",
+      "target": "Βηθσαϊδά",
+      "note": "place"
+    },
+    {
+      "source": "Ιάιρος",
+      "target": "Ιάιρος",
+      "note": "person"
+    },
+    {
+      "source": "Αδιέλ",
+      "target": "Αδιέλ",
+      "note": "person"
+    },
+    {
+      "source": "Μπεν-Σολέμ",
+      "target": "Μπεν-Σολέμ",
+      "note": "person"
+    },
+    {
+      "source": "Σαρών",
+      "target": "Σαρών",
+      "note": "person"
+    },
+    {
+      "source": "Ραχήλ",
+      "target": "Ραχήλ",
+      "note": "person"
+    },
+    {
+      "source": "Καπερναούμ",
+      "target": "Καπερναούμ",
+      "note": "place"
+    },
+    {
+      "source": "Σίμωνα",
+      "target": "Σίμων",
+      "note": "person"
+    },
+    {
+      "source": "Λεβύ",
+      "target": "Λεβύ",
+      "note": "person"
+    },
+    {
+      "source": "Ελιμελέχ",
+      "target": "Ελιμελέχ",
+      "note": "person"
+    },
+    {
+      "source": "Νάθαν",
+      "target": "Νάθαν",
+      "note": "person"
+    },
+    {
+      "source": "Πιλάτος",
+      "target": "Πιλάτος",
+      "note": "person"
+    },
+    {
+      "source": "Οβαδία",
+      "target": "Οβαδία",
+      "note": "person"
+    },
+    {
+      "source": "Μένσιος",
+      "target": "Μένσιος",
+      "note": "person"
+    },
+    {
+      "source": "Κατακόμβες",
+      "target": "Κατακόμβες",
+      "note": "place"
+    },
+    {
+      "source": "Εγκεντί",
+      "target": "Εγκεντί",
+      "note": "place"
+    },
+    {
+      "source": "Ιόππη",
+      "target": "Ιόππη",
+      "note": "place"
+    },
+    {
+      "source": "Καισάρεια",
+      "target": "Καισάρεια",
+      "note": "place"
+    },
+    {
+      "source": "Γεσρί",
+      "target": "Γεσρί",
+      "note": "person"
+    },
+    {
+      "source": "Μάρκελλος",
+      "target": "Μάρκελλος",
+      "note": "person"
+    },
+    {
+      "source": "Μάρσιπος",
+      "target": "Μάρσιπος",
+      "note": "person"
+    },
+    {
+      "source": "Γαλλίου",
+      "target": "Γαλλίος",
+      "note": "person"
+    },
+    {
+      "source": "Δημήτριο",
+      "target": "Δημήτριος",
+      "note": "person"
+    },
+    {
+      "source": "Σαρπηδών",
+      "target": "Σαρπηδών",
+      "note": "person"
+    },
+    {
+      "source": "Σέργιου",
+      "target": "Σέργιος",
+      "note": "person"
+    },
+    {
+      "source": "Φέλιξ",
+      "target": "Φέλιξ",
+      "note": "person"
+    }
+  ],
+  "model": "gemini-3-flash"
+}

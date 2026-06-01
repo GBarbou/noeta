@@ -1,0 +1,47 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: μυθιστόρημα\nΘέμα: Η εναρκτήρια σκηνή του Heart of Darkness, όπου μια ομάδα ανδρών πάνω στο σκάφος Nellie περιμένει την παλίρροια στον ποταμό Τάμεση, ενώ περιγράφεται το ατμοσφαιρικό και δυσοίωνο τοπίο.\nΕποχή/Πλαίσιο: Τέλη 19ου αιώνα (Victorian/Edwardian era)\nΎφος: λογοτεχνικό, υψηλό ύφος\nΣημειώσεις: Η μεγαλύτερη πρόκληση είναι η απόδοση της ατμόσφαιρας (mood). Η λέξη 'gloom' επαναλαμβάνεται και αποτελεί κεντρικό μοτίβο. Απαιτείται ακρίβεια στη ναυτική ορολογία και διατήρηση του μακροπερίοδου, λυρικού λόγου του συγγραφέα.",
+  "glossary": [
+    {
+      "source": "sea-reach",
+      "target": "εκβολές / θαλάσσιο τμήμα του ποταμού",
+      "note": "place"
+    },
+    {
+      "source": "The Nellie",
+      "target": "Νέλι",
+      "note": "place"
+    },
+    {
+      "source": "Thames",
+      "target": "Τάμεσης",
+      "note": "place"
+    },
+    {
+      "source": "Gravesend",
+      "target": "Γκρέιβσεντ",
+      "note": "place"
+    },
+    {
+      "source": "Essex",
+      "target": "Έσεξ",
+      "note": "place"
+    },
+    {
+      "source": "The Lawyer",
+      "target": "Ο Δικηγόρος",
+      "note": "person"
+    },
+    {
+      "source": "The Accountant",
+      "target": "Ο Λογιστής",
+      "note": "person"
+    },
+    {
+      "source": "Marlow",
+      "target": "Μάρλοου",
+      "note": "person"
+    }
+  ],
+  "model": "gemini-flash-latest"
+}

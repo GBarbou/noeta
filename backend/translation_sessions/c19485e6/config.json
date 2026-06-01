@@ -1,0 +1,112 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: Λογοτεχνικό (Μυθιστόρημα)\nΘέμα: Το κείμενο εισάγει τον κεντρικό χαρακτήρα, τον λόγιο Τζόζεφ Ντέιβις, και περιγράφει την πνευματική, εκπαιδευτική και θρησκευτική του εξέλιξη από την παιδική του ηλικία. Παράλληλα, προετοιμάζει το έδαφος για μια παράξενη, σχεδόν απίστευτη ιδέα που πρόκειται να κυριεύσει το μυαλό του.\nΕποχή/Πλαίσιο: Αρχές έως μέσα 20ού αιώνα, Αγγλία (αναφορές στη γέννηση στην αλλαγή του αιώνα, στη νευρασθένεια και στο αγγλικό εκπαιδευτικό σύστημα της εποχής).\nΎφος: Λογοτεχνικό, με στοιχεία φιλοσοφικού στοχασμού και ελαφρώς ακαδημαϊκό λεξιλόγιο.\nΣημειώσεις: Η μεγαλύτερη πρόκληση είναι η διατήρηση του λεπτού, ειρωνικού αφηγηματικού τόνου του συγγραφέα (πρόκειται για το 'Star Begotten' του H.G. Wells). Ιδιαίτερη προσοχή απαιτείται στην απόδοση των εκπαιδευτικών όρων της Αγγλίας (π.χ. 'public schools' που στα ελληνικά αποδίδεται συχνά ως 'ιδιωτικά κολέγια' για να μην υπάρξει σύγχυση με τη δημόσια δωρεάν παιδεία) και στη θρησκευτική ορολογία (π.χ. 'confirmation' = χρίσμα/επιβεβαίωση πίστης), ώστε να αποδοθεί σωστά το πολιτισμικό πλαίσιο χωρίς να χαθεί η σατιρική διάθεση.",
+  "glossary": [
+    {
+      "source": "Planetarium Club",
+      "target": "Λέσχη Πλανητάριουμ",
+      "note": "org"
+    },
+    {
+      "source": "Joseph Davis",
+      "target": "Τζόζεφ Ντέιβις",
+      "note": "person"
+    },
+    {
+      "source": "Abraham",
+      "target": "Αβραάμ",
+      "note": "person"
+    },
+    {
+      "source": "Isaac",
+      "target": "Ισαάκ",
+      "note": "person"
+    },
+    {
+      "source": "Jacob",
+      "target": "Ιακώβ",
+      "note": "person"
+    },
+    {
+      "source": "Adam",
+      "target": "Αδάμ",
+      "note": "person"
+    },
+    {
+      "source": "Eve",
+      "target": "Εύα",
+      "note": "person"
+    },
+    {
+      "source": "Cain",
+      "target": "Κάιν",
+      "note": "person"
+    },
+    {
+      "source": "Abel",
+      "target": "Άβελ",
+      "note": "person"
+    },
+    {
+      "source": "Noah",
+      "target": "Νώε",
+      "note": "person"
+    },
+    {
+      "source": "Samuel",
+      "target": "Σαμουήλ",
+      "note": "person"
+    },
+    {
+      "source": "Solomon",
+      "target": "Σολομών",
+      "note": "person"
+    },
+    {
+      "source": "David",
+      "target": "Δαβίδ",
+      "note": "person"
+    },
+    {
+      "source": "Eastern Levant",
+      "target": "Ανατολικό Λεβάντε",
+      "note": "place"
+    },
+    {
+      "source": "Garden of Eden",
+      "target": "Κήπος της Εδέμ",
+      "note": "place"
+    },
+    {
+      "source": "Oxford",
+      "target": "Οξφόρδη",
+      "note": "place"
+    },
+    {
+      "source": "St. Hobart's",
+      "target": "Σεντ Χόμπαρτς",
+      "note": "org"
+    },
+    {
+      "source": "Camborne Hall",
+      "target": "Κάμπορν Χολ",
+      "note": "org"
+    },
+    {
+      "source": "Bible",
+      "target": "Βίβλος",
+      "note": "title"
+    },
+    {
+      "source": "Green Pastures",
+      "target": "Πράσινα Λιβάδια",
+      "note": "title"
+    },
+    {
+      "source": "Natural History",
+      "target": "Φυσική Ιστορία",
+      "note": "title"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

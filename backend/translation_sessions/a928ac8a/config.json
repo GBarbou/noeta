@@ -1,0 +1,402 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: Λογοτεχνικό (Ιστορικό μυθιστόρημα)\nΘέμα: Η ιστορία του μικρού Όθωνα, ο οποίος απομακρύνεται από το ειρηνικό μοναστήρι όπου μεγάλωσε για να ζήσει στον βίαιο κόσμο του κάστρου του πατέρα του, και τελικά αιχμαλωτίζεται μετά από μια καταστροφική πολιορκία. Το κείμενο αντιπαραβάλλει τη γαλήνη της μοναστικής ζωής με τη σκληρότητα του μεσαιωνικού πολέμου.\nΕποχή/Πλαίσιο: Μεσαιωνική Γερμανία (εποχή της Αγίας Ρωμαϊκής Αυτοκρατορίας, με αναφορά στον Αυτοκράτορα Ροδόλφο των Αψβούργων).\nΎφος: Λογοτεχνικό, αφηγηματικό, με ελαφρώς αρχαΐζον και ρομαντικό ύφος.\nΣημειώσεις: Το πρωτότυπο κείμενο χρησιμοποιεί αρχαΐζουσα αγγλική γλώσσα στους διαλόγους (π.χ. 'dost thou', 'methinks', 'art thou', 'nay'). Κατά τη μετάφραση στα Νέα Ελληνικά, προτείνεται η χρήση ενός ελαφρώς λογοτεχνικού ύφους, ίσως με πιο παραδοσιακή σύνταξη ή λεξιλόγιο στους διαλόγους, για να διατηρηθεί η μεσαιωνική ατμόσφαιρα, χωρίς όμως να γίνει το κείμενο δυσνόητο. Ιδιαίτερη προσοχή απαιτείται στην ακριβή απόδοση της ορολογίας των μεσαιωνικών όπλων και της αρχιτεκτονικής των κάστρων, καθώς και στη διατήρηση της αντίθεσης ανάμεσα στο γαλήνιο ύφος των σκηνών του μοναστηριού και στο σκληρό, βίαιο ύφος των σκηνών του κάστρου.",
+  "glossary": [
+    {
+      "source": "belfry",
+      "target": "καμπαναριό / κωδωνοστάσιο",
+      "note": "Χώρος του μοναστηριού."
+    },
+    {
+      "source": "men-at-arms",
+      "target": "οπλίτες / ένοπλοι φρουροί",
+      "note": "Στρατιωτικός όρος της εποχής."
+    },
+    {
+      "source": "mail-clad",
+      "target": "σιδηρόφρακτος / θωρακισμένος",
+      "note": "Αναφέρεται στην αλυσιδωτή πανοπλία των ιπποτών."
+    },
+    {
+      "source": "bartizan",
+      "target": "κρεμαστός πυργίσκος / πολεμίστρα",
+      "note": "Αρχιτεκτονικός όρος μεσαιωνικού κάστρου."
+    },
+    {
+      "source": "arbelast",
+      "target": "βαλλίστρα",
+      "note": "Μεσαιωνικό όπλο."
+    },
+    {
+      "source": "leech",
+      "target": "θεραπευτής / πρακτικός γιατρός",
+      "note": "Παλαιός όρος για τον γιατρό, προερχόμενος από τη χρήση βδελλών."
+    },
+    {
+      "source": "jerkin",
+      "target": "χιτώνιο / γιλέκο",
+      "note": "Συνήθως δερμάτινο (leathern jerkin)."
+    },
+    {
+      "source": "Otto",
+      "target": "Όττο",
+      "note": "person"
+    },
+    {
+      "source": "Brother John",
+      "target": "Αδελφός Ιωάννης",
+      "note": "person"
+    },
+    {
+      "source": "Angel Gabriel",
+      "target": "Άγγελος Γαβριήλ",
+      "note": "person"
+    },
+    {
+      "source": "Father Abbot",
+      "target": "Πατέρας Ηγούμενος",
+      "note": "person"
+    },
+    {
+      "source": "Abbot Otto",
+      "target": "Ηγούμενος Όττο",
+      "note": "person"
+    },
+    {
+      "source": "St. Joseph",
+      "target": "Άγιος Ιωσήφ",
+      "note": "person"
+    },
+    {
+      "source": "Blessed Virgin",
+      "target": "Ευλογημένη Παρθένος",
+      "note": "person"
+    },
+    {
+      "source": "Christ Child",
+      "target": "Θείο Βρέφος",
+      "note": "person"
+    },
+    {
+      "source": "Brother Emmanuel",
+      "target": "Αδελφός Εμμανουήλ",
+      "note": "person"
+    },
+    {
+      "source": "Brother Ignatius",
+      "target": "Αδελφός Ιγνάτιος",
+      "note": "person"
+    },
+    {
+      "source": "Baron Conrad",
+      "target": "Βαρόνος Κόνραντ",
+      "note": "person"
+    },
+    {
+      "source": "Brother Fritz",
+      "target": "Αδελφός Φριτς",
+      "note": "person"
+    },
+    {
+      "source": "Baron Frederick",
+      "target": "Βαρόνος Φρειδερίκος",
+      "note": "person"
+    },
+    {
+      "source": "Count Rudolph of Hapsburg",
+      "target": "Κόμης Ροδόλφος των Αψβούργων",
+      "note": "person"
+    },
+    {
+      "source": "Baron Henry",
+      "target": "Βαρόνος Ερρίκος",
+      "note": "person"
+    },
+    {
+      "source": "Master Rudolph",
+      "target": "Δάσκαλος Ροδόλφος",
+      "note": "person"
+    },
+    {
+      "source": "Hans Schmidt",
+      "target": "Χανς Σμιτ",
+      "note": "person"
+    },
+    {
+      "source": "Schwartz Carl",
+      "target": "Σβαρτς Καρλ",
+      "note": "person"
+    },
+    {
+      "source": "Ursela",
+      "target": "Ούρσουλα",
+      "note": "person"
+    },
+    {
+      "source": "Hilda",
+      "target": "Χίλντα",
+      "note": "person"
+    },
+    {
+      "source": "Casper",
+      "target": "Κάσπερ",
+      "note": "person"
+    },
+    {
+      "source": "Casper Max",
+      "target": "Κάσπερ Μαξ",
+      "note": "person"
+    },
+    {
+      "source": "Pauline",
+      "target": "Παυλίνα",
+      "note": "person"
+    },
+    {
+      "source": "Carl Max",
+      "target": "Καρλ Μαξ",
+      "note": "person"
+    },
+    {
+      "source": "Gretchen",
+      "target": "Γκρέτσεν",
+      "note": "person"
+    },
+    {
+      "source": "Fritz",
+      "target": "Φριτς",
+      "note": "person"
+    },
+    {
+      "source": "Katherine",
+      "target": "Αικατερίνη",
+      "note": "person"
+    },
+    {
+      "source": "One-eyed Hans",
+      "target": "Μονόφθαλμος Χανς",
+      "note": "person"
+    },
+    {
+      "source": "Jacob",
+      "target": "Ιακώβ",
+      "note": "person"
+    },
+    {
+      "source": "Red-beard",
+      "target": "Κοκκινογένης",
+      "note": "person"
+    },
+    {
+      "source": "St. Michaelsburg",
+      "target": "Σεντ Μάικλσμπουργκ",
+      "note": "place"
+    },
+    {
+      "source": "White Cross",
+      "target": "Λευκός Σταυρός",
+      "note": "place"
+    },
+    {
+      "source": "Drachenhausen",
+      "target": "Ντράχενχαουζεν",
+      "note": "place"
+    },
+    {
+      "source": "Dragon's House",
+      "target": "Σπίτι του Δράκου",
+      "note": "place"
+    },
+    {
+      "source": "Trutz-Drachen",
+      "target": "Τρουτς-Ντράχεν",
+      "note": "place"
+    },
+    {
+      "source": "Germany",
+      "target": "Γερμανία",
+      "note": "place"
+    },
+    {
+      "source": "Kaiserburg",
+      "target": "Κάιζερμπουργκ",
+      "note": "place"
+    },
+    {
+      "source": "Gruenstadt",
+      "target": "Γκρούνσταντ",
+      "note": "place"
+    },
+    {
+      "source": "Melchior's tower",
+      "target": "Πύργος του Μελχιόρ",
+      "note": "place"
+    },
+    {
+      "source": "Paradise",
+      "target": "Παράδεισος",
+      "note": "place"
+    },
+    {
+      "source": "Universal Mother Church",
+      "target": "Καθολική Μητέρα Εκκλησία",
+      "note": "org"
+    },
+    {
+      "source": "Imperial Court",
+      "target": "Αυτοκρατορική Αυλή",
+      "note": "org"
+    },
+    {
+      "source": "Vuelphs",
+      "target": "Βέλφοι",
+      "note": "org"
+    },
+    {
+      "source": "Roderburgs",
+      "target": "Ρόντερμπουργκ",
+      "note": "org"
+    },
+    {
+      "source": "monastery",
+      "target": "μοναστήρι",
+      "note": "term"
+    },
+    {
+      "source": "abbot",
+      "target": "ηγούμενος",
+      "note": "term"
+    },
+    {
+      "source": "monk",
+      "target": "μοναχός",
+      "note": "term"
+    },
+    {
+      "source": "cell",
+      "target": "κελί",
+      "note": "term"
+    },
+    {
+      "source": "refectory",
+      "target": "τράπεζα (μοναστηριού)",
+      "note": "term"
+    },
+    {
+      "source": "parchment",
+      "target": "περγαμηνή",
+      "note": "term"
+    },
+    {
+      "source": "vintage",
+      "target": "τρύγος",
+      "note": "term"
+    },
+    {
+      "source": "manger",
+      "target": "φάτνη",
+      "note": "term"
+    },
+    {
+      "source": "kine",
+      "target": "αγελάδες",
+      "note": "term"
+    },
+    {
+      "source": "baron",
+      "target": "βαρόνος",
+      "note": "term"
+    },
+    {
+      "source": "knight",
+      "target": "ιππότης",
+      "note": "term"
+    },
+    {
+      "source": "armor",
+      "target": "πανοπλία",
+      "note": "term"
+    },
+    {
+      "source": "chain armor",
+      "target": "αλυσιδωτή πανοπλία",
+      "note": "term"
+    },
+    {
+      "source": "drawbridge",
+      "target": "κινητή γέφυρα",
+      "note": "term"
+    },
+    {
+      "source": "gateway",
+      "target": "πύλη",
+      "note": "term"
+    },
+    {
+      "source": "court-yard",
+      "target": "αυλή",
+      "note": "term"
+    },
+    {
+      "source": "cross-bow",
+      "target": "βαλλίστρα",
+      "note": "term"
+    },
+    {
+      "source": "bolt",
+      "target": "βέλος βαλλίστρας / σύρτης",
+      "note": "term"
+    },
+    {
+      "source": "bowstring",
+      "target": "χορδή τόξου",
+      "note": "term"
+    },
+    {
+      "source": "watch-tower",
+      "target": "παρατηρητήριο",
+      "note": "term"
+    },
+    {
+      "source": "leathern jerkin",
+      "target": "δερμάτινο γιλέκο",
+      "note": "term"
+    },
+    {
+      "source": "postern",
+      "target": "πυλίδα",
+      "note": "term"
+    },
+    {
+      "source": "wicket",
+      "target": "θυρίδα",
+      "note": "term"
+    },
+    {
+      "source": "swineherd",
+      "target": "χοιροβοσκός",
+      "note": "term"
+    },
+    {
+      "source": "peddler",
+      "target": "γυρολόγος",
+      "note": "term"
+    },
+    {
+      "source": "knapsack",
+      "target": "σακίδιο",
+      "note": "term"
+    },
+    {
+      "source": "wolf-hounds",
+      "target": "λυκόσκυλα",
+      "note": "term"
+    },
+    {
+      "source": "bear skin",
+      "target": "δέρμα αρκούδας",
+      "note": "term"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

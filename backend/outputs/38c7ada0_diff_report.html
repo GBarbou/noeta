@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Αναφορά Αλλαγών - 38c7ada0.docx</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .header h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .header .meta { color: #64748b; font-size: 0.875rem; }
+        .status {
+            background: #22c55e;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-weight: 600;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .stat {
+            background: #f1f5f9;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-value { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
+        .stat-label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; }
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .change {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .change.unmatched {
+            border-color: #fecaca;
+            background: #fef2f2;
+        }
+        .change-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        .change-type {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        .change-type.replace { background: #fef3c7; color: #92400e; }
+        .change-type.insert { background: #d1fae5; color: #065f46; }
+        .change-type.delete { background: #fee2e2; color: #991b1b; }
+        .change-position { font-size: 0.75rem; color: #64748b; }
+        .change-content { font-family: 'Courier New', monospace; font-size: 0.875rem; }
+        .context { color: #64748b; }
+        .deleted { background: #fee2e2; color: #991b1b; text-decoration: line-through; padding: 0.125rem 0.25rem; border-radius: 2px; }
+        .inserted { background: #d1fae5; color: #065f46; padding: 0.125rem 0.25rem; border-radius: 2px; }
+        .warning-box {
+            background: #fef2f2;
+            border: 2px solid #ef4444;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box h3 { color: #dc2626; margin-bottom: 0.5rem; }
+        .footer {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.75rem;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📄 Αναφορά Αλλαγών</h1>
+            <div class="meta">
+                <div><strong>Αρχείο:</strong> 38c7ada0.docx</div>
+                <div><strong>Session:</strong> 38c7ada0</div>
+                <div><strong>Ημερομηνία:</strong> 23/02/2026 17:51</div>
+            </div>
+            <div class="status">✓ ΑΣΦΑΛΕΣ - Όλες οι αλλαγές αντιστοιχούν σε εγκεκριμένες διορθώσεις</div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Συνολικές Αλλαγές</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Εγκεκριμένες</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" style="color: #22c55e">0</div>
+                    <div class="stat-label">Μη Εγκεκριμένες</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">794,994</div>
+                    <div class="stat-label">Χαρακτήρες (Αρχικό)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Καμία Αλλαγή</h2>
+            <p>Δεν έγιναν αλλαγές στο έγγραφο.</p>
+        </div>
+
+        <div class="footer">
+            ProofreadAI Diff Report • 2026 • Session: 38c7ada0
+        </div>
+    </div>
+</body>
+</html>

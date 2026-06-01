@@ -1,0 +1,307 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: Λογοτεχνικό (Ιστορικό μυθιστόρημα / Εφηβική λογοτεχνία)\nΘέμα: Η δραματική διάσωση του μικρού Όττο από το εχθρικό κάστρο, η ηρωική θυσία του πατέρα του και η τελική δικαίωσή του στην αυλή του Αυτοκράτορα.\nΕποχή/Πλαίσιο: Μεσαιωνική Γερμανία (Αγία Ρωμαϊκή Αυτοκρατορία), τέλη 13ου αιώνα (εποχή του Αυτοκράτορα Ροδόλφου Α').\nΎφος: Λογοτεχνικό, αφηγηματικό, με αρχαΐζοντα στοιχεία και επικό/ρομαντικό τόνο.\nΣημειώσεις: Το πρωτότυπο κείμενο χρησιμοποιεί αρχαΐζουσα αγγλική (π.χ. thou, hast, methinks). Στη μετάφραση προτείνεται η χρήση μιας προσεγμένης, ελαφρώς εξυψωμένης δημοτικής για να διατηρηθεί η μεσαιωνική ατμόσφαιρα, χωρίς να γίνει το κείμενο δυσνόητο. Τα γερμανικά τοπωνύμια (Trutz-Drachen, Drachenhausen) πρέπει να μεταγραφούν φωνητικά με συνέπεια. Η πόλη Nurnburg αποδίδεται καθιερωμένα ως Νυρεμβέργη. Η λατινική ρήση στο τέλος ('Manus argentea quam manus ferrea melior est') προτείνεται να διατηρηθεί στα λατινικά στο κυρίως κείμενο, προσθέτοντας την ελληνική απόδοση ('Ένα ασημένιο χέρι είναι καλύτερο από ένα σιδερένιο') σε υποσημείωση.",
+  "glossary": [
+    {
+      "source": "One-eyed Hans",
+      "target": "Χανς ο Μονόφθαλμος",
+      "note": "Προσωνύμιο βασικού χαρακτήρα."
+    },
+    {
+      "source": "Otto of the Silver Hand",
+      "target": "Όττο με το Ασημένιο Χέρι",
+      "note": "Προσωνύμιο του πρωταγωνιστή (και τίτλος του κλασικού έργου του Howard Pyle)."
+    },
+    {
+      "source": "scullion",
+      "target": "παραγιός μαγειρείου",
+      "note": "Απόδοση του κατώτερου υπηρέτη κουζίνας της εποχής."
+    },
+    {
+      "source": "weasand",
+      "target": "λαρύγγι / λαιμός",
+      "note": "Αρχαϊκή λέξη για την τραχεία."
+    },
+    {
+      "source": "man-at-arms",
+      "target": "οπλίτης / φρουρός",
+      "note": "Στρατιωτικός όρος του Μεσαίωνα."
+    },
+    {
+      "source": "Hans",
+      "target": "Χανς",
+      "note": "person"
+    },
+    {
+      "source": "Long Jacob",
+      "target": "Ψηλός Ιακώβ",
+      "note": "person"
+    },
+    {
+      "source": "Baron Otto of Drachenhausen",
+      "target": "Βαρόνος Όθων του Ντράχενχαουζεν",
+      "note": "person"
+    },
+    {
+      "source": "Baron Henry of Trutz-Drachen",
+      "target": "Βαρόνος Ερρίκος του Τρουτς-Ντράχεν",
+      "note": "person"
+    },
+    {
+      "source": "Baron Conrad of Vuelph of Drachenhausen",
+      "target": "Βαρόνος Κορράδος του Βελφ του Ντράχενχαουζεν",
+      "note": "person"
+    },
+    {
+      "source": "Nicholas Stein",
+      "target": "Νίκολας Στάιν",
+      "note": "person"
+    },
+    {
+      "source": "Abbot Otto",
+      "target": "Ηγούμενος Όθων",
+      "note": "person"
+    },
+    {
+      "source": "Carl Spigler",
+      "target": "Καρλ Σπίγκλερ",
+      "note": "person"
+    },
+    {
+      "source": "William of Roderburg",
+      "target": "Γουλιέλμος του Ρόντερμπουργκ",
+      "note": "person"
+    },
+    {
+      "source": "Brother Theodore",
+      "target": "Αδελφός Θεόδωρος",
+      "note": "person"
+    },
+    {
+      "source": "Brother John",
+      "target": "Αδελφός Ιωάννης",
+      "note": "person"
+    },
+    {
+      "source": "Emperor Rudolph",
+      "target": "Αυτοκράτορας Ροδόλφος",
+      "note": "person"
+    },
+    {
+      "source": "King Ottocar of Bohemia",
+      "target": "Βασιλιάς Οττοκάρ της Βοημίας",
+      "note": "person"
+    },
+    {
+      "source": "Pauline",
+      "target": "Παυλίνα",
+      "note": "person"
+    },
+    {
+      "source": "Master Nicholas",
+      "target": "Δάσκαλος Νικόλαος",
+      "note": "person"
+    },
+    {
+      "source": "Castle of Trutz-Drachen",
+      "target": "Κάστρο του Τρουτς-Ντράχεν",
+      "note": "place"
+    },
+    {
+      "source": "St. Michaelsburg",
+      "target": "Σεντ Μάικλσμπουργκ",
+      "note": "place"
+    },
+    {
+      "source": "Drachenhausen",
+      "target": "Ντράχενχαουζεν",
+      "note": "place"
+    },
+    {
+      "source": "Nurnburg",
+      "target": "Νυρεμβέργη",
+      "note": "place"
+    },
+    {
+      "source": "Germany",
+      "target": "Γερμανία",
+      "note": "place"
+    },
+    {
+      "source": "Austria",
+      "target": "Αυστρία",
+      "note": "place"
+    },
+    {
+      "source": "Italy",
+      "target": "Ιταλία",
+      "note": "place"
+    },
+    {
+      "source": "Bohemia",
+      "target": "Βοημία",
+      "note": "place"
+    },
+    {
+      "source": "monastery of the White Cross",
+      "target": "Μοναστήρι του Λευκού Σταυρού",
+      "note": "place"
+    },
+    {
+      "source": "Council",
+      "target": "Συμβούλιο",
+      "note": "org"
+    },
+    {
+      "source": "Vuelphs",
+      "target": "Βέλφοι",
+      "note": "org"
+    },
+    {
+      "source": "Roderburgs",
+      "target": "Ρόντερμπουργκ",
+      "note": "org"
+    },
+    {
+      "source": "Trutz-Dragons",
+      "target": "Δράκοι του Τρουτς",
+      "note": "org"
+    },
+    {
+      "source": "chimney",
+      "target": "καμινάδα",
+      "note": "term"
+    },
+    {
+      "source": "soot",
+      "target": "αιθάλη",
+      "note": "term"
+    },
+    {
+      "source": "fagots",
+      "target": "φρύγανα",
+      "note": "term"
+    },
+    {
+      "source": "bread trough",
+      "target": "σκάφη ζυμώματος",
+      "note": "term"
+    },
+    {
+      "source": "breast-plate",
+      "target": "θώρακας",
+      "note": "term"
+    },
+    {
+      "source": "spear",
+      "target": "δόρυ",
+      "note": "term"
+    },
+    {
+      "source": "dagger",
+      "target": "στιλέτο",
+      "note": "term"
+    },
+    {
+      "source": "armor",
+      "target": "πανοπλία",
+      "note": "term"
+    },
+    {
+      "source": "lance",
+      "target": "λόγχη",
+      "note": "term"
+    },
+    {
+      "source": "vizor",
+      "target": "προσωπίδα",
+      "note": "term"
+    },
+    {
+      "source": "sword",
+      "target": "σπαθί",
+      "note": "term"
+    },
+    {
+      "source": "burgher",
+      "target": "αστός",
+      "note": "term"
+    },
+    {
+      "source": "gables",
+      "target": "αετώματα",
+      "note": "term"
+    },
+    {
+      "source": "gallery",
+      "target": "στοά",
+      "note": "term"
+    },
+    {
+      "source": "sentinel",
+      "target": "σκοπός",
+      "note": "term"
+    },
+    {
+      "source": "grating",
+      "target": "κιγκλίδωμα",
+      "note": "term"
+    },
+    {
+      "source": "courtyard",
+      "target": "αυλή",
+      "note": "term"
+    },
+    {
+      "source": "bowman",
+      "target": "τοξότης",
+      "note": "term"
+    },
+    {
+      "source": "horsemen",
+      "target": "ιππείς",
+      "note": "term"
+    },
+    {
+      "source": "bridge-head",
+      "target": "προγεφύρωμα",
+      "note": "term"
+    },
+    {
+      "source": "monks",
+      "target": "μοναχοί",
+      "note": "term"
+    },
+    {
+      "source": "nobles",
+      "target": "ευγενείς",
+      "note": "term"
+    },
+    {
+      "source": "Emperor",
+      "target": "Αυτοκράτορας",
+      "note": "term"
+    },
+    {
+      "source": "Baron",
+      "target": "Βαρόνος",
+      "note": "term"
+    },
+    {
+      "source": "Abbot",
+      "target": "Ηγούμενος",
+      "note": "term"
+    },
+    {
+      "source": "torches",
+      "target": "πυρσοί",
+      "note": "term"
+    },
+    {
+      "source": "iron bars",
+      "target": "σιδερένιες ράβδοι",
+      "note": "term"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

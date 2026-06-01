@@ -1,0 +1,542 @@
+{
+  "source_language": "Αγγλικά (με εισαγωγικό απόφθεγμα στα Γαλλικά)",
+  "document_brief": "Τύπος: Λογοτεχνικό κείμενο (Απόσπασμα διηγήματος)\nΘέμα: Περιγραφή μιας εναλλακτικής, δυστοπικής Αμερικής του 1920 και η εγκαθίδρυση των Κυβερνητικών Θαλάμων Θανάτου.\nΕποχή/Πλαίσιο: Γράφτηκε στα τέλη του 19ου αιώνα (1895), αλλά διαδραματίζεται σε ένα φανταστικό/εναλλακτικό μέλλον (1920).\nΎφος: Λογοτεχνικό, επίσημο, περιγραφικό, με μακάβριους και δυστοπικούς τόνους.\nΣημειώσεις: 1. Το κείμενο είναι η αρχή του κλασικού διηγήματος 'The Repairer of Reputations' του Robert W. Chambers. 2. Το γαλλικό απόφθεγμα στην αρχή ('Ne raillons pas les fous...') μπορεί να διατηρηθεί στα γαλλικά με υποσημείωση ή να μεταφραστεί απευθείας ('Ας μην κοροϊδεύουμε τους τρελούς...'). 3. Ο όρος 'Secretary' στο πλαίσιο της αμερικανικής κυβέρνησης αποδίδεται ως 'Υπουργός' (π.χ. Secretary of War = Υπουργός Πολέμου). 4. Ο όρος 'Lethal Chamber' είναι κεντρικός στο έργο και προτείνεται η απόδοση 'Θάλαμος Θανάτου' για να διατηρηθεί η μακάβρια αίσθηση, αν και το 'Θάλαμος Ευθανασίας' είναι επίσης δόκιμο. 5. Προσοχή στην απόδοση των στρατιωτικών βαθμών και μονάδων (squadron = ίλη για το ιππικό, αλλά μοίρα για το ναυτικό).",
+  "glossary": [
+    {
+      "source": "Winthrop",
+      "target": "Γουίνθροπ",
+      "note": "person"
+    },
+    {
+      "source": "Von Gartenlaube",
+      "target": "Φον Γκαρτενλάουμπε",
+      "note": "person"
+    },
+    {
+      "source": "Archer",
+      "target": "Άρτσερ",
+      "note": "person"
+    },
+    {
+      "source": "Boris Yvain",
+      "target": "Μπόρις Ιβέν (ή Υβαίν)",
+      "note": "person"
+    },
+    {
+      "source": "Livingston",
+      "target": "Λίβινγκστον",
+      "note": "person"
+    },
+    {
+      "source": "Blount",
+      "target": "Μπλάουντ",
+      "note": "person"
+    },
+    {
+      "source": "Hamilton",
+      "target": "Χάμιλτον",
+      "note": "person"
+    },
+    {
+      "source": "Buffby",
+      "target": "Μπάφμπι",
+      "note": "person"
+    },
+    {
+      "source": "Lanceford",
+      "target": "Λάνσφορντ",
+      "note": "person"
+    },
+    {
+      "source": "Wyse",
+      "target": "Γουάις",
+      "note": "person"
+    },
+    {
+      "source": "Franklin",
+      "target": "Φράνκλιν",
+      "note": "person"
+    },
+    {
+      "source": "Hawberk",
+      "target": "Χόμπερκ",
+      "note": "person"
+    },
+    {
+      "source": "United States",
+      "target": "Ηνωμένες Πολιτείες",
+      "note": "place"
+    },
+    {
+      "source": "Samoan Islands / Samoa",
+      "target": "Νησιά Σαμόα / Σαμόα",
+      "note": "place"
+    },
+    {
+      "source": "Norfolk",
+      "target": "Νόρφολκ",
+      "note": "place"
+    },
+    {
+      "source": "State of New Jersey",
+      "target": "Πολιτεία του Νιου Τζέρσεϊ",
+      "note": "place"
+    },
+    {
+      "source": "Chicago",
+      "target": "Σικάγο",
+      "note": "place"
+    },
+    {
+      "source": "New York",
+      "target": "Νέα Υόρκη",
+      "note": "place"
+    },
+    {
+      "source": "Suanee",
+      "target": "Σουάνι",
+      "note": "place"
+    },
+    {
+      "source": "Caucasus",
+      "target": "Καύκασος",
+      "note": "place"
+    },
+    {
+      "source": "Washington Square",
+      "target": "Πλατεία Ουάσινγκτον (ή Γουάσινγκτον Σκουέρ)",
+      "note": "place"
+    },
+    {
+      "source": "Madison Avenue",
+      "target": "Λεωφόρος Μάντισον",
+      "note": "place"
+    },
+    {
+      "source": "Carcosa",
+      "target": "Καρκόσα",
+      "note": "place"
+    },
+    {
+      "source": "Hali",
+      "target": "Χάλι",
+      "note": "place"
+    },
+    {
+      "source": "Wooster Street",
+      "target": "Οδός Γούστερ",
+      "note": "place"
+    },
+    {
+      "source": "South Fifth Avenue",
+      "target": "Νότια Πέμπτη Λεωφόρος",
+      "note": "place"
+    },
+    {
+      "source": "University Place",
+      "target": "Γιουνιβέρσιτι Πλέις (ή Πλατεία Πανεπιστημίου)",
+      "note": "place"
+    },
+    {
+      "source": "Fourth Street",
+      "target": "Τέταρτη Οδός",
+      "note": "place"
+    },
+    {
+      "source": "Washington Park",
+      "target": "Πάρκο Ουάσινγκτον",
+      "note": "place"
+    },
+    {
+      "source": "Brooklyn",
+      "target": "Μπρούκλιν",
+      "note": "place"
+    },
+    {
+      "source": "Governor’s Island",
+      "target": "Γκόβερνορς Άιλαντ (ή Νησί του Κυβερνήτη)",
+      "note": "place"
+    },
+    {
+      "source": "North River",
+      "target": "Βόρειος Ποταμός (ή Νορθ Ρίβερ)",
+      "note": "place"
+    },
+    {
+      "source": "Fifth Avenue",
+      "target": "Πέμπτη Λεωφόρος",
+      "note": "place"
+    },
+    {
+      "source": "Bleecker Street",
+      "target": "Οδός Μπλίκερ",
+      "note": "place"
+    },
+    {
+      "source": "General Staff",
+      "target": "Γενικό Επιτελείο",
+      "note": "org"
+    },
+    {
+      "source": "United States National Academy of Design",
+      "target": "Εθνική Ακαδημία Σχεδίου των Ηνωμένων Πολιτειών",
+      "note": "org"
+    },
+    {
+      "source": "National Mounted Police",
+      "target": "Εθνική Έφιππη Αστυνομία",
+      "note": "org"
+    },
+    {
+      "source": "Congress of Religions",
+      "target": "Συνέδριο των Θρησκειών",
+      "note": "org"
+    },
+    {
+      "source": "National Free Hospital",
+      "target": "Εθνικό Δωρεάν Νοσοκομείο",
+      "note": "org"
+    },
+    {
+      "source": "National Guard",
+      "target": "Εθνοφρουρά",
+      "note": "org"
+    },
+    {
+      "source": "The King in Yellow",
+      "target": "Ο Βασιλιάς με τα Κίτρινα",
+      "note": "title"
+    },
+    {
+      "source": "Pallid Mask",
+      "target": "Ωχρή Μάσκα",
+      "note": "title"
+    },
+    {
+      "source": "Fates",
+      "target": "Μοίρες",
+      "note": "title"
+    },
+    {
+      "source": "Government Lethal Chamber",
+      "target": "Κυβερνητικός Θάλαμος Θανάτου (ή Θάλαμος Ευθανασίας)",
+      "note": "term"
+    },
+    {
+      "source": "Elevated Railroads",
+      "target": "Υπέργειοι Σιδηρόδρομοι",
+      "note": "term"
+    },
+    {
+      "source": "Dodge Statue",
+      "target": "Άγαλμα του Ντοτζ",
+      "note": "term"
+    },
+    {
+      "source": "Armourer",
+      "target": "Οπλοποιός (ή Κατασκευαστής Πανοπλιών)",
+      "note": "term"
+    },
+    {
+      "source": "President",
+      "target": "Πρόεδρος",
+      "note": "title/rank"
+    },
+    {
+      "source": "Secretary of Fine Arts",
+      "target": "Υπουργός Καλών Τεχνών",
+      "note": "title/rank"
+    },
+    {
+      "source": "Secretary of Forestry and Game Preservation",
+      "target": "Υπουργός Δασών και Προστασίας Θηραμάτων",
+      "note": "title/rank"
+    },
+    {
+      "source": "Secretary of War",
+      "target": "Υπουργός Πολέμου",
+      "note": "title/rank"
+    },
+    {
+      "source": "Governor",
+      "target": "Κυβερνήτης",
+      "note": "title/rank"
+    },
+    {
+      "source": "Mayor",
+      "target": "Δήμαρχος",
+      "note": "title/rank"
+    },
+    {
+      "source": "Inspector-General of Police",
+      "target": "Γενικός Επιθεωρητής Αστυνομίας",
+      "note": "title/rank"
+    },
+    {
+      "source": "Commandant",
+      "target": "Διοικητής",
+      "note": "title/rank"
+    },
+    {
+      "source": "Colonel",
+      "target": "Συνταγματάρχης",
+      "note": "title/rank"
+    },
+    {
+      "source": "Military aid",
+      "target": "Στρατιωτικός υπασπιστής",
+      "note": "title/rank"
+    },
+    {
+      "source": "Major-General",
+      "target": "Υποστράτηγος",
+      "note": "title/rank"
+    },
+    {
+      "source": "Admiral",
+      "target": "Ναύαρχος",
+      "note": "title/rank"
+    },
+    {
+      "source": "Surgeon-General",
+      "target": "Γενικός Αρχίατρος",
+      "note": "title/rank"
+    },
+    {
+      "source": "Commissioner of Public Works",
+      "target": "Επίτροπος Δημοσίων Έργων",
+      "note": "title/rank"
+    },
+    {
+      "source": "suicide",
+      "target": "αυτοκτονία",
+      "note": "other"
+    },
+    {
+      "source": "self-destruction",
+      "target": "αυτοκαταστροφή (ή αυτοχειρία)",
+      "note": "other"
+    },
+    {
+      "source": "lancers",
+      "target": "λογχοφόροι",
+      "note": "other"
+    },
+    {
+      "source": "hussars",
+      "target": "ουσάροι",
+      "note": "other"
+    },
+    {
+      "source": "squadron",
+      "target": "ίλη (για ιππικό) / μοίρα (για ναυτικό)",
+      "note": "other"
+    },
+    {
+      "source": "President Winthrop",
+      "target": "Πρόεδρος Γουίνθροπ",
+      "note": "person"
+    },
+    {
+      "source": "General Von Gartenlaube",
+      "target": "Στρατηγός Φον Γκαρτενλάουμπε",
+      "note": "person"
+    },
+    {
+      "source": "Dr. Archer",
+      "target": "Δρ. Άρτσερ",
+      "note": "person"
+    },
+    {
+      "source": "Governor of New York",
+      "target": "Κυβερνήτης της Νέας Υόρκης",
+      "note": "person"
+    },
+    {
+      "source": "Mayor of New York and Brooklyn",
+      "target": "Δήμαρχος Νέας Υόρκης και Μπρούκλιν",
+      "note": "person"
+    },
+    {
+      "source": "Commandant of the state troops",
+      "target": "Διοικητής των πολιτειακών στρατευμάτων",
+      "note": "person"
+    },
+    {
+      "source": "Colonel Livingston",
+      "target": "Συνταγματάρχης Λίβινγκστον",
+      "note": "person"
+    },
+    {
+      "source": "military aid to the President of the United States",
+      "target": "Στρατιωτικός Ακόλουθος του Προέδρου των Ηνωμένων Πολιτειών",
+      "note": "person"
+    },
+    {
+      "source": "General Blount",
+      "target": "Στρατηγός Μπλάουντ",
+      "note": "person"
+    },
+    {
+      "source": "Major-General Hamilton",
+      "target": "Υποστράτηγος Χάμιλτον",
+      "note": "person"
+    },
+    {
+      "source": "Admiral Buffby",
+      "target": "Ναύαρχος Μπάφμπι",
+      "note": "person"
+    },
+    {
+      "source": "Surgeon-General Lanceford",
+      "target": "Γενικός Χειρουργός Λάνσφορντ",
+      "note": "person"
+    },
+    {
+      "source": "Senator Wyse",
+      "target": "Γερουσιαστής Γουάιζ",
+      "note": "person"
+    },
+    {
+      "source": "Senator Franklin",
+      "target": "Γερουσιαστής Φράνκλιν",
+      "note": "person"
+    },
+    {
+      "source": "United States of America",
+      "target": "Ηνωμένες Πολιτείες της Αμερικής",
+      "note": "place"
+    },
+    {
+      "source": "Germany",
+      "target": "Γερμανία",
+      "note": "place"
+    },
+    {
+      "source": "Samoan Islands",
+      "target": "Νησιά Σαμόα",
+      "note": "place"
+    },
+    {
+      "source": "Samoa",
+      "target": "Σαμόα",
+      "note": "place"
+    },
+    {
+      "source": "Cuba",
+      "target": "Κούβα",
+      "note": "place"
+    },
+    {
+      "source": "Hawaii",
+      "target": "Χαβάη",
+      "note": "place"
+    },
+    {
+      "source": "West",
+      "target": "Δύση",
+      "note": "place"
+    },
+    {
+      "source": "France",
+      "target": "Γαλλία",
+      "note": "place"
+    },
+    {
+      "source": "England",
+      "target": "Αγγλία",
+      "note": "place"
+    },
+    {
+      "source": "Italy",
+      "target": "Ιταλία",
+      "note": "place"
+    },
+    {
+      "source": "Spain",
+      "target": "Ισπανία",
+      "note": "place"
+    },
+    {
+      "source": "Belgium",
+      "target": "Βέλγιο",
+      "note": "place"
+    },
+    {
+      "source": "Russia",
+      "target": "Ρωσία",
+      "note": "place"
+    },
+    {
+      "source": "lake of Hali",
+      "target": "Λίμνη του Χάλι",
+      "note": "place"
+    },
+    {
+      "source": "Paris",
+      "target": "Παρίσι",
+      "note": "place"
+    },
+    {
+      "source": "London",
+      "target": "Λονδίνο",
+      "note": "place"
+    },
+    {
+      "source": "Government of the United States",
+      "target": "Κυβέρνηση των Ηνωμένων Πολιτειών",
+      "note": "org"
+    },
+    {
+      "source": "French Government",
+      "target": "Γαλλική Κυβέρνηση",
+      "note": "org"
+    },
+    {
+      "source": "state theatre",
+      "target": "κρατικό θέατρο",
+      "note": "org"
+    },
+    {
+      "source": "state opera",
+      "target": "κρατική όπερα",
+      "note": "org"
+    },
+    {
+      "source": "Lethal Chamber",
+      "target": "Θάλαμος Θανάτου",
+      "note": "term"
+    },
+    {
+      "source": "Death Chamber",
+      "target": "Θάλαμος Θανάτου",
+      "note": "term"
+    },
+    {
+      "source": "Anarchy",
+      "target": "Αναρχία",
+      "note": "term"
+    },
+    {
+      "source": "Prussian system",
+      "target": "Πρωσικό σύστημα",
+      "note": "term"
+    },
+    {
+      "source": "Tariff and Labour questions",
+      "target": "Ζητήματα Δασμών και Εργασίας",
+      "note": "term"
+    },
+    {
+      "source": "Indian problem",
+      "target": "Ινδιάνικο πρόβλημα",
+      "note": "term"
+    },
+    {
+      "source": "Indian cavalry scouts",
+      "target": "Ινδιάνοι ανιχνευτές ιππικού",
+      "note": "term"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

@@ -1,0 +1,952 @@
+{
+  "source_language": "Αγγλικά",
+  "document_brief": "Τύπος: Μυθιστόρημα / Παιδική λογοτεχνία\nΘέμα: Ιστορική περιπέτεια για τον μικρό βαρόνο Όττο που ζει στον Μεσαίωνα, ορφανός από μητέρα, μεγαλώνει σε μοναστήρι και αντιμετωπίζει τη βία και την αδικία της εποχής του\nΕποχή/Πλαίσιο: Μεσαίωνας / Σκοτεινοί Αιώνες — εποχή Αυτοκράτορα Ρουδόλφου του Αψβούργου (13ος αιώνας), Γερμανία\nΎφος: Λογοτεχνικό, αφηγηματικό, ρομαντικό-ιστορικό ύφος, απευθύνεται σε νεαρό κοινό, με αρχαϊκές εκφράσεις (thee, thou, wilt, dost κ.λπ.)\nΣημειώσεις: 1. ΑΡΧΑΪΚΕΣ ΑΓΓΛΙΚΕΣ ΕΚΦΡΑΣΕΙΣ: Το κείμενο χρησιμοποιεί αρχαϊκές αγγλικές μορφές (thee, thou, thy, wilt, dost, hast, art, methinks, mayhap, prut, tschk κ.λπ.) που αποδίδουν μεσαιωνικό ύφος. Στα ελληνικά πρέπει να αποδοθούν με κατάλληλο λογοτεχνικό-αρχαΐζον ύφος χωρίς να γίνει αδόκιμο. 2. ΚΥΡΙΑ ΟΝΟΜΑΤΑ: Τα γερμανικά ονόματα (Conrad, Matilda, Schwartz Carl, Ursela κ.λπ.) πρέπει να μεταγραφούν με συνέπεια. Το όνομα 'Otto' αποδίδεται 'Όττο'. 3. ΤΟΠΩΝΥΜΙΑ: Τα γερμανικά τοπωνύμια (Drachenhausen = 'Σπίτι του Δράκου', Trutz-Drachen = 'Σκορνητής Δράκου') έχουν σημασιολογικό περιεχόμενο που ο συγγραφέας εκμεταλλεύεται. Ο μεταφραστής πρέπει να αποφασίσει αν θα τα μεταγράψει ή θα τα αποδώσει σημασιολογικά. 4. ΛΑΤΙΝΙΚΟ ΡΗΤΟ: Το τελικό μότο 'Manus argentea quam manus ferrea melior est' πρέπει να αποδοθεί στα ελληνικά με σημείωση ότι είναι λατινικό. 5. ΘΡΗΣΚΕΥΤΙΚΕΣ ΑΝΑΦΟΡΕΣ: Πολλές αναφορές σε αγγέλους, αγίους, παράδεισο κ.λπ. απαιτούν προσοχή στην ορθόδοξη ελληνική ορολογία. 6. ΣΤΡΑΤΙΩΤΙΚΗ/ΦΕΟΥΔΑΡΧΙΚΗ ΟΡΟΛΟΓΙΑ: Όροι όπως portcullis, bartizan, bascinet, arbelast, corselet κ.λπ. είναι εξειδικευμένοι και χρειάζονται έρευνα για την ακριβή ελληνική απόδοσή τους. 7. ΟΝΟΜΑ ΗΡΩΑ: Το 'Otto of the Silver Hand' (τίτλος) πρέπει να αποδοθεί ως 'Όττο του Ασημένιου Χεριού'. 8. ΔΙΑΛΟΓΟΙ: Οι διάλογοι έχουν ζωντανό, δραματικό χαρακτήρα και πρέπει να διατηρήσουν την ένταση και το ύφος τους στη μετάφραση.",
+  "glossary": [
+    {
+      "source": "Howard Pyle",
+      "target": "Χάουαρντ Πάιλ",
+      "note": "person — συγγραφέας"
+    },
+    {
+      "source": "Baron Conrad",
+      "target": "Βαρόνος Κόνραντ",
+      "note": "person"
+    },
+    {
+      "source": "Baroness Matilda",
+      "target": "Βαρόνη Ματίλδα",
+      "note": "person"
+    },
+    {
+      "source": "Baron Otto",
+      "target": "Βαρόνος Όττο",
+      "note": "person — κεντρικός ήρωας"
+    },
+    {
+      "source": "Otto",
+      "target": "Όττο",
+      "note": "person — κεντρικός ήρωας"
+    },
+    {
+      "source": "Baron Henry",
+      "target": "Βαρόνος Χένρι",
+      "note": "person — ανταγωνιστής"
+    },
+    {
+      "source": "Baron Frederick",
+      "target": "Βαρόνος Φρέντερικ",
+      "note": "person"
+    },
+    {
+      "source": "Abbot Otto",
+      "target": "Ηγούμενος Όττο",
+      "note": "person"
+    },
+    {
+      "source": "Brother John",
+      "target": "Αδελφός Ιωάννης",
+      "note": "person"
+    },
+    {
+      "source": "Brother Emmanuel",
+      "target": "Αδελφός Εμμανουήλ",
+      "note": "person"
+    },
+    {
+      "source": "Brother Benedict",
+      "target": "Αδελφός Βενέδικτος",
+      "note": "person"
+    },
+    {
+      "source": "Brother Ignatius",
+      "target": "Αδελφός Ιγνάτιος",
+      "note": "person"
+    },
+    {
+      "source": "Brother Theodore",
+      "target": "Αδελφός Θεόδωρος",
+      "note": "person"
+    },
+    {
+      "source": "One-eyed Hans",
+      "target": "ο Μονόφθαλμος Χανς",
+      "note": "person"
+    },
+    {
+      "source": "Hans",
+      "target": "Χανς",
+      "note": "person"
+    },
+    {
+      "source": "Schwartz Carl",
+      "target": "Σβαρτς Καρλ",
+      "note": "person"
+    },
+    {
+      "source": "Master Rudolph",
+      "target": "Κύριος Ρούντολφ",
+      "note": "person — επιστάτης"
+    },
+    {
+      "source": "Master Nicholas",
+      "target": "Κύριος Νικόλαος",
+      "note": "person — ξάδελφος του Βαρόνου"
+    },
+    {
+      "source": "Ursela",
+      "target": "Ούρσελα",
+      "note": "person — παραμάνα"
+    },
+    {
+      "source": "Pauline",
+      "target": "Παουλίνε",
+      "note": "person — κόρη του Βαρόνου Χένρι"
+    },
+    {
+      "source": "Fritz",
+      "target": "Φριτς",
+      "note": "person — χοιροβοσκός"
+    },
+    {
+      "source": "Katherine",
+      "target": "Αικατερίνη",
+      "note": "person — γυναίκα του Φριτς"
+    },
+    {
+      "source": "Hans Schmidt",
+      "target": "Χανς Σμιτ",
+      "note": "person — τοξότης"
+    },
+    {
+      "source": "Nicholas Stein",
+      "target": "Νικόλαος Στάιν",
+      "note": "person — υπαρχηγός του Βαρόνου Χένρι"
+    },
+    {
+      "source": "William of Roderburg",
+      "target": "Βίλχελμ του Ρόντερμπουργκ",
+      "note": "person"
+    },
+    {
+      "source": "Casper",
+      "target": "Κάσπερ",
+      "note": "person — φρουρός στο Τρουτς-Ντράχεν"
+    },
+    {
+      "source": "Long Jacob",
+      "target": "ο Ψηλός Γιάκομπ",
+      "note": "person — τοξότης"
+    },
+    {
+      "source": "Gretchen",
+      "target": "Γκρέτχεν",
+      "note": "person"
+    },
+    {
+      "source": "Hilda",
+      "target": "Χίλντα",
+      "note": "person — γυναίκα του Σβαρτς Καρλ"
+    },
+    {
+      "source": "Emperor Rudolph",
+      "target": "Αυτοκράτορας Ρουδόλφος",
+      "note": "person — Ρουδόλφος του Αψβούργου"
+    },
+    {
+      "source": "Rudolph of Hapsburg",
+      "target": "Ρουδόλφος του Αψβούργου",
+      "note": "person"
+    },
+    {
+      "source": "Emperor Frederick",
+      "target": "Αυτοκράτορας Φρειδερίκος",
+      "note": "person — εγγονός του Κοκκινογένη"
+    },
+    {
+      "source": "King Ottocar of Bohemia",
+      "target": "Βασιλιάς Ότοκαρ της Βοημίας",
+      "note": "person"
+    },
+    {
+      "source": "Castle Drachenhausen",
+      "target": "Κάστρο Ντράχενχάουζεν",
+      "note": "place — το Σπίτι του Δράκου"
+    },
+    {
+      "source": "Castle Trutz-Drachen",
+      "target": "Κάστρο Τρουτς-Ντράχεν",
+      "note": "place — το Κάστρο του Δράκου-Σκορνητή"
+    },
+    {
+      "source": "Drachenhausen",
+      "target": "Ντράχενχάουζεν",
+      "note": "place"
+    },
+    {
+      "source": "Trutz-Drachen",
+      "target": "Τρουτς-Ντράχεν",
+      "note": "place"
+    },
+    {
+      "source": "St. Michaelsburg",
+      "target": "Άγιος Μιχαήλσμπουργκ",
+      "note": "place — λόφος και μοναστήρι"
+    },
+    {
+      "source": "Monastery of St. Michaelsburg",
+      "target": "Μοναστήρι του Αγίου Μιχαήλσμπουργκ",
+      "note": "org"
+    },
+    {
+      "source": "The White Cross on the Hill",
+      "target": "ο Λευκός Σταυρός στον Λόφο",
+      "note": "place — προσωνύμιο του μοναστηριού"
+    },
+    {
+      "source": "Gruenstadt",
+      "target": "Γκρύνσταντ",
+      "note": "place — πόλη"
+    },
+    {
+      "source": "Staffenburgen",
+      "target": "Σταφενμπούργκεν",
+      "note": "place — πόλη"
+    },
+    {
+      "source": "Gruenhoffen",
+      "target": "Γκρύνχοφεν",
+      "note": "place — κοιλάδα"
+    },
+    {
+      "source": "Kaiserburg",
+      "target": "Κάιζερμπουργκ",
+      "note": "place"
+    },
+    {
+      "source": "Keiserberg",
+      "target": "Κάιζερμπεργκ",
+      "note": "place — βουνό"
+    },
+    {
+      "source": "Nurnburg",
+      "target": "Νυρεμβέργη",
+      "note": "place — καθιερωμένη ελληνική μορφή"
+    },
+    {
+      "source": "Rhine",
+      "target": "Ρήνος",
+      "note": "place — καθιερωμένη ελληνική μορφή"
+    },
+    {
+      "source": "Germany",
+      "target": "Γερμανία",
+      "note": "place"
+    },
+    {
+      "source": "Austria",
+      "target": "Αυστρία",
+      "note": "place"
+    },
+    {
+      "source": "Bohemia",
+      "target": "Βοημία",
+      "note": "place"
+    },
+    {
+      "source": "Palestine",
+      "target": "Παλαιστίνη",
+      "note": "place"
+    },
+    {
+      "source": "Melchior Tower",
+      "target": "Πύργος Μέλχιορ",
+      "note": "place — εντός του κάστρου"
+    },
+    {
+      "source": "Roderhausen",
+      "target": "Ρόντερχάουζεν",
+      "note": "place — τμήμα του κάστρου"
+    },
+    {
+      "source": "Baron's Hall",
+      "target": "Αίθουσα του Βαρόνου",
+      "note": "place"
+    },
+    {
+      "source": "Vuelphs",
+      "target": "Βέλφοι",
+      "note": "org — οικογένεια/δυναστεία"
+    },
+    {
+      "source": "Roderburgs",
+      "target": "Ρόντερμπουργκ",
+      "note": "org — εχθρική οικογένεια"
+    },
+    {
+      "source": "Imperial Court",
+      "target": "Αυτοκρατορική Αυλή",
+      "note": "org"
+    },
+    {
+      "source": "Universal Mother Church",
+      "target": "Καθολική Εκκλησία / Μητέρα Εκκλησία",
+      "note": "org"
+    },
+    {
+      "source": "dark ages",
+      "target": "Σκοτεινοί Αιώνες",
+      "note": "term"
+    },
+    {
+      "source": "middle ages",
+      "target": "Μεσαίωνας",
+      "note": "term"
+    },
+    {
+      "source": "Baron",
+      "target": "Βαρόνος",
+      "note": "title/rank"
+    },
+    {
+      "source": "Baroness",
+      "target": "Βαρόνη",
+      "note": "title/rank"
+    },
+    {
+      "source": "Abbot",
+      "target": "Ηγούμενος",
+      "note": "title/rank"
+    },
+    {
+      "source": "Emperor",
+      "target": "Αυτοκράτορας",
+      "note": "title/rank"
+    },
+    {
+      "source": "King",
+      "target": "Βασιλιάς",
+      "note": "title/rank"
+    },
+    {
+      "source": "Count",
+      "target": "Κόμης",
+      "note": "title/rank"
+    },
+    {
+      "source": "knight",
+      "target": "ιππότης",
+      "note": "title/rank"
+    },
+    {
+      "source": "steward",
+      "target": "επιστάτης / οικονόμος",
+      "note": "title/rank"
+    },
+    {
+      "source": "leech",
+      "target": "γιατρός / ιατρός",
+      "note": "term — μεσαιωνικός όρος για τον γιατρό"
+    },
+    {
+      "source": "portcullis",
+      "target": "σιδερένια κατεβαστή πόρτα / κατεβαστή",
+      "note": "term — αρχιτεκτονικός όρος κάστρου"
+    },
+    {
+      "source": "drawbridge",
+      "target": "ανασυρόμενη γέφυρα",
+      "note": "term"
+    },
+    {
+      "source": "bascule",
+      "target": "ανασυρόμενη γέφυρα",
+      "note": "term"
+    },
+    {
+      "source": "bartizan",
+      "target": "προμαχώνας / παρατηρητήριο",
+      "note": "term — μικρός πύργος παρατήρησης"
+    },
+    {
+      "source": "belfry",
+      "target": "καμπαναριό",
+      "note": "term"
+    },
+    {
+      "source": "dungeon",
+      "target": "μπουντρούμι / υπόγεια φυλακή",
+      "note": "term"
+    },
+    {
+      "source": "dungeon-keep",
+      "target": "κεντρικός πύργος-φυλακή",
+      "note": "term"
+    },
+    {
+      "source": "portals",
+      "target": "πύλες",
+      "note": "term"
+    },
+    {
+      "source": "postern",
+      "target": "πίσω πόρτα / μικρή πλαϊνή πύλη",
+      "note": "term — αρχιτεκτονικός όρος κάστρου"
+    },
+    {
+      "source": "barbican",
+      "target": "προπύλιο / εξωτερική οχύρωση",
+      "note": "term"
+    },
+    {
+      "source": "battlement",
+      "target": "επάλξεις",
+      "note": "term"
+    },
+    {
+      "source": "turret",
+      "target": "πυργίσκος",
+      "note": "term"
+    },
+    {
+      "source": "windlass",
+      "target": "βαρούλκο / ανυψωτικός μηχανισμός",
+      "note": "term"
+    },
+    {
+      "source": "men-at-arms",
+      "target": "οπλίτες / ένοπλοι άνδρες",
+      "note": "term"
+    },
+    {
+      "source": "retainers",
+      "target": "ακόλουθοι / υπηρέτες",
+      "note": "term"
+    },
+    {
+      "source": "serfs",
+      "target": "δουλοπάροικοι",
+      "note": "term"
+    },
+    {
+      "source": "peasants",
+      "target": "χωρικοί / αγρότες",
+      "note": "term"
+    },
+    {
+      "source": "robber baron",
+      "target": "ληστής βαρόνος",
+      "note": "term"
+    },
+    {
+      "source": "ransom",
+      "target": "λύτρα",
+      "note": "term"
+    },
+    {
+      "source": "sanctuary",
+      "target": "άσυλο / καταφύγιο",
+      "note": "term"
+    },
+    {
+      "source": "sennight",
+      "target": "εβδομάδα (επτά νύχτες)",
+      "note": "term — αρχαϊκός όρος"
+    },
+    {
+      "source": "arbelast",
+      "target": "βαλλίστρα / αρβαλέστα",
+      "note": "term — είδος βαλλίστρας"
+    },
+    {
+      "source": "cross-bow",
+      "target": "βαλλίστρα",
+      "note": "term"
+    },
+    {
+      "source": "bascinet",
+      "target": "κράνος βασινέτο",
+      "note": "term — είδος κράνους"
+    },
+    {
+      "source": "corselet",
+      "target": "θώρακας",
+      "note": "term"
+    },
+    {
+      "source": "vizor",
+      "target": "προσωπίδα κράνους",
+      "note": "term"
+    },
+    {
+      "source": "scabbard",
+      "target": "θήκη σπαθιού",
+      "note": "term"
+    },
+    {
+      "source": "two-handed sword",
+      "target": "δίχειρο σπαθί",
+      "note": "term"
+    },
+    {
+      "source": "lance",
+      "target": "λόγχη / κοντάρι",
+      "note": "term"
+    },
+    {
+      "source": "pike",
+      "target": "πίκα / δόρυ",
+      "note": "term"
+    },
+    {
+      "source": "quiver",
+      "target": "φαρέτρα",
+      "note": "term"
+    },
+    {
+      "source": "bolt",
+      "target": "βέλος βαλλίστρας",
+      "note": "term"
+    },
+    {
+      "source": "pennant",
+      "target": "σημαιάκι / φλάμπουρο",
+      "note": "term"
+    },
+    {
+      "source": "chain armor",
+      "target": "αλυσιδωτή πανοπλία",
+      "note": "term"
+    },
+    {
+      "source": "breast-plate",
+      "target": "θωρακοπλάκα",
+      "note": "term"
+    },
+    {
+      "source": "leathern jerkin",
+      "target": "δερμάτινο γιλέκο",
+      "note": "term"
+    },
+    {
+      "source": "oriel window",
+      "target": "προεξέχον παράθυρο / εξώστης-παράθυρο",
+      "note": "term"
+    },
+    {
+      "source": "parchment",
+      "target": "περγαμηνή",
+      "note": "term"
+    },
+    {
+      "source": "monk",
+      "target": "μοναχός",
+      "note": "term"
+    },
+    {
+      "source": "brethren",
+      "target": "αδελφοί (μοναχοί)",
+      "note": "term"
+    },
+    {
+      "source": "monastery",
+      "target": "μοναστήρι",
+      "note": "term"
+    },
+    {
+      "source": "chapel",
+      "target": "παρεκκλήσι",
+      "note": "term"
+    },
+    {
+      "source": "vintage",
+      "target": "τρύγος",
+      "note": "term"
+    },
+    {
+      "source": "caravan",
+      "target": "καραβάνι",
+      "note": "term"
+    },
+    {
+      "source": "tribute",
+      "target": "φόρος / δασμός",
+      "note": "term"
+    },
+    {
+      "source": "fealty",
+      "target": "υποτέλεια / πίστη",
+      "note": "term — φεουδαρχικός όρος"
+    },
+    {
+      "source": "allegiance",
+      "target": "υποταγή / πίστη",
+      "note": "term"
+    },
+    {
+      "source": "surety",
+      "target": "εγγύηση / εγγυητής",
+      "note": "term"
+    },
+    {
+      "source": "indemnity",
+      "target": "αποζημίωση",
+      "note": "term"
+    },
+    {
+      "source": "ward",
+      "target": "κηδεμονία / επιτροπεία",
+      "note": "term"
+    },
+    {
+      "source": "scutcheon",
+      "target": "οικόσημο / ασπίδα",
+      "note": "term — εραλδικός όρος"
+    },
+    {
+      "source": "rope ladder",
+      "target": "σχοινένια σκάλα",
+      "note": "term"
+    },
+    {
+      "source": "knotted rope",
+      "target": "κόμπος σχοινί",
+      "note": "term"
+    },
+    {
+      "source": "alarm bell",
+      "target": "καμπάνα συναγερμού",
+      "note": "term"
+    },
+    {
+      "source": "wolf-hounds",
+      "target": "λυκόσκυλα",
+      "note": "term"
+    },
+    {
+      "source": "stag-hound",
+      "target": "κυνηγόσκυλο ελαφιών",
+      "note": "term"
+    },
+    {
+      "source": "defile",
+      "target": "στενό πέρασμα / φαράγγι",
+      "note": "term"
+    },
+    {
+      "source": "parapet",
+      "target": "στηθαίο / προστατευτικό τοίχωμα γέφυρας",
+      "note": "term"
+    },
+    {
+      "source": "rapine",
+      "target": "αρπαγή / λεηλασία",
+      "note": "term"
+    },
+    {
+      "source": "extortion",
+      "target": "εκβιασμός / αρπαγή",
+      "note": "term"
+    },
+    {
+      "source": "superstition",
+      "target": "δεισιδαιμονία",
+      "note": "term"
+    },
+    {
+      "source": "mutilated",
+      "target": "ακρωτηριασμένος",
+      "note": "term"
+    },
+    {
+      "source": "silver hand",
+      "target": "ασημένιο χέρι",
+      "note": "term — κεντρικό σύμβολο"
+    },
+    {
+      "source": "Otto of the Silver Hand",
+      "target": "Όττο του Ασημένιου Χεριού",
+      "note": "title — τίτλος έργου"
+    },
+    {
+      "source": "Manus argentea quam manus ferrea melior est",
+      "target": "Το ασημένιο χέρι είναι καλύτερο από το σιδερένιο",
+      "note": "title — λατινικό ρητό / μότο"
+    },
+    {
+      "source": "Angel Gabriel",
+      "target": "Αρχάγγελος Γαβριήλ",
+      "note": "term — θρησκευτικό"
+    },
+    {
+      "source": "Paradise",
+      "target": "Παράδεισος",
+      "note": "term — θρησκευτικό"
+    },
+    {
+      "source": "Christ",
+      "target": "Χριστός",
+      "note": "term — θρησκευτικό"
+    },
+    {
+      "source": "Blessed Virgin",
+      "target": "Παναγία / Ευλογημένη Παρθένος",
+      "note": "term — θρησκευτικό"
+    },
+    {
+      "source": "St. Joseph",
+      "target": "Άγιος Ιωσήφ",
+      "note": "term — θρησκευτικό"
+    },
+    {
+      "source": "the three Kings",
+      "target": "οι τρεις Μάγοι",
+      "note": "term — θρησκευτικό"
+    },
+    {
+      "source": "Shepherds",
+      "target": "Ποιμένες",
+      "note": "term — θρησκευτικό"
+    },
+    {
+      "source": "oriole",
+      "target": "φωτοστέφανο / αχτινοβολία",
+      "note": "term — θρησκευτική εικονογραφία"
+    },
+    {
+      "source": "tonsure",
+      "target": "κουρά / κλερικάλ κούρεμα",
+      "note": "term — μοναστικό"
+    },
+    {
+      "source": "leathern",
+      "target": "δερμάτινος",
+      "note": "term — αρχαϊκή λέξη"
+    },
+    {
+      "source": "frieze",
+      "target": "χοντρό μάλλινο ύφασμα",
+      "note": "term"
+    },
+    {
+      "source": "burgher",
+      "target": "αστός / πολίτης",
+      "note": "term — μεσαιωνικός κοινωνικός όρος"
+    },
+    {
+      "source": "dough trough",
+      "target": "σκάφη ζύμης",
+      "note": "term"
+    },
+    {
+      "source": "distaff",
+      "target": "ρόκα (εργαλείο νηματουργίας)",
+      "note": "term"
+    },
+    {
+      "source": "spit",
+      "target": "σούβλα",
+      "note": "term"
+    },
+    {
+      "source": "flagon",
+      "target": "κανάτα / δοχείο κρασιού",
+      "note": "term"
+    },
+    {
+      "source": "pewter",
+      "target": "κασσίτερος / κράμα μολύβδου",
+      "note": "term"
+    },
+    {
+      "source": "punk",
+      "target": "σπινθήρας / αναμμένο υλικό",
+      "note": "term — αρχαϊκή χρήση"
+    },
+    {
+      "source": "wainscoting",
+      "target": "ξύλινη επένδυση τοίχου",
+      "note": "term"
+    },
+    {
+      "source": "tapestry",
+      "target": "ταπισερί / υφαντό τοιχοκάλυμμα",
+      "note": "term"
+    },
+    {
+      "source": "hog-skin",
+      "target": "δέρμα χοίρου",
+      "note": "term — βιβλιοδεσία"
+    },
+    {
+      "source": "ivory",
+      "target": "ελεφαντόδοντο",
+      "note": "term"
+    },
+    {
+      "source": "peddler",
+      "target": "πλανόδιος έμπορος / γυρολόγος",
+      "note": "term"
+    },
+    {
+      "source": "scullion",
+      "target": "βοηθός κουζίνας / μαγειρόπαιδο",
+      "note": "term"
+    },
+    {
+      "source": "sentry / sentinel / watchman",
+      "target": "φρουρός / σκοπός",
+      "note": "term"
+    },
+    {
+      "source": "filigree",
+      "target": "φιλιγκράν / λεπτοδουλεμένο κόσμημα",
+      "note": "term"
+    },
+    {
+      "source": "Latin",
+      "target": "Λατινικά",
+      "note": "term — γλώσσα"
+    },
+    {
+      "source": "Greek",
+      "target": "Ελληνικά",
+      "note": "term — γλώσσα"
+    },
+    {
+      "source": "Foreword",
+      "target": "Πρόλογος",
+      "note": "term — δομικό στοιχείο"
+    },
+    {
+      "source": "Afterword",
+      "target": "Επίλογος",
+      "note": "term — δομικό στοιχείο"
+    },
+    {
+      "source": "Brother Fritz",
+      "target": "Αδελφός Φριτς",
+      "note": "person"
+    },
+    {
+      "source": "Mother Hilda",
+      "target": "Μητέρα Χίλντα",
+      "note": "person"
+    },
+    {
+      "source": "Count Rudolph of Hapsburg",
+      "target": "Κόμης Ρούντολφ της Αψβούργης",
+      "note": "person"
+    },
+    {
+      "source": "Otto of Wolbergen",
+      "target": "Όττο του Βόλμπεργκεν",
+      "note": "person"
+    },
+    {
+      "source": "White Cross on the Hill",
+      "target": "Λευκός Σταυρός στον Λόφο",
+      "note": "place"
+    },
+    {
+      "source": "River Rhine",
+      "target": "Ποταμός Ρήνος",
+      "note": "place"
+    },
+    {
+      "source": "Gruenstaldt",
+      "target": "Γκρούενσταλντ",
+      "note": "place"
+    },
+    {
+      "source": "dark middle ages",
+      "target": "σκοτεινός μεσαίωνας",
+      "note": "term"
+    },
+    {
+      "source": "watch-tower",
+      "target": "πύργος παρατήρησης",
+      "note": "term"
+    },
+    {
+      "source": "belfry-tower",
+      "target": "πύργος καμπαναριού",
+      "note": "term"
+    },
+    {
+      "source": "plate armor",
+      "target": "πανοπλία πλακών",
+      "note": "term"
+    },
+    {
+      "source": "burghers",
+      "target": "αστοί / εμποροί",
+      "note": "term"
+    },
+    {
+      "source": "court-yard",
+      "target": "αυλή",
+      "note": "term"
+    },
+    {
+      "source": "great hall",
+      "target": "μεγάλη αίθουσα",
+      "note": "term"
+    },
+    {
+      "source": "cell",
+      "target": "κελί",
+      "note": "term"
+    },
+    {
+      "source": "red cock crows",
+      "target": "ο κόκκινος πετεινός λαλεί (μεταφορά για πυρκαγιά)",
+      "note": "term"
+    },
+    {
+      "source": "imperial summons",
+      "target": "αυτοκρατορική κλήση",
+      "note": "term"
+    },
+    {
+      "source": "prowess",
+      "target": "ανδρεία / ικανότητα",
+      "note": "term"
+    },
+    {
+      "source": "chastened",
+      "target": "τιμωρημένος / σωφρονισμένος",
+      "note": "term"
+    },
+    {
+      "source": "Hill-man",
+      "target": "ο Άνθρωπος του Λόφου (μυθολογικό ον)",
+      "note": "term"
+    },
+    {
+      "source": "Christ Child",
+      "target": "Θείο Βρέφος",
+      "note": "term"
+    },
+    {
+      "source": "three Kings",
+      "target": "οι τρεις Μάγοι",
+      "note": "term"
+    },
+    {
+      "source": "Greek writing",
+      "target": "ελληνική γραφή",
+      "note": "term"
+    },
+    {
+      "source": "Postera Phoeba lustrabat lampade terras",
+      "target": "Postera Phoeba lustrabat lampade terras (λατινικό κείμενο)",
+      "note": "title"
+    },
+    {
+      "source": "humentemque Aurora polo dimoverat umbram",
+      "target": "humentemque Aurora polo dimoverat umbram (λατινικό κείμενο)",
+      "note": "title"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

@@ -1,0 +1,222 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: Λογοτεχνικό κείμενο (μυθιστόρημα)\nΘέμα: Η εισαγωγή μιας παράξενης ιδέας που κυρίευσε τη σκέψη διανοούμενων, με επίκεντρο την παιδική ηλικία, την εκπαίδευση και τις θρησκευτικές αμφιβολίες του πρωταγωνιστή, κ. Τζόζεφ Ντέιβις.\nΕποχή/Πλαίσιο: Αρχές 20ού αιώνα, Αγγλία (εποχή ιδεολογικής σύγκρουσης μεταξύ θρησκευτικού δόγματος και επιστήμης, βρετανικό εκπαιδευτικό σύστημα).\nΎφος: Λογοτεχνικό, διανοητικό, με στοιχεία φιλοσοφικού και θεολογικού στοχασμού.\nΣημειώσεις: Η μεγαλύτερη πρόκληση είναι η διατήρηση του λεπτού, ειρωνικού τόνου του αφηγητή, ιδιαίτερα στις παραγράφους που σατιρίζουν τη θρησκευτική κατήχηση και το αγγλικό εκπαιδευτικό σύστημα. Προσοχή στην απόδοση του 'public schools' για να μην μπερδευτεί ο Έλληνας αναγνώστης με τα δημόσια σχολεία. Επίσης, η μετάβαση από την παιδική αφέλεια στην εφηβική αμφισβήτηση πρέπει να αποδοθεί με την αντίστοιχη κλιμάκωση στο ύφος και το λεξιλόγιο.",
+  "glossary": [
+    {
+      "source": "man of letters",
+      "target": "άνθρωπος των γραμμάτων / λόγιος",
+      "note": ""
+    },
+    {
+      "source": "neurasthenia",
+      "target": "νευρασθένεια",
+      "note": ""
+    },
+    {
+      "source": "mellifluous parson",
+      "target": "μειλίχιος ιερέας / γλυκομίλητος πάστορας",
+      "note": ""
+    },
+    {
+      "source": "Mr. Cleverkins",
+      "target": "κύριος Εξυπνάκιας",
+      "note": "Απαιτεί ελεύθερη απόδοση για να διατηρηθεί ο ειρωνικός/παιδικός τόνος."
+    },
+    {
+      "source": "public schools",
+      "target": "ιδιωτικά σχολεία",
+      "note": "Στην Αγγλία τα 'public schools' είναι ελίτ ιδιωτικά σχολεία, όχι δημόσια. Χρειάζεται προσοχή για να μην υπάρξει παρανόηση."
+    },
+    {
+      "source": "games-and-cram schools",
+      "target": "σχολεία αθλητισμού και παπαγαλίας",
+      "note": "Ελεύθερη απόδοση του cramming (εντατική αποστήθιση)."
+    },
+    {
+      "source": "Joseph Davis",
+      "target": "Τζόζεφ Ντέιβις",
+      "note": "person"
+    },
+    {
+      "source": "Abraham",
+      "target": "Αβραάμ",
+      "note": "person"
+    },
+    {
+      "source": "Isaac",
+      "target": "Ισαάκ",
+      "note": "person"
+    },
+    {
+      "source": "Jacob",
+      "target": "Ιακώβ",
+      "note": "person"
+    },
+    {
+      "source": "Adam",
+      "target": "Αδάμ",
+      "note": "person"
+    },
+    {
+      "source": "Eve",
+      "target": "Εύα",
+      "note": "person"
+    },
+    {
+      "source": "Cain",
+      "target": "Κάιν",
+      "note": "person"
+    },
+    {
+      "source": "Abel",
+      "target": "Άβελ",
+      "note": "person"
+    },
+    {
+      "source": "Noah",
+      "target": "Νώε",
+      "note": "person"
+    },
+    {
+      "source": "Samuel",
+      "target": "Σαμουήλ",
+      "note": "person"
+    },
+    {
+      "source": "Solomon",
+      "target": "Σολομών",
+      "note": "person"
+    },
+    {
+      "source": "David",
+      "target": "Δαβίδ",
+      "note": "person"
+    },
+    {
+      "source": "Wood",
+      "target": "Γουντ",
+      "note": "person"
+    },
+    {
+      "source": "Eastern Levant",
+      "target": "Ανατολικό Λεβάντε",
+      "note": "place"
+    },
+    {
+      "source": "Garden of Eden",
+      "target": "Κήπος της Εδέμ",
+      "note": "place"
+    },
+    {
+      "source": "Oxford",
+      "target": "Οξφόρδη",
+      "note": "place"
+    },
+    {
+      "source": "Planetarium Club",
+      "target": "Λέσχη Πλανητάριουμ",
+      "note": "org"
+    },
+    {
+      "source": "St. Hobart's school",
+      "target": "Σχολείο Σεντ Χόμπαρτς",
+      "note": "org"
+    },
+    {
+      "source": "Camborne Hall",
+      "target": "Κάμπορν Χολ",
+      "note": "org"
+    },
+    {
+      "source": "Green Pastures",
+      "target": "Πράσινα Λιβάδια",
+      "note": "title"
+    },
+    {
+      "source": "Natural History",
+      "target": "Φυσική Ιστορία",
+      "note": "title"
+    },
+    {
+      "source": "Bible",
+      "target": "Βίβλος",
+      "note": "title"
+    },
+    {
+      "source": "universe",
+      "target": "σύμπαν",
+      "note": "term"
+    },
+    {
+      "source": "omnipotence",
+      "target": "παντοδυναμία",
+      "note": "term"
+    },
+    {
+      "source": "salvation",
+      "target": "σωτηρία",
+      "note": "term"
+    },
+    {
+      "source": "science",
+      "target": "επιστήμη",
+      "note": "term"
+    },
+    {
+      "source": "governess",
+      "target": "γκουβερνάντα",
+      "note": "term"
+    },
+    {
+      "source": "parson",
+      "target": "πάστορας",
+      "note": "term"
+    },
+    {
+      "source": "Fall",
+      "target": "Πτώση",
+      "note": "term"
+    },
+    {
+      "source": "Ark",
+      "target": "Κιβωτός",
+      "note": "term"
+    },
+    {
+      "source": "Eastern Levantine",
+      "target": "Ανατολικολεβαντίνικος",
+      "note": "term"
+    },
+    {
+      "source": "public school",
+      "target": "βρετανικό ιδιωτικό σχολείο",
+      "note": "term"
+    },
+    {
+      "source": "doubt",
+      "target": "αμφιβολία",
+      "note": "term"
+    },
+    {
+      "source": "faith",
+      "target": "πίστη",
+      "note": "term"
+    },
+    {
+      "source": "scripture",
+      "target": "γραφή",
+      "note": "term"
+    },
+    {
+      "source": "God",
+      "target": "Θεός",
+      "note": "term"
+    },
+    {
+      "source": "symbolical",
+      "target": "συμβολικός",
+      "note": "term"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

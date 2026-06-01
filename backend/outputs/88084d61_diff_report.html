@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Αναφορά Αλλαγών - 88084d61.docx</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .header h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .header .meta { color: #64748b; font-size: 0.875rem; }
+        .status {
+            background: #22c55e;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-weight: 600;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .stat {
+            background: #f1f5f9;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-value { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
+        .stat-label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; }
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .change {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .change.unmatched {
+            border-color: #fecaca;
+            background: #fef2f2;
+        }
+        .change-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        .change-type {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        .change-type.replace { background: #fef3c7; color: #92400e; }
+        .change-type.insert { background: #d1fae5; color: #065f46; }
+        .change-type.delete { background: #fee2e2; color: #991b1b; }
+        .change-position { font-size: 0.75rem; color: #64748b; }
+        .change-content { font-family: 'Courier New', monospace; font-size: 0.875rem; }
+        .context { color: #64748b; }
+        .deleted { background: #fee2e2; color: #991b1b; text-decoration: line-through; padding: 0.125rem 0.25rem; border-radius: 2px; }
+        .inserted { background: #d1fae5; color: #065f46; padding: 0.125rem 0.25rem; border-radius: 2px; }
+        .warning-box {
+            background: #fef2f2;
+            border: 2px solid #ef4444;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box h3 { color: #dc2626; margin-bottom: 0.5rem; }
+        .footer {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.75rem;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📄 Αναφορά Αλλαγών</h1>
+            <div class="meta">
+                <div><strong>Αρχείο:</strong> 88084d61.docx</div>
+                <div><strong>Session:</strong> 88084d61</div>
+                <div><strong>Ημερομηνία:</strong> 05/03/2026 14:05</div>
+            </div>
+            <div class="status">✓ ΑΣΦΑΛΕΣ - Όλες οι αλλαγές αντιστοιχούν σε εγκεκριμένες διορθώσεις</div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">32</div>
+                    <div class="stat-label">Συνολικές Αλλαγές</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">32</div>
+                    <div class="stat-label">Εγκεκριμένες</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" style="color: #22c55e">0</div>
+                    <div class="stat-label">Μη Εγκεκριμένες</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">1,305,650</div>
+                    <div class="stat-label">Χαρακτήρες (Αρχικό)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✓ Εγκεκριμένες Αλλαγές (32)</h2>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 7
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">οσεχώς τον ανήσυχο και πολύπαθ</span><span class="deleted">ό</span><span class="inserted">ο</span><span class="context"> μας κόσμο. Loyd Douglas1Ήταν </span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Λανθασμένη προσθήκη τόνου. Το επίθετο 'πολύπαθος' είναι προπαροξύτονο και όταν ακολουθείται από εγκλιτικό κτητικό (μας), ο τόνος δεν ανεβαίνει στην παραλήγουσα γιατί η λήγουσα είναι βραχύχρονη.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type insert">insert</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 8
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">συχο και πολύπαθό μας κόσμο. L</span><span class="inserted">l</span><span class="context">oyd Douglas1Ήταν ένα ήσυχο μεσ</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Ορθογραφικό λάθος σε κύριο όνομα. Ο συγγραφέας είναι ο Lloyd C. Douglas (διπλό 'l').
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type insert">insert</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 17
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">υ με τις αυστηρές τιμωρίες του</span><span class="inserted">,</span><span class="context"> τους είχε αναγκάσει συχνά να </span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Σοβαρό συντακτικό σφάλμα: η συσσώρευση αντωνυμιών χωρίς στίξη καθιστά τη φράση γραμματικά εσφαλμένη ως προς τη σύνδεση των όρων (κτήτορας και αντικείμενο).
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type insert">insert</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 17
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ράν, που όμως προμάντευαν όλοι</span><span class="inserted"> πως</span><span class="context"> θα παντρευόταν σε λίγο την πρ</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Σοβαρό συντακτικό σφάλμα: παράλειψη του ειδικού συνδέσμου (πως/ότι) που εισάγει τη δευτερεύουσα πρόταση, καθιστώντας τη δομή γραμματικά ελλιπή.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 39
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">με στην Πέτρα. Θα φύγουμε την </span><span class="deleted">Τ</span><span class="inserted">τ</span><span class="context">ρίτη μέρα της εβδομάδας, θα μα</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Η λέξη 'τρίτη' ως αριθμητικό προσδιοριστικό ημέρας (και όχι ως το κύριο όνομα της ημέρας Τρίτη) πρέπει να γράφεται με πεζό, καθώς εδώ προσδιορίζει τη σειρά των ημερών.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 48
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ην Χαλδαία στους κάμπους του Μ</span><span class="deleted">άμρ</span><span class="inserted">αμβρή</span><span class="context">. Όσο κι αν η αφήγηση τραβούσε</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Ορθογραφικό λάθος σε κύριο όνομα. Η βιβλική τοποθεσία αναφέρεται ως Μαμβρή (Mamre).
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type insert">insert</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 17
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context"> τους. Δεν ήταν μικρή δουλειά </span><span class="inserted">ν</span><span class="context">α συνενώσει τόσα παράταιρα στο</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Σοβαρό συντακτικό σφάλμα: παράλειψη του ειδικού συνδέσμου (πως/ότι) που εισάγει τη δευτερεύουσα πρόταση, καθιστώντας τη δομή γραμματικά ελλιπή.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type delete">delete</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 17
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ρόμο με σκουντιές ανάμεσα στον</span><span class="deleted">ν</span><span class="context"> κόσμο κ’ έδειξαν μεγάλο ενδια</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Σοβαρό συντακτικό σφάλμα: παράλειψη του ειδικού συνδέσμου (πως/ότι) που εισάγει τη δευτερεύουσα πρόταση, καθιστώντας τη δομή γραμματικά ελλιπή.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type delete">delete</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 17
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ος συνεννοήθηκε βιαστικά με το</span><span class="deleted">ν</span><span class="context">υς Άραβες, εξηγώντας τους πως </span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Σοβαρό συντακτικό σφάλμα: παράλειψη του ειδικού συνδέσμου (πως/ότι) που εισάγει τη δευτερεύουσα πρόταση, καθιστώντας τη δομή γραμματικά ελλιπή.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type delete">delete</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 17
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">χε στεγάσει τουλάχιστον τέσσερ</span><span class="deleted">ε</span><span class="context">ις διαδοχικούς πολιτισμούς και</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Σοβαρό συντακτικό σφάλμα: η συσσώρευση αντωνυμιών χωρίς στίξη καθιστά τη φράση γραμματικά εσφαλμένη ως προς τη σύνδεση των όρων (κτήτορας και αντικείμενο).
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 71
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ην με μια ζώνη απόκρημνων βραχ</span><span class="deleted">ισμένω</span><span class="inserted">ωδώ</span><span class="context">ν βουνών, που την μετάλλαζαν σ</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Λανθασμένη χρήση λέξης/Μορφολογικό λάθος (η λέξη 'βραχισμένων' δεν υφίσταται, προφανώς εννοείται 'βραχωδών').
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 76
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">αν περιζήτητα από τους περιφημ</span><span class="deleted">οτέ</span><span class="inserted">ότε</span><span class="context">ρους ανυφαντές της Καισάρειας,</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Ορθογραφικό λάθος στον τονισμό· η προπαραλήγουσα στα επίθετα σε -ος δεν ανεβάζει τον τόνο στην κατάληξη -ους (παραμένει στην προπαραλήγουσα).
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 81
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">αν απασχολημένος με πλήθος επε</span><span class="deleted">ίγο</span><span class="inserted">ιγό</span><span class="context">ντων προβλήματα. Δεν είχε βρει</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Ορθογραφικό λάθος στον τονισμό της μετοχής/επιθέτου στη γενική πληθυντικού.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 81
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">νος με πλήθος επείγοντων προβλ</span><span class="deleted">ήματα</span><span class="inserted">ημάτων</span><span class="context">. Δεν είχε βρει ποτέ καιρό να </span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Λάθος πτώση· η λέξη πρέπει να είναι σε γενική πτώση ('πλήθος επειγόντων προβλημάτων').
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 91
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">εράστιο φόρο. Για ποιο λόγο θα</span><span class="deleted">’ </span><span class="inserted"> '</span><span class="context">στελνε ο αυτοκράτορας το στρατ</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Λανθασμένη χρήση της αποστρόφου (χρήση δεξιάς αποστρόφου/εισαγωγικού αντί για την κανονική απόστροφο που δηλώνει έκθλιψη).
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type delete">delete</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 100
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ρεί παρά να καταλαβαίνει πόσο </span><span class="deleted">είναι </span><span class="context">ασταθής ο επαρχιακός του θρόνο</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Σοβαρό συντακτικό σφάλμα στη σειρά των λέξεων που επηρεάζει τη γραμματική ορθότητα της αναφορικής πρότασης.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type insert">insert</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 100
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">αταλαβαίνει πόσο είναι ασταθής</span><span class="inserted"> είναι</span><span class="context"> ο επαρχιακός του θρόνος. Απόδ</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Σοβαρό συντακτικό σφάλμα στη σειρά των λέξεων που επηρεάζει τη γραμματική ορθότητα της αναφορικής πρότασης.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 107
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ζι, που στις δυο του άκρες ορθ</span><span class="deleted">ώνον</span><span class="inserted">ωνό</span><span class="context">ταν από μια επίχρυση πολυθρόνα</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Λάθος αριθμός ρήματος (πληθυντικός αντί ενικού), καθώς το υποκείμενο είναι η 'πολυθρόνα'.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type delete">delete</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 108
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">υς ευγενικούς, αβρούς, εντελώς</span><span class="deleted">,</span><span class="context"> ο άνθρωπος για να διαπραγματε</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Η λέξη 'εντελώς' φαίνεται να είναι ημιτελής ή πλεονάζουσα στη συγκεκριμένη σύνταξη, αλλά μορφολογικά η χρήση του επιρρήματος χωρίς προσδιοριζόμενο επίθετο αποτελεί συντακτικό σφάλμα.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 110
+                        | user
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">λεοπάρδαλης, δίχως καθόλου πάχ</span><span class="deleted">ητα</span><span class="inserted">ος</span><span class="context">, με δέρμα σκληρό σαν τη χορδή</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Χειροκίνητη διόρθωση χρήστη
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type insert">insert</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 17
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">μπορούσαν να στείλουν ένα εκστ</span><span class="inserted">ρ</span><span class="context">ατευτικό σώμα να πλατσικολογήσ</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Σοβαρό συντακτικό σφάλμα: η συσσώρευση αντωνυμιών χωρίς στίξη καθιστά τη φράση γραμματικά εσφαλμένη ως προς τη σύνδεση των όρων (κτήτορας και αντικείμενο).
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type insert">insert</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 17
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ο ανώτατο όριο της αντοχής του</span><span class="inserted">ς</span><span class="context">. Και να τότε, ο γέρος αυτοκρά</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Σοβαρό συντακτικό σφάλμα: η συσσώρευση αντωνυμιών χωρίς στίξη καθιστά τη φράση γραμματικά εσφαλμένη ως προς τη σύνδεση των όρων (κτήτορας και αντικείμενο).
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type insert">insert</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 17
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">άτικη ελαφρότητα, να κόψει ένα</span><span class="inserted">ν</span><span class="context"> κεφαλικό φόρο από τους πεινασ</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Σοβαρό συντακτικό σφάλμα: παράλειψη του ειδικού συνδέσμου (πως/ότι) που εισάγει τη δευτερεύουσα πρόταση, καθιστώντας τη δομή γραμματικά ελλιπή.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 126
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ην θέση της ούτε ένα δάχτυλο κ</span><span class="deleted">’</span><span class="inserted">ι</span><span class="context"> έγειρε προς τον συνομιλητή το</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Λανθασμένη χρήση αποστρόφου στο σύνδεσμο 'και' πριν από φωνήεν· το ορθό είναι 'κι'.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 126
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">, σ’ ένα τόνο εμπιστευτικό: -Κ</span><span class="deleted">’</span><span class="inserted">ι</span><span class="context"> εγώ το σκέφτηκα. Θα χρειαστού</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Λανθασμένη χρήση αποστρόφου στο σύνδεσμο 'και' πριν από φωνήεν· το ορθό είναι 'κι'.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type insert">insert</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 7
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ρέος τους με προθυμία και ακέρ</span><span class="inserted">α</span><span class="context">ια; Ίσως αυτό που λες να εφαρμ</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Λανθασμένη προσθήκη τόνου. Το επίθετο 'πολύπαθος' είναι προπαροξύτονο και όταν ακολουθείται από εγκλιτικό κτητικό (μας), ο τόνος δεν ανεβαίνει στην παραλήγουσα γιατί η λήγουσα είναι βραχύχρονη.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 157
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ο διαλύθηκε, αλλά όχι για να π</span><span class="deleted">αν</span><span class="inserted">άνε</span><span class="context"> να κοιμηθούν. Τέλειωσαν το πρ</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Λανθασμένος τύπος υποτακτικής του ρήματος πηγαίνω (πάω). Το 'παν' αποτελεί τύπο οριστικής αορίστου (είπαν), ενώ εδώ απαιτείται ο τύπος 'πάνε' ή 'πάρουν'.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 100
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">είς να το δεχτείς αυτό για χατ</span><span class="deleted">ή</span><span class="inserted">ί</span><span class="context">ρι της Αραβίας;Η Άρνον έκλεισε</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Σοβαρό συντακτικό σφάλμα στη σειρά των λέξεων που επηρεάζει τη γραμματική ορθότητα της αναφορικής πρότασης.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 17
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">το το σκληρό μαρτύριο.***Αν ήτ</span><span class="deleted">αν</span><span class="inserted">τα</span><span class="context"> ανάγκη για τους Άραβες και το</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Σοβαρό συντακτικό σφάλμα: παράλειψη του ειδικού συνδέσμου (πως/ότι) που εισάγει τη δευτερεύουσα πρόταση, καθιστώντας τη δομή γραμματικά ελλιπή.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type delete">delete</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 7
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">ριν να είναι βέβαιος από που θ</span><span class="deleted">α</span><span class="context">’ γερνε η ζυγαριά. Οι στρατιωτ</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Λανθασμένη προσθήκη τόνου. Το επίθετο 'πολύπαθος' είναι προπαροξύτονο και όταν ακολουθείται από εγκλιτικό κτητικό (μας), ο τόνος δεν ανεβαίνει στην παραλήγουσα γιατί η λήγουσα είναι βραχύχρονη.
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type insert">insert</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 69
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context"> να είναι βέβαιος από που θα’ </span><span class="inserted">έ</span><span class="context">γερνε η ζυγαριά. Οι στρατιωτικ</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Ορθογραφικό λάθος (η σωστή γραφή του αριθμητικού είναι με 'ι').
+                </div>
+            </div>
+
+            <div class="change">
+                <div class="change-header">
+                    <span class="change-type replace">replace</span>
+                    <span class="change-position">
+                        body 
+                        Παρ. 204
+                        | core
+                    </span>
+                </div>
+                <div class="change-content">
+                    <span class="context">: - Καλά θα κάνατε να το διαβά</span><span class="deleted">ζ</span><span class="inserted">σ</span><span class="context">ετε, Μεγαλειότατε. Είναι το νέ</span>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">
+                    <strong>Αιτία:</strong> Λανθασμένη χρήση χρόνου/όψης ρήματος. Η υποτακτική αορίστου (να διαβάσετε) είναι η γραμματικά ορθή επιλογή για μια συγκεκριμένη πράξη στο μέλλον, αντί του παρατατικού (να διαβάζετε).
+                </div>
+            </div>
+</div>
+        <div class="footer">
+            ProofreadAI Diff Report • 2026 • Session: 88084d61
+        </div>
+    </div>
+</body>
+</html>

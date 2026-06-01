@@ -1,0 +1,88 @@
+/* ==============================================
+   PROOFREAD AI — Global Styles
+   ============================================== */
+
+/* Import the active theme */
+@import '../themes/classical-editorial.css';
+
+/* Font Imports */
+@import '@fontsource/cormorant-garamond/400.css';
+@import '@fontsource/cormorant-garamond/500.css';
+@import '@fontsource/cormorant-garamond/600.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+
+/* ==============================================
+   Global Overrides
+   ============================================== */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better text rendering */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove default focus outlines, we handle them in components */
+*:focus {
+  outline: none;
+}
+
+/* Ensure consistent box sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ==============================================
+   Scrollbar Styling
+   ============================================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-strong) var(--color-surface-alt);
+}
+
+/* ==============================================
+   Print Styles
+   ============================================== */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .document-content {
+    max-width: none;
+    padding: 0;
+  }
+}

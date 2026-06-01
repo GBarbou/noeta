@@ -1,0 +1,22 @@
+{
+  "status": "error",
+  "progress": 0,
+  "total_chunks": 0,
+  "source_language": "",
+  "document_brief": "",
+  "style_register": "",
+  "glossary": [],
+  "translated": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "filename": "4.docx",
+  "is_docx": true,
+  "error_message": "Error code: 404 - {'error': {'message': 'No endpoints found for google/gemini-3-pro-preview.', 'code': 404}, 'user_id': 'user_3885okr8I3kzo8K7qXGG0Gvegf2'}",
+  "chunk_reviews": []
+}

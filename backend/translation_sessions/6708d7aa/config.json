@@ -1,0 +1,1077 @@
+{
+  "source_language": "English (with French phrases)",
+  "document_brief": "Τύπος: Λογοτεχνικό κείμενο / Διηγήματα\nΘέμα: Αποσπάσματα από τη συλλογή διηγημάτων τρόμου και φαντασίας 'The King in Yellow' του Robert W. Chambers.\nΕποχή/Πλαίσιο: Εναλλακτική δεκαετία του 1920 (Νέα Υόρκη) και τέλη 19ου αιώνα (Μποέμ Παρίσι / Μεσαιωνική φαντασία).\nΎφος: Λογοτεχνικό, ατμοσφαιρικό, δραματικό, ενίοτε ποιητικό και παραληρηματικό.\nΣημειώσεις: Το κείμενο αποτελείται από συρραφή αποσπασμάτων διαφορετικών διηγημάτων του βιβλίου 'The King in Yellow'. Απαιτείται ιδιαίτερη προσοχή στην καθιερωμένη ορολογία του φανταστικού (π.χ. Carcosa, Hastur, Yellow Sign). Υπάρχουν αρκετοί γαλλικοί όροι (ειδικά στο διήγημα με την ιερακοθηρία) που πρέπει να αποδοθούν με ακρίβεια ή να διατηρηθούν με πλάγια γράμματα ανάλογα με τις οδηγίες του εκδότη. Η ορολογία των εξαρτημάτων πανοπλίας (tassets, cuissards, greaves) απαιτεί εξειδικευμένη ιστορική απόδοση.",
+  "glossary": [
+    {
+      "source": "Hildred Castaigne",
+      "target": "Χίλντρεντ Καστέν",
+      "note": "person"
+    },
+    {
+      "source": "Louis de Calvados",
+      "target": "Λουί ντε Καλβαντός",
+      "note": "person"
+    },
+    {
+      "source": "Mr. Wilde",
+      "target": "Κύριος Ουάιλντ",
+      "note": "person"
+    },
+    {
+      "source": "Hawberk",
+      "target": "Χόμπερκ",
+      "note": "person"
+    },
+    {
+      "source": "Constance",
+      "target": "Κόνστανς",
+      "note": "person"
+    },
+    {
+      "source": "Dr. Archer",
+      "target": "Δρ Άρτσερ",
+      "note": "person"
+    },
+    {
+      "source": "Boris Yvain",
+      "target": "Μπόρις Ιβέν",
+      "note": "person"
+    },
+    {
+      "source": "Jeanne d'Ys",
+      "target": "Ζαν ντ'Ις",
+      "note": "person"
+    },
+    {
+      "source": "Philip",
+      "target": "Φίλιπ",
+      "note": "person"
+    },
+    {
+      "source": "Severn",
+      "target": "Σέβερν",
+      "note": "person"
+    },
+    {
+      "source": "Sylvia Elven",
+      "target": "Σύλβια Έλβεν",
+      "note": "person"
+    },
+    {
+      "source": "Foxhall Clifford",
+      "target": "Φόξχολ Κλίφορντ",
+      "note": "person"
+    },
+    {
+      "source": "Elliott",
+      "target": "Έλιοτ",
+      "note": "person"
+    },
+    {
+      "source": "Selby",
+      "target": "Σέλμπι",
+      "note": "person"
+    },
+    {
+      "source": "Rue Barrée",
+      "target": "Ρι Μπαρέ",
+      "note": "person/place (χρησιμοποιείται ως όνομα κοπέλας και ως οδός)"
+    },
+    {
+      "source": "President Winthrop",
+      "target": "Πρόεδρος Γουίνθροπ",
+      "note": "person"
+    },
+    {
+      "source": "General Von Gartenlaube",
+      "target": "Στρατηγός Φον Γκαρτενλάουμπε",
+      "note": "person"
+    },
+    {
+      "source": "New York",
+      "target": "Νέα Υόρκη",
+      "note": "place"
+    },
+    {
+      "source": "Washington Square",
+      "target": "Πλατεία Ουάσινγκτον",
+      "note": "place"
+    },
+    {
+      "source": "Carcosa",
+      "target": "Καρκόσα",
+      "note": "place (φανταστική τοποθεσία)"
+    },
+    {
+      "source": "Hali",
+      "target": "Χάλι",
+      "note": "place (φανταστική λίμνη)"
+    },
+    {
+      "source": "Aldebaran",
+      "target": "Αλντεμπαράν",
+      "note": "place/star"
+    },
+    {
+      "source": "Hyades",
+      "target": "Υάδες",
+      "note": "place/star cluster"
+    },
+    {
+      "source": "Suanee",
+      "target": "Σουάνι",
+      "note": "place (φανταστική πολιτεία)"
+    },
+    {
+      "source": "Bleecker Street",
+      "target": "Οδός Μπλίκερ",
+      "note": "place"
+    },
+    {
+      "source": "Pell Street",
+      "target": "Οδός Πελ",
+      "note": "place"
+    },
+    {
+      "source": "Street of the Four Winds",
+      "target": "Οδός των Τεσσάρων Ανέμων",
+      "note": "place"
+    },
+    {
+      "source": "Latin Quarter",
+      "target": "Καρτιέ Λατέν / Λατινική Συνοικία",
+      "note": "place"
+    },
+    {
+      "source": "Boulevard St. Germain",
+      "target": "Λεωφόρος Σεν Ζερμέν",
+      "note": "place"
+    },
+    {
+      "source": "Place de la Concorde",
+      "target": "Πλατεία Ομονοίας (Παρίσι) / Πλας ντε λα Κονκόρντ",
+      "note": "place"
+    },
+    {
+      "source": "Metropolitan Museum",
+      "target": "Μητροπολιτικό Μουσείο",
+      "note": "org"
+    },
+    {
+      "source": "National Mounted Police",
+      "target": "Εθνική Έφιππη Αστυνομία",
+      "note": "org"
+    },
+    {
+      "source": "Congress of Religions",
+      "target": "Συνέδριο των Θρησκειών",
+      "note": "org"
+    },
+    {
+      "source": "Julian's",
+      "target": "Ακαδημία Ζυλιάν",
+      "note": "org"
+    },
+    {
+      "source": "Café Vachette",
+      "target": "Καφέ Βασέτ",
+      "note": "org"
+    },
+    {
+      "source": "Delmonico's",
+      "target": "Ντελμόνικος",
+      "note": "org"
+    },
+    {
+      "source": "The King in Yellow",
+      "target": "Ο Βασιλιάς με τα Κίτρινα",
+      "note": "title"
+    },
+    {
+      "source": "The Imperial Dynasty of America",
+      "target": "Η Αυτοκρατορική Δυναστεία της Αμερικής",
+      "note": "title"
+    },
+    {
+      "source": "Lethal Chamber",
+      "target": "Θάλαμος Ευθανασίας / Θανατικός Θάλαμος",
+      "note": "term"
+    },
+    {
+      "source": "Repairer of Reputations",
+      "target": "Επιδιορθωτής Υπολήψεων",
+      "note": "term"
+    },
+    {
+      "source": "Yellow Sign",
+      "target": "Κίτρινο Σημείο",
+      "note": "term"
+    },
+    {
+      "source": "Pallid Mask",
+      "target": "Ωχρή Μάσκα",
+      "note": "term"
+    },
+    {
+      "source": "Hastur",
+      "target": "Χάστουρ",
+      "note": "term/entity"
+    },
+    {
+      "source": "Prince's Emblazoned",
+      "target": "Εμβληματική του Πρίγκιπα",
+      "note": "term (όνομα πανοπλίας)"
+    },
+    {
+      "source": "tassets",
+      "target": "παραμηρίδια",
+      "note": "term (εξάρτημα πανοπλίας)"
+    },
+    {
+      "source": "cuissards",
+      "target": "περιμηρίδια",
+      "note": "term (εξάρτημα πανοπλίας)"
+    },
+    {
+      "source": "greaves",
+      "target": "περικνημίδες",
+      "note": "term (εξάρτημα πανοπλίας)"
+    },
+    {
+      "source": "chaperon à cornette",
+      "target": "κουκούλα με λοφίο",
+      "note": "term (ιερακοθηρία)"
+    },
+    {
+      "source": "leurre",
+      "target": "δόλωμα / σκιάχτρο",
+      "note": "term (ιερακοθηρία)"
+    },
+    {
+      "source": "Surgeon-General",
+      "target": "Γενικός Χειρουργός / Αρχίατρος",
+      "note": "title/rank"
+    },
+    {
+      "source": "Inspector-General",
+      "target": "Γενικός Επιθεωρητής",
+      "note": "title/rank"
+    },
+    {
+      "source": "Marquis of Avonshire",
+      "target": "Μαρκήσιος του Έιβονσαϊρ",
+      "note": "title/rank"
+    },
+    {
+      "source": "Secretary of Fine Arts",
+      "target": "Υπουργός Καλών Τεχνών",
+      "note": "person"
+    },
+    {
+      "source": "Secretary of Forestry and Game Preservation",
+      "target": "Υπουργός Δασών και Προστασίας Θηραμάτων",
+      "note": "person"
+    },
+    {
+      "source": "Secretary of War",
+      "target": "Υπουργός Πολέμου",
+      "note": "person"
+    },
+    {
+      "source": "Governor of New York",
+      "target": "Κυβερνήτης της Νέας Υόρκης",
+      "note": "person"
+    },
+    {
+      "source": "Mayor of New York and Brooklyn",
+      "target": "Δήμαρχος Νέας Υόρκης και Μπρούκλιν",
+      "note": "person"
+    },
+    {
+      "source": "Inspector-General of Police",
+      "target": "Γενικός Επιθεωρητής Αστυνομίας",
+      "note": "person"
+    },
+    {
+      "source": "Commandant of the state troops",
+      "target": "Διοικητής των πολιτειακών στρατευμάτων",
+      "note": "person"
+    },
+    {
+      "source": "Colonel Livingston",
+      "target": "Συνταγματάρχης Λίβινγκστον",
+      "note": "person"
+    },
+    {
+      "source": "President of the United States",
+      "target": "Πρόεδρος των Ηνωμένων Πολιτειών",
+      "note": "person"
+    },
+    {
+      "source": "General Blount",
+      "target": "Στρατηγός Μπλάουντ",
+      "note": "person"
+    },
+    {
+      "source": "Major-General Hamilton",
+      "target": "Υποστράτηγος Χάμιλτον",
+      "note": "person"
+    },
+    {
+      "source": "Admiral Buffby",
+      "target": "Ναύαρχος Μπάφμπι",
+      "note": "person"
+    },
+    {
+      "source": "Surgeon-General Lanceford",
+      "target": "Γενικός Χειρουργός Λάνσφορντ",
+      "note": "person"
+    },
+    {
+      "source": "Senators Wyse and Franklin",
+      "target": "Γερουσιαστές Γουάις και Φράνκλιν",
+      "note": "person"
+    },
+    {
+      "source": "Commissioner of Public Works",
+      "target": "Επίτροπος Δημοσίων Έργων",
+      "note": "person"
+    },
+    {
+      "source": "John Archer",
+      "target": "Τζον Άρτσερ",
+      "note": "person"
+    },
+    {
+      "source": "Mr. Castaigne",
+      "target": "Κος Καστέν",
+      "note": "person"
+    },
+    {
+      "source": "Louis Castaigne",
+      "target": "Λουί Καστέν",
+      "note": "person"
+    },
+    {
+      "source": "Edythe Landes Castaigne",
+      "target": "Έντιθ Λαντς Καστέν",
+      "note": "person"
+    },
+    {
+      "source": "Hildred de Calvados",
+      "target": "Χίλντρεντ ντε Καλβαντός",
+      "note": "person"
+    },
+    {
+      "source": "Thomas Stainbridge",
+      "target": "Τόμας Στέινμπριτζ",
+      "note": "person"
+    },
+    {
+      "source": "Henry B. Matthews",
+      "target": "Χένρι Μπ. Μάθιους",
+      "note": "person"
+    },
+    {
+      "source": "P. Greene Dusenberry",
+      "target": "Π. Γκριν Ντούζενμπερι",
+      "note": "person"
+    },
+    {
+      "source": "Mrs. C. Hamilton Chester",
+      "target": "Κα Κ. Χάμιλτον Τσέστερ",
+      "note": "person"
+    },
+    {
+      "source": "C. Hamilton Chester",
+      "target": "Κ. Χάμιλτον Τσέστερ",
+      "note": "person"
+    },
+    {
+      "source": "Arnold Steylette",
+      "target": "Άρνολντ Στέιλετ",
+      "note": "person"
+    },
+    {
+      "source": "Caesar",
+      "target": "Καίσαρας",
+      "note": "person"
+    },
+    {
+      "source": "Napoleon",
+      "target": "Ναπολέων",
+      "note": "person"
+    },
+    {
+      "source": "Peter Stuyvesant",
+      "target": "Πίτερ Στάιβεσαντ",
+      "note": "person"
+    },
+    {
+      "source": "Garibaldi",
+      "target": "Γκαριμπάλντι",
+      "note": "person"
+    },
+    {
+      "source": "General Sheridan",
+      "target": "Στρατηγός Σέρινταν",
+      "note": "person"
+    },
+    {
+      "source": "Camilla",
+      "target": "Καμίλα",
+      "note": "person"
+    },
+    {
+      "source": "Jeanne d’Ys",
+      "target": "Ζαν ντ'Ις",
+      "note": "person"
+    },
+    {
+      "source": "Demoiselle Jeanne d’Ys",
+      "target": "Δεσποινίς Ζαν ντ'Ις",
+      "note": "person"
+    },
+    {
+      "source": "Cabane",
+      "target": "Καμπάν",
+      "note": "person"
+    },
+    {
+      "source": "Clifford",
+      "target": "Κλίφορντ",
+      "note": "person"
+    },
+    {
+      "source": "Clémence",
+      "target": "Κλεμάνς",
+      "note": "person"
+    },
+    {
+      "source": "Marie Tellec",
+      "target": "Μαρί Τελέκ",
+      "note": "person"
+    },
+    {
+      "source": "Cosette",
+      "target": "Κοζέτ",
+      "note": "person"
+    },
+    {
+      "source": "Fifine",
+      "target": "Φιφίν",
+      "note": "person"
+    },
+    {
+      "source": "Colette",
+      "target": "Κολέτ",
+      "note": "person"
+    },
+    {
+      "source": "Marie Verdier",
+      "target": "Μαρί Βερντιέ",
+      "note": "person"
+    },
+    {
+      "source": "Pierrot",
+      "target": "Πιερότος",
+      "note": "person"
+    },
+    {
+      "source": "Truth",
+      "target": "Αλήθεια",
+      "note": "person"
+    },
+    {
+      "source": "Death",
+      "target": "Θάνατος",
+      "note": "person"
+    },
+    {
+      "source": "Love",
+      "target": "Έρωτας",
+      "note": "person"
+    },
+    {
+      "source": "Clown",
+      "target": "Κλόουν",
+      "note": "person"
+    },
+    {
+      "source": "Jester",
+      "target": "Γελωτοποιός",
+      "note": "person"
+    },
+    {
+      "source": "Phantom of the Past",
+      "target": "Φάντασμα του Παρελθόντος",
+      "note": "person"
+    },
+    {
+      "source": "United States",
+      "target": "Ηνωμένες Πολιτείες",
+      "note": "place"
+    },
+    {
+      "source": "United States of America",
+      "target": "Ηνωμένες Πολιτείες της Αμερικής",
+      "note": "place"
+    },
+    {
+      "source": "Germany",
+      "target": "Γερμανία",
+      "note": "place"
+    },
+    {
+      "source": "Samoan Islands",
+      "target": "Νησιά Σαμόα",
+      "note": "place"
+    },
+    {
+      "source": "Samoa",
+      "target": "Σαμόα",
+      "note": "place"
+    },
+    {
+      "source": "Norfolk",
+      "target": "Νόρφολκ",
+      "note": "place"
+    },
+    {
+      "source": "State of New Jersey",
+      "target": "Πολιτεία του Νιου Τζέρσεϊ",
+      "note": "place"
+    },
+    {
+      "source": "New Jersey",
+      "target": "Νιου Τζέρσεϊ",
+      "note": "place"
+    },
+    {
+      "source": "Jersey",
+      "target": "Τζέρσεϊ",
+      "note": "place"
+    },
+    {
+      "source": "Chicago",
+      "target": "Σικάγο",
+      "note": "place"
+    },
+    {
+      "source": "New York City",
+      "target": "Πόλη της Νέας Υόρκης",
+      "note": "place"
+    },
+    {
+      "source": "France",
+      "target": "Γαλλία",
+      "note": "place"
+    },
+    {
+      "source": "England",
+      "target": "Αγγλία",
+      "note": "place"
+    },
+    {
+      "source": "Italy",
+      "target": "Ιταλία",
+      "note": "place"
+    },
+    {
+      "source": "Spain",
+      "target": "Ισπανία",
+      "note": "place"
+    },
+    {
+      "source": "Belgium",
+      "target": "Βέλγιο",
+      "note": "place"
+    },
+    {
+      "source": "Russia",
+      "target": "Ρωσία",
+      "note": "place"
+    },
+    {
+      "source": "Caucasus",
+      "target": "Καύκασος",
+      "note": "place"
+    },
+    {
+      "source": "Madison Avenue",
+      "target": "Λεωφόρος Μάντισον",
+      "note": "place"
+    },
+    {
+      "source": "lake of Hali",
+      "target": "Λίμνη του Χάλι",
+      "note": "place"
+    },
+    {
+      "source": "Paris",
+      "target": "Παρίσι",
+      "note": "place"
+    },
+    {
+      "source": "London",
+      "target": "Λονδίνο",
+      "note": "place"
+    },
+    {
+      "source": "Wooster Street",
+      "target": "Οδός Γούστερ",
+      "note": "place"
+    },
+    {
+      "source": "South Fifth Avenue",
+      "target": "Νότια Πέμπτη Λεωφόρος",
+      "note": "place"
+    },
+    {
+      "source": "University Place",
+      "target": "Γιουνιβέρσιτι Πλέις",
+      "note": "place"
+    },
+    {
+      "source": "Fourth Street",
+      "target": "Τέταρτη Οδός",
+      "note": "place"
+    },
+    {
+      "source": "Washington Park",
+      "target": "Πάρκο Ουάσινγκτον",
+      "note": "place"
+    },
+    {
+      "source": "Brooklyn",
+      "target": "Μπρούκλιν",
+      "note": "place"
+    },
+    {
+      "source": "Governor’s Island",
+      "target": "Νησί του Κυβερνήτη",
+      "note": "place"
+    },
+    {
+      "source": "North River",
+      "target": "Βόρειος Ποταμός",
+      "note": "place"
+    },
+    {
+      "source": "Fifth Avenue",
+      "target": "Πέμπτη Λεωφόρος",
+      "note": "place"
+    },
+    {
+      "source": "Quai d’Orsay",
+      "target": "Κε ντ'Ορσέ",
+      "note": "place"
+    },
+    {
+      "source": "Broadway",
+      "target": "Μπρόντγουεϊ",
+      "note": "place"
+    },
+    {
+      "source": "Westchester County",
+      "target": "Κομητεία Γουέσττσεστερ",
+      "note": "place"
+    },
+    {
+      "source": "Westchester",
+      "target": "Γουέσττσεστερ",
+      "note": "place"
+    },
+    {
+      "source": "998 Pell Street",
+      "target": "Οδός Πελ 998",
+      "note": "place"
+    },
+    {
+      "source": "Australia",
+      "target": "Αυστραλία",
+      "note": "place"
+    },
+    {
+      "source": "Fairbeach",
+      "target": "Φέρμπιτς",
+      "note": "place"
+    },
+    {
+      "source": "Bowery",
+      "target": "Μπάουερι",
+      "note": "place"
+    },
+    {
+      "source": "Chester Park",
+      "target": "Τσέστερ Παρκ",
+      "note": "place"
+    },
+    {
+      "source": "Dieppe",
+      "target": "Διέππη",
+      "note": "place"
+    },
+    {
+      "source": "California",
+      "target": "Καλιφόρνια",
+      "note": "place"
+    },
+    {
+      "source": "Northwest",
+      "target": "Βορειοδυτικά",
+      "note": "place"
+    },
+    {
+      "source": "Mount St. Vincent",
+      "target": "Μάουντ Σεντ Βίνσεντ",
+      "note": "place"
+    },
+    {
+      "source": "East Washington Square",
+      "target": "Ανατολική Πλατεία Ουάσινγκτον",
+      "note": "place"
+    },
+    {
+      "source": "Benedick",
+      "target": "Μπένεντικ",
+      "note": "place"
+    },
+    {
+      "source": "Memorial Church",
+      "target": "Εκκλησία Μεμόριαλ",
+      "note": "place"
+    },
+    {
+      "source": "Washington Memorial Arch",
+      "target": "Αψίδα Μνήμης του Ουάσινγκτον",
+      "note": "place"
+    },
+    {
+      "source": "Delmonico’s",
+      "target": "Ντελμόνικος",
+      "note": "place"
+    },
+    {
+      "source": "Spring Street",
+      "target": "Οδός Σπρινγκ",
+      "note": "place"
+    },
+    {
+      "source": "190th Street",
+      "target": "190ή Οδός",
+      "note": "place"
+    },
+    {
+      "source": "Highlands",
+      "target": "Χάιλαντς",
+      "note": "place"
+    },
+    {
+      "source": "Staten Island",
+      "target": "Στέιτεν Άιλαντ",
+      "note": "place"
+    },
+    {
+      "source": "Red Fort",
+      "target": "Κόκκινο Φρούριο",
+      "note": "place"
+    },
+    {
+      "source": "Castle William",
+      "target": "Κάστρο Γουίλιαμ",
+      "note": "place"
+    },
+    {
+      "source": "Rangelys",
+      "target": "Ράντζελις",
+      "note": "place"
+    },
+    {
+      "source": "Presidio",
+      "target": "Πρεσίντιο",
+      "note": "place"
+    },
+    {
+      "source": "San Francisco",
+      "target": "Σαν Φρανσίσκο",
+      "note": "place"
+    },
+    {
+      "source": "rue de Seine",
+      "target": "Οδός Σηκουάνα",
+      "note": "place"
+    },
+    {
+      "source": "Elven",
+      "target": "Έλβεν",
+      "note": "place"
+    },
+    {
+      "source": "Pont au Change",
+      "target": "Ποντ ο Σανζ",
+      "note": "place"
+    },
+    {
+      "source": "morgue",
+      "target": "Νεκροτομείο",
+      "note": "place"
+    },
+    {
+      "source": "Mignon’s",
+      "target": "Μινιόν",
+      "note": "place"
+    },
+    {
+      "source": "Government",
+      "target": "Κυβέρνηση",
+      "note": "org"
+    },
+    {
+      "source": "General Staff",
+      "target": "Γενικό Επιτελείο",
+      "note": "org"
+    },
+    {
+      "source": "United States National Academy of Design",
+      "target": "Εθνική Ακαδημία Σχεδίου των Ηνωμένων Πολιτειών",
+      "note": "org"
+    },
+    {
+      "source": "National Free Hospital",
+      "target": "Εθνικό Δωρεάν Νοσοκομείο",
+      "note": "org"
+    },
+    {
+      "source": "National Guard",
+      "target": "Εθνοφρουρά",
+      "note": "org"
+    },
+    {
+      "source": "Whysot Whysot and Company",
+      "target": "Ουάισοτ Ουάισοτ και Σία",
+      "note": "org"
+    },
+    {
+      "source": "South Sea Squadron",
+      "target": "Μοίρα της Νότιας Θάλασσας",
+      "note": "org"
+    },
+    {
+      "source": "Julian’s",
+      "target": "Ζιλιάν",
+      "note": "org"
+    },
+    {
+      "source": "twentieth dragoon regiment",
+      "target": "εικοστό σύνταγμα δραγώνων",
+      "note": "org"
+    },
+    {
+      "source": "Herald",
+      "target": "Χέραλντ",
+      "note": "title"
+    },
+    {
+      "source": "Meteor",
+      "target": "Μιτίορ",
+      "note": "title"
+    },
+    {
+      "source": "THE PROPHETS’ PARADISE",
+      "target": "Ο ΠΑΡΑΔΕΙΣΟΣ ΤΩΝ ΠΡΟΦΗΤΩΝ",
+      "note": "title"
+    },
+    {
+      "source": "THE STUDIO",
+      "target": "ΤΟ ΣΤΟΥΝΤΙΟ",
+      "note": "title"
+    },
+    {
+      "source": "THE PHANTOM",
+      "target": "ΤΟ ΦΑΝΤΑΣΜΑ",
+      "note": "title"
+    },
+    {
+      "source": "THE SACRIFICE",
+      "target": "Η ΘΥΣΙΑ",
+      "note": "title"
+    },
+    {
+      "source": "DESTINY",
+      "target": "ΠΕΠΡΩΜΕΝΟ",
+      "note": "title"
+    },
+    {
+      "source": "THE THRONG",
+      "target": "ΤΟ ΠΛΗΘΟΣ",
+      "note": "title"
+    },
+    {
+      "source": "THE JESTER",
+      "target": "Ο ΓΕΛΩΤΟΠΟΙΟΣ",
+      "note": "title"
+    },
+    {
+      "source": "THE GREEN ROOM",
+      "target": "ΤΟ ΠΡΑΣΙΝΟ ΔΩΜΑΤΙΟ",
+      "note": "title"
+    },
+    {
+      "source": "THE LOVE TEST",
+      "target": "Η ΔΟΚΙΜΑΣΙΑ ΤΟΥ ΕΡΩΤΑ",
+      "note": "title"
+    },
+    {
+      "source": "THE STREET OF THE FOUR WINDS",
+      "target": "Η ΟΔΟΣ ΤΩΝ ΤΕΣΣΑΡΩΝ ΑΝΕΜΩΝ",
+      "note": "title"
+    },
+    {
+      "source": "U.S.S. Avalanche",
+      "target": "U.S.S. Avalanche",
+      "note": "title"
+    },
+    {
+      "source": "Tarpon",
+      "target": "Tarpon",
+      "note": "title"
+    },
+    {
+      "source": "Falcon",
+      "target": "Falcon",
+      "note": "title"
+    },
+    {
+      "source": "Sea Fox",
+      "target": "Sea Fox",
+      "note": "title"
+    },
+    {
+      "source": "Octopus",
+      "target": "Octopus",
+      "note": "title"
+    },
+    {
+      "source": "Princeton",
+      "target": "Princeton",
+      "note": "title"
+    },
+    {
+      "source": "Champlain",
+      "target": "Champlain",
+      "note": "title"
+    },
+    {
+      "source": "Still Water",
+      "target": "Still Water",
+      "note": "title"
+    },
+    {
+      "source": "Erie",
+      "target": "Erie",
+      "note": "title"
+    },
+    {
+      "source": "Faragut",
+      "target": "Faragut",
+      "note": "title"
+    },
+    {
+      "source": "Los Angeles",
+      "target": "Los Angeles",
+      "note": "title"
+    },
+    {
+      "source": "Dakota",
+      "target": "Dakota",
+      "note": "title"
+    },
+    {
+      "source": "Washington",
+      "target": "Washington",
+      "note": "title"
+    },
+    {
+      "source": "Terrible",
+      "target": "Terrible",
+      "note": "title"
+    },
+    {
+      "source": "Magnificent",
+      "target": "Magnificent",
+      "note": "title"
+    },
+    {
+      "source": "Osceola",
+      "target": "Osceola",
+      "note": "title"
+    },
+    {
+      "source": "Fates",
+      "target": "Μοίρες",
+      "note": "term"
+    },
+    {
+      "source": "Prince’s Emblazoned",
+      "target": "Εμβληματική του Πρίγκιπα",
+      "note": "term"
+    },
+    {
+      "source": "greave",
+      "target": "περικνημίδα",
+      "note": "term"
+    },
+    {
+      "source": "cuissard",
+      "target": "προστατευτικό μηρού",
+      "note": "term"
+    },
+    {
+      "source": "pât",
+      "target": "pât (τροφή γερακιού)",
+      "note": "term"
+    },
+    {
+      "source": "au bloc",
+      "target": "au bloc (στο κούτσουρο)",
+      "note": "term"
+    },
+    {
+      "source": "hagard",
+      "target": "hagard (άγριο γεράκι)",
+      "note": "term"
+    },
+    {
+      "source": "faire courtoisie á l’oiseau",
+      "target": "faire courtoisie á l’oiseau (ανταμείβω το πουλί)",
+      "note": "term"
+    },
+    {
+      "source": "longe",
+      "target": "longe (λουρί)",
+      "note": "term"
+    },
+    {
+      "source": "bloc",
+      "target": "bloc (κούτσουρο)",
+      "note": "term"
+    },
+    {
+      "source": "couleuvre",
+      "target": "couleuvre (νερόφιδο)",
+      "note": "term"
+    },
+    {
+      "source": "grisette",
+      "target": "γκριζέτα",
+      "note": "term"
+    },
+    {
+      "source": "Ne raillons pas les fous; leur folie dure plus longtemps que la nôtre.... Voila toute la différence.",
+      "target": "Ας μην περιγελάμε τους τρελούς· η τρέλα τους διαρκεί περισσότερο από τη δική μας.... Αυτή είναι όλη η διαφορά.",
+      "note": "term"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

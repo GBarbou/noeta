@@ -1,0 +1,20 @@
+{
+  "session_id": "23c8dfff",
+  "source_filename": "11.docx",
+  "trans_filename": "1.docx",
+  "status": "error",
+  "current_chunk": 0,
+  "total_chunks": 1,
+  "document_brief": "Είδος: Ιστορικό μυθιστόρημα. Ύφος: Λογοτεχνικό (στρωτή δημοτική). Εποχή μετάφρασης: Μεταπολεμική (δεκαετίες '50-'70).",
+  "style_notes": "Το ύφος είναι λογοτεχνικό με χρήση οικείων, καθημερινών λέξεων της δημοτικής (π.χ. 'τσαντίρια' αντί για σκηνές, 'πουγκί', 'ξετυλιγότανε'). Ο μεταφραστής προβαίνει σε αρκετές ελεύθερες αποδόσεις και απλουστεύσεις (π.χ. 'predatory sheiks' -> 'άγριους σεΐχηδες', 'hot chastisements' -> 'αυστηρές τιμωρίες'). Εντοπίζονται επίσης αδόκιμες κατά λέξη μεταφράσεις, όπως το 'This accounted for...' που αποδίδεται λανθασμένα ως 'Αυτό υπολογιζόταν για...'.",
+  "key_names": [
+    "Arabia: Αραβία",
+    "Dead Sea: Νεκρή Θάλασσα",
+    "Aretas: Αρέτας",
+    "Arnon: Άρνον",
+    "Kedar: Κεδάρ"
+  ],
+  "paraphrased_chunks": {},
+  "model": "google/gemini-3.1-pro-preview",
+  "error_message": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 8000 tokens, but can only afford 3057. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_3885okr8I3kzo8K7qXGG0Gvegf2'}"
+}

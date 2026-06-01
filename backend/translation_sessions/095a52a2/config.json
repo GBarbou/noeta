@@ -1,0 +1,117 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: λογοτεχνικό (μυθιστόρημα)\nΘέμα: Η εισαγωγή μιας παράξενης ιδέας που κυρίευσε το μυαλό του κ. Τζόζεφ Ντέιβις και μια αναδρομή στα παιδικά του χρόνια, την εκπαίδευση και τη θρησκευτική του ανατροφή.\nΕποχή/Πλαίσιο: Αρχές 20ού αιώνα (Αγγλία), με αναφορές στο βρετανικό εκπαιδευτικό σύστημα και την αγγλικανική θρησκευτική παράδοση.\nΎφος: λογοτεχνικό\nΣημειώσεις: Ο μεταφραστής πρέπει να διατηρήσει τη λεπτή ειρωνεία και τον αποστασιοποιημένο αλλά γλαφυρό τόνο του αφηγητή. Ιδιαίτερη προσοχή απαιτείται στην απόδοση των θρησκευτικών όρων ώστε να αποδίδουν το αγγλικανικό πλαίσιο, καθώς και στην ορολογία του βρετανικού εκπαιδευτικού συστήματος (π.χ. ο όρος 'public schools' στην Αγγλία αναφέρεται σε ελίτ ιδιωτικά σχολεία).",
+  "glossary": [
+    {
+      "source": "Planetarium Club",
+      "target": "Λέσχη Πλανητάριουμ",
+      "note": "org"
+    },
+    {
+      "source": "Wood's Natural History",
+      "target": "Φυσική Ιστορία του Γουντ",
+      "note": "title"
+    },
+    {
+      "source": "St. Hobart's school",
+      "target": "Σχολείο Σεντ Χόμπαρτ",
+      "note": "org"
+    },
+    {
+      "source": "Camborne Hall",
+      "target": "Κάμπορν Χολ",
+      "note": "org"
+    },
+    {
+      "source": "Joseph Davis",
+      "target": "Τζόζεφ Ντέιβις",
+      "note": "person"
+    },
+    {
+      "source": "Abraham",
+      "target": "Αβραάμ",
+      "note": "person"
+    },
+    {
+      "source": "Isaac",
+      "target": "Ισαάκ",
+      "note": "person"
+    },
+    {
+      "source": "Jacob",
+      "target": "Ιακώβ",
+      "note": "person"
+    },
+    {
+      "source": "Adam",
+      "target": "Αδάμ",
+      "note": "person"
+    },
+    {
+      "source": "Eve",
+      "target": "Εύα",
+      "note": "person"
+    },
+    {
+      "source": "Cain",
+      "target": "Κάιν",
+      "note": "person"
+    },
+    {
+      "source": "Abel",
+      "target": "Άβελ",
+      "note": "person"
+    },
+    {
+      "source": "Noah",
+      "target": "Νώε",
+      "note": "person"
+    },
+    {
+      "source": "Samuel",
+      "target": "Σαμουήλ",
+      "note": "person"
+    },
+    {
+      "source": "Solomon",
+      "target": "Σολομών",
+      "note": "person"
+    },
+    {
+      "source": "David",
+      "target": "Δαβίδ",
+      "note": "person"
+    },
+    {
+      "source": "Wood",
+      "target": "Γουντ",
+      "note": "person"
+    },
+    {
+      "source": "Eastern Levant",
+      "target": "Ανατολικό Λεβάντε",
+      "note": "place"
+    },
+    {
+      "source": "Garden of Eden",
+      "target": "Κήπος της Εδέμ",
+      "note": "place"
+    },
+    {
+      "source": "Oxford",
+      "target": "Οξφόρδη",
+      "note": "place"
+    },
+    {
+      "source": "Natural History",
+      "target": "Φυσική Ιστορία",
+      "note": "title"
+    },
+    {
+      "source": "Bible",
+      "target": "Βίβλος",
+      "note": "title"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

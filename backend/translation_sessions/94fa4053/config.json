@@ -1,0 +1,132 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: μυθιστόρημα\nΘέμα: Εισαγωγή σε μια παράξενη ιδέα που κυρίευσε τη σκέψη διανοούμενων, με επίκεντρο την παιδική ηλικία, την εκπαίδευση και τη θρησκευτική ανατροφή του πρωταγωνιστή Τζόζεφ Ντέιβις.\nΕποχή/Πλαίσιο: Αρχές έως μέσα 20ού αιώνα (Αγγλία, βρετανικό εκπαιδευτικό σύστημα, θρησκευτικός συντηρητισμός).\nΎφος: λογοτεχνικό\nΣημειώσεις: Η μεγαλύτερη πρόκληση είναι η διατήρηση του λεπτού, ειρωνικού τόνου του αφηγητή απέναντι στη θρησκεία και την αγγλική εκπαίδευση. Όροι όπως 'public schools' (που στην Αγγλία είναι ιστορικά ιδιωτικά σχολεία κύρους) χρειάζονται προσοχή για να μην παραπλανήσουν τον Έλληνα αναγνώστη αν μεταφραστούν κατά λέξη ως 'δημόσια σχολεία'. Επίσης, η θρησκευτική ορολογία πρέπει να αποδοθεί με το αντίστοιχο ύφος της κατήχησης.",
+  "glossary": [
+    {
+      "source": "Mr. Joseph Davis",
+      "target": "κ. Τζόζεφ Ντέιβις",
+      "note": "person"
+    },
+    {
+      "source": "Planetarium Club",
+      "target": "Λέσχη Πλανητάριουμ",
+      "note": "org"
+    },
+    {
+      "source": "St. Hobart's school",
+      "target": "Σχολείο Σεντ Χόμπαρτς",
+      "note": "org"
+    },
+    {
+      "source": "Camborne Hall",
+      "target": "Κάμπορν Χολ",
+      "note": "org"
+    },
+    {
+      "source": "Oxford",
+      "target": "Οξφόρδη",
+      "note": "place"
+    },
+    {
+      "source": "Wood's Natural History",
+      "target": "Φυσική Ιστορία του Γουντ",
+      "note": "title"
+    },
+    {
+      "source": "Green Pastures",
+      "target": "Πράσινα Λιβάδια",
+      "note": "title"
+    },
+    {
+      "source": "Joseph Davis",
+      "target": "Τζόζεφ Ντέιβις",
+      "note": "person"
+    },
+    {
+      "source": "Abraham",
+      "target": "Αβραάμ",
+      "note": "person"
+    },
+    {
+      "source": "Isaac",
+      "target": "Ισαάκ",
+      "note": "person"
+    },
+    {
+      "source": "Jacob",
+      "target": "Ιακώβ",
+      "note": "person"
+    },
+    {
+      "source": "Adam",
+      "target": "Αδάμ",
+      "note": "person"
+    },
+    {
+      "source": "Eve",
+      "target": "Εύα",
+      "note": "person"
+    },
+    {
+      "source": "Cain",
+      "target": "Κάιν",
+      "note": "person"
+    },
+    {
+      "source": "Abel",
+      "target": "Άβελ",
+      "note": "person"
+    },
+    {
+      "source": "Noah",
+      "target": "Νώε",
+      "note": "person"
+    },
+    {
+      "source": "Samuel",
+      "target": "Σαμουήλ",
+      "note": "person"
+    },
+    {
+      "source": "Solomon",
+      "target": "Σολομών",
+      "note": "person"
+    },
+    {
+      "source": "David",
+      "target": "Δαβίδ",
+      "note": "person"
+    },
+    {
+      "source": "Wood",
+      "target": "Γουντ",
+      "note": "person"
+    },
+    {
+      "source": "Eastern Levant",
+      "target": "Ανατολικό Λεβάντε",
+      "note": "place"
+    },
+    {
+      "source": "Garden of Eden",
+      "target": "Κήπος της Εδέμ",
+      "note": "place"
+    },
+    {
+      "source": "earth",
+      "target": "γη",
+      "note": "place"
+    },
+    {
+      "source": "Natural History",
+      "target": "Φυσική Ιστορία",
+      "note": "title"
+    },
+    {
+      "source": "Bible",
+      "target": "Βίβλος",
+      "note": "title"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

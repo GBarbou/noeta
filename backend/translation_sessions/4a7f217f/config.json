@@ -1,0 +1,212 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: Λογοτεχνικό (Νουβέλα / Διήγημα)\nΘέμα: Η ιστορία ενός δικηγόρου της Wall Street και του αινιγματικού υπαλλήλου του, Μπάρτλεμπι, ο οποίος σταδιακά αρνείται να εργαστεί ή να αποχωρήσει από το γραφείο, επαναλαμβάνοντας τη φράση «I would prefer not to».\nΕποχή/Πλαίσιο: Μέσα 19ου αιώνα (1853), Νέα Υόρκη (Wall Street), ΗΠΑ.\nΎφος: Λογοτεχνικό, με στοιχεία νομικής ορολογίας της εποχής και τυπικό, κάπως αρχαΐζον ύφος.\nΣημειώσεις: Η μεγαλύτερη πρόκληση είναι η απόδοση της φράσης 'I would prefer not to', η οποία πρέπει να διατηρήσει την ευγένεια, την παθητική αντίσταση και την παραδοξότητά της. Επίσης, τα ονόματα των υπαλλήλων (Turkey, Nippers, Ginger Nut) μπορούν είτε να μεταγραφούν είτε να αποδοθούν περιφραστικά/μεταφραστούν, ανάλογα με τη μεταφραστική στρατηγική, καθώς φέρουν σημασιολογικό βάρος. Το ύφος του αφηγητή πρέπει να αποπνέει την αστική ευγένεια, τον συντηρητισμό και τη φλεγματικότητα ενός δικηγόρου του 19ου αιώνα.",
+  "glossary": [
+    {
+      "source": "The Tombs",
+      "target": "Οι Τάφοι (Φυλακές της Νέας Υόρκης)",
+      "note": "place"
+    },
+    {
+      "source": "Herman Melville",
+      "target": "Χέρμαν Μέλβιλ",
+      "note": "person"
+    },
+    {
+      "source": "Bartleby",
+      "target": "Μπάρτλεμπι",
+      "note": "person"
+    },
+    {
+      "source": "John Jacob Astor",
+      "target": "Τζον Τζέικομπ Άστορ",
+      "note": "person"
+    },
+    {
+      "source": "Byron",
+      "target": "Μπάιρον",
+      "note": "person"
+    },
+    {
+      "source": "Cicero",
+      "target": "Κικέρων",
+      "note": "person"
+    },
+    {
+      "source": "Marius",
+      "target": "Μάριος",
+      "note": "person"
+    },
+    {
+      "source": "Adam",
+      "target": "Αδάμ",
+      "note": "person"
+    },
+    {
+      "source": "Adams",
+      "target": "Άνταμς",
+      "note": "person"
+    },
+    {
+      "source": "Colt",
+      "target": "Κολτ",
+      "note": "person"
+    },
+    {
+      "source": "Edwards",
+      "target": "Έντουαρντς",
+      "note": "person"
+    },
+    {
+      "source": "Priestly",
+      "target": "Πρίστλι",
+      "note": "person"
+    },
+    {
+      "source": "Mr. Cutlets",
+      "target": "Κος Κάτλετς",
+      "note": "person"
+    },
+    {
+      "source": "Mrs. Cutlets",
+      "target": "Κα Κάτλετς",
+      "note": "person"
+    },
+    {
+      "source": "Monroe Edwards",
+      "target": "Μονρόε Έντουαρντς",
+      "note": "person"
+    },
+    {
+      "source": "Wall-street",
+      "target": "Γουόλ Στριτ",
+      "note": "place"
+    },
+    {
+      "source": "State of New York",
+      "target": "Πολιτεία της Νέας Υόρκης",
+      "note": "place"
+    },
+    {
+      "source": "Tombs",
+      "target": "Τομπς",
+      "note": "place"
+    },
+    {
+      "source": "Custom House",
+      "target": "Τελωνείο",
+      "note": "place"
+    },
+    {
+      "source": "Post Office",
+      "target": "Ταχυδρομείο",
+      "note": "place"
+    },
+    {
+      "source": "Trinity Church",
+      "target": "Εκκλησία της Αγίας Τριάδας",
+      "note": "place"
+    },
+    {
+      "source": "Petra",
+      "target": "Πέτρα",
+      "note": "place"
+    },
+    {
+      "source": "Carthage",
+      "target": "Καρχηδόνα",
+      "note": "place"
+    },
+    {
+      "source": "Mississippi",
+      "target": "Μισισιπής",
+      "note": "place"
+    },
+    {
+      "source": "Broadway",
+      "target": "Μπρόντγουεϊ",
+      "note": "place"
+    },
+    {
+      "source": "City Hall",
+      "target": "Δημαρχείο",
+      "note": "place"
+    },
+    {
+      "source": "Canal-street",
+      "target": "Κάναλ Στριτ",
+      "note": "place"
+    },
+    {
+      "source": "Virginia",
+      "target": "Βιρτζίνια",
+      "note": "place"
+    },
+    {
+      "source": "Europe",
+      "target": "Ευρώπη",
+      "note": "place"
+    },
+    {
+      "source": "Jersey City",
+      "target": "Τζέρσεϊ Σίτι",
+      "note": "place"
+    },
+    {
+      "source": "Hoboken",
+      "target": "Χομπόκεν",
+      "note": "place"
+    },
+    {
+      "source": "Manhattanville",
+      "target": "Μανχάτανβιλ",
+      "note": "place"
+    },
+    {
+      "source": "Astoria",
+      "target": "Αστόρια",
+      "note": "place"
+    },
+    {
+      "source": "Halls of Justice",
+      "target": "Μέγαρο Δικαιοσύνης",
+      "note": "place"
+    },
+    {
+      "source": "Sing-Sing",
+      "target": "Σινγκ-Σινγκ",
+      "note": "place"
+    },
+    {
+      "source": "High Court of Chancery",
+      "target": "Ανώτατο Δικαστήριο της Καγκελαρίας",
+      "note": "org"
+    },
+    {
+      "source": "Justices' courts",
+      "target": "Ειρηνοδικεία",
+      "note": "org"
+    },
+    {
+      "source": "Bartleby, The Scrivener",
+      "target": "Μπάρτλεμπι, ο Γραφιάς",
+      "note": "title"
+    },
+    {
+      "source": "A STORY OF WALL-STREET",
+      "target": "ΜΙΑ ΙΣΤΟΡΙΑ ΤΗΣ ΓΟΥΟΛ ΣΤΡΙΤ",
+      "note": "title"
+    },
+    {
+      "source": "Edwards on the Will",
+      "target": "Ο Έντουαρντς περί της Θελήσεως",
+      "note": "title"
+    },
+    {
+      "source": "Priestly on Necessity",
+      "target": "Ο Πρίστλι περί της Αναγκαιότητας",
+      "note": "title"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}

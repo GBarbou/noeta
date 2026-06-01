@@ -1,0 +1,392 @@
+{
+  "source_language": "English",
+  "document_brief": "Τύπος: λογοτεχνικό (μυθιστόρημα μυστηρίου/ρομάντζο)\nΘέμα: Η ιστορία ακολουθεί τη Margot Anstruther, μια νεαρή ηθοποιό του κινηματογράφου στη Νέα Υόρκη, η οποία βρίσκεται αντιμέτωπη με ένα τρομακτικό μυστήριο στο δωμάτιό της, ενώ παράλληλα διαχειρίζεται τις ίντριγκες του στούντιο και τον έρωτά της για τον οπερατέρ Gene Valery.\nΕποχή/Πλαίσιο: Δεκαετία του 1920 (Εποχή της Τζαζ / Πρώιμος Κινηματογράφος), Νέα Υόρκη, ΗΠΑ.\nΎφος: Λογοτεχνικό, με στοιχεία καθομιλουμένης και αργκό της δεκαετίας του 1920 στους διαλόγους.\nΣημειώσεις: Το κείμενο περιέχει ιδιωματισμούς και αργκό της δεκαετίας του 1920 (π.χ. 'Ain't it the truth', 'bunk', 'dope', 'tripe'), που απαιτούν προσεκτική απόδοση στα ελληνικά για να διατηρηθεί το ύφος της εποχής (Jazz Age) χωρίς να ακούγονται υπερβολικά σύγχρονοι. Επίσης, η κινηματογραφική ορολογία πρέπει να αντικατοπτρίζει την πρώιμη βιομηχανία του κινηματογράφου. Προσοχή στην απόδοση του σασπένς στη σκηνή με το χέρι κάτω από το κρεβάτι.",
+  "glossary": [
+    {
+      "source": "extra",
+      "target": "κομπάρσος",
+      "note": "Κινηματογραφικός όρος"
+    },
+    {
+      "source": "camera man",
+      "target": "οπερατέρ",
+      "note": "Προτιμότερο από το 'εικονολήπτης' για το ύφος της εποχής"
+    },
+    {
+      "source": "director",
+      "target": "σκηνοθέτης",
+      "note": "Στο πλαίσιο του κινηματογράφου"
+    },
+    {
+      "source": "props",
+      "target": "σκηνικά αντικείμενα / φροντιστηριακό υλικό",
+      "note": "Κινηματογραφική ορολογία"
+    },
+    {
+      "source": "shoot (a picture)",
+      "target": "γυρίζω (ταινία)",
+      "note": "Κινηματογραφική αργκό"
+    },
+    {
+      "source": "fans",
+      "target": "θαυμαστές",
+      "note": "Απόδοση του κινηματογραφικού κοινού της εποχής"
+    },
+    {
+      "source": "Bronx",
+      "target": "Μπρονξ",
+      "note": "Αναφέρεται στο γνωστό κοκτέιλ της εποχής (Bronx cocktail)"
+    },
+    {
+      "source": "W. Adolphe Roberts",
+      "target": "Γ. Άντολφ Ρόμπερτς",
+      "note": "person"
+    },
+    {
+      "source": "George W. Gage",
+      "target": "Τζορτζ Γ. Γκέιτζ",
+      "note": "person"
+    },
+    {
+      "source": "Florence M. Osborne",
+      "target": "Φλόρενς Μ. Όσμπορν",
+      "note": "person"
+    },
+    {
+      "source": "Margot Anstruther",
+      "target": "Μάργκοτ Άνστρουδερ",
+      "note": "person"
+    },
+    {
+      "source": "Gene Valery",
+      "target": "Τζιν Βάλερι",
+      "note": "person"
+    },
+    {
+      "source": "Frederick Stoner",
+      "target": "Φρέντερικ Στόνερ",
+      "note": "person"
+    },
+    {
+      "source": "May Cheshire",
+      "target": "Μέι Τσέσαϊρ",
+      "note": "person"
+    },
+    {
+      "source": "Lulu Leinster",
+      "target": "Λούλου Λένστερ",
+      "note": "person"
+    },
+    {
+      "source": "Corinne Delamar",
+      "target": "Κορίν Ντελαμάρ",
+      "note": "person"
+    },
+    {
+      "source": "Mrs. Bellew",
+      "target": "Κυρία Μπελιού",
+      "note": "person"
+    },
+    {
+      "source": "Stella Ball",
+      "target": "Στέλλα Μπολ",
+      "note": "person"
+    },
+    {
+      "source": "Murchison",
+      "target": "Μέρτσισον",
+      "note": "person"
+    },
+    {
+      "source": "Joseph Livingstone",
+      "target": "Τζόζεφ Λίβινγκστον",
+      "note": "person"
+    },
+    {
+      "source": "Shakespeare",
+      "target": "Σαίξπηρ",
+      "note": "person"
+    },
+    {
+      "source": "Rip Van Winkle",
+      "target": "Ριπ Βαν Ουίνκλ",
+      "note": "person"
+    },
+    {
+      "source": "Kipling",
+      "target": "Κίπλινγκ",
+      "note": "person"
+    },
+    {
+      "source": "Anatole France",
+      "target": "Ανατόλ Φρανς",
+      "note": "person"
+    },
+    {
+      "source": "Dante",
+      "target": "Δάντης",
+      "note": "person"
+    },
+    {
+      "source": "Millay",
+      "target": "Μιλέι",
+      "note": "person"
+    },
+    {
+      "source": "Bulwer-Lytton",
+      "target": "Μπούλγουερ-Λίτον",
+      "note": "person"
+    },
+    {
+      "source": "Monsieur Dupin",
+      "target": "Κύριος Ντιπέν",
+      "note": "person"
+    },
+    {
+      "source": "Gaboriau",
+      "target": "Γκαμποριό",
+      "note": "person"
+    },
+    {
+      "source": "Maurice le Blanc",
+      "target": "Μορίς Λεμπλάν",
+      "note": "person"
+    },
+    {
+      "source": "Conan Doyle",
+      "target": "Κόναν Ντόιλ",
+      "note": "person"
+    },
+    {
+      "source": "Sherlock",
+      "target": "Σέρλοκ",
+      "note": "person"
+    },
+    {
+      "source": "Arsene Lupin",
+      "target": "Αρσέν Λουπέν",
+      "note": "person"
+    },
+    {
+      "source": "Carmen",
+      "target": "Κάρμεν",
+      "note": "person"
+    },
+    {
+      "source": "Conchita",
+      "target": "Κοντσίτα",
+      "note": "person"
+    },
+    {
+      "source": "Uriah Heep",
+      "target": "Ουράια Χιπ",
+      "note": "person"
+    },
+    {
+      "source": "New York",
+      "target": "Νέα Υόρκη",
+      "note": "place"
+    },
+    {
+      "source": "Long Island",
+      "target": "Λονγκ Άιλαντ",
+      "note": "place"
+    },
+    {
+      "source": "Maine",
+      "target": "Μέιν",
+      "note": "place"
+    },
+    {
+      "source": "West",
+      "target": "Δύση",
+      "note": "place"
+    },
+    {
+      "source": "South America",
+      "target": "Νότια Αμερική",
+      "note": "place"
+    },
+    {
+      "source": "Texas",
+      "target": "Τέξας",
+      "note": "place"
+    },
+    {
+      "source": "Riverside Drive",
+      "target": "Ρίβερσαϊντ Ντράιβ",
+      "note": "place"
+    },
+    {
+      "source": "Central Park",
+      "target": "Σέντραλ Παρκ",
+      "note": "place"
+    },
+    {
+      "source": "Jericho",
+      "target": "Ιεριχώ",
+      "note": "place"
+    },
+    {
+      "source": "Roaring Forties",
+      "target": "Ρόαρινγκ Φόρτις",
+      "note": "place"
+    },
+    {
+      "source": "The Macaulay Company",
+      "target": "Εταιρεία Macaulay",
+      "note": "org"
+    },
+    {
+      "source": "Superfilm Company",
+      "target": "Εταιρεία Superfilm",
+      "note": "org"
+    },
+    {
+      "source": "International",
+      "target": "International",
+      "note": "org"
+    },
+    {
+      "source": "Fellowe Institute",
+      "target": "Ινστιτούτο Φέλοου",
+      "note": "org"
+    },
+    {
+      "source": "Macy's",
+      "target": "Macy's",
+      "note": "org"
+    },
+    {
+      "source": "The Haunting Hand",
+      "target": "Το Στοιχειωμένο Χέρι",
+      "note": "title"
+    },
+    {
+      "source": "A Toreador's Love",
+      "target": "Ο Έρωτας Ενός Ταυρομάχου",
+      "note": "title"
+    },
+    {
+      "source": "The House and the Brain",
+      "target": "Το Σπίτι και ο Εγκέφαλος",
+      "note": "title"
+    },
+    {
+      "source": "Memoirs of Arsene Lupin",
+      "target": "Οι Αναμνήσεις του Αρσέν Λουπέν",
+      "note": "title"
+    },
+    {
+      "source": "studio",
+      "target": "στούντιο",
+      "note": "term"
+    },
+    {
+      "source": "actress",
+      "target": "ηθοποιός",
+      "note": "term"
+    },
+    {
+      "source": "scenario",
+      "target": "σενάριο",
+      "note": "term"
+    },
+    {
+      "source": "star",
+      "target": "αστέρας",
+      "note": "term"
+    },
+    {
+      "source": "prop",
+      "target": "φροντιστηριακό αντικείμενο",
+      "note": "term"
+    },
+    {
+      "source": "art director",
+      "target": "καλλιτεχνικός διευθυντής",
+      "note": "term"
+    },
+    {
+      "source": "radium",
+      "target": "ράδιο",
+      "note": "term"
+    },
+    {
+      "source": "detective",
+      "target": "ντετέκτιβ",
+      "note": "term"
+    },
+    {
+      "source": "paranoiac",
+      "target": "παρανοϊκός",
+      "note": "term"
+    },
+    {
+      "source": "maniac",
+      "target": "μανιακός",
+      "note": "term"
+    },
+    {
+      "source": "publicity",
+      "target": "δημοσιότητα",
+      "note": "term"
+    },
+    {
+      "source": "press agent",
+      "target": "υπεύθυνος τύπου",
+      "note": "term"
+    },
+    {
+      "source": "unit",
+      "target": "συνεργείο",
+      "note": "term"
+    },
+    {
+      "source": "board room",
+      "target": "αίθουσα συνεδριάσεων",
+      "note": "term"
+    },
+    {
+      "source": "picture",
+      "target": "ταινία",
+      "note": "term"
+    },
+    {
+      "source": "motion picture",
+      "target": "κινηματογραφική ταινία",
+      "note": "term"
+    },
+    {
+      "source": "cast",
+      "target": "διανομή ρόλων",
+      "note": "term"
+    },
+    {
+      "source": "role",
+      "target": "ρόλος",
+      "note": "term"
+    },
+    {
+      "source": "dressing-room",
+      "target": "καμαρίνι",
+      "note": "term"
+    },
+    {
+      "source": "stage",
+      "target": "πλατό",
+      "note": "term"
+    },
+    {
+      "source": "scenery",
+      "target": "σκηνικά",
+      "note": "term"
+    },
+    {
+      "source": "production manager",
+      "target": "διευθυντής παραγωγής",
+      "note": "term"
+    }
+  ],
+  "model": "gemini-3.1-pro"
+}
