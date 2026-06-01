@@ -2994,18 +2994,21 @@ app.add_middleware(
 
 class AuthRequest(BaseModel):
     password: str
+    service: str = "editor"  # "editor" | "translate"
 
 @app.post("/api/auth")
 async def authenticate(request: AuthRequest):
     """Verify password. Frontend calls this on login."""
     if not APP_PASSWORD:
         return {"authenticated": True, "message": "No password required"}
-    
+
     provided = (request.password or "").strip()
-    if provided == APP_PASSWORD:
+    expected = TRANSLATE_PASSWORD if request.service == "translate" else APP_PASSWORD
+
+    if provided == expected:
         return {"authenticated": True}
     else:
-        print(f"[AUTH] Login failed - provided: {repr(provided)}, expected: {repr(APP_PASSWORD)}")
+        print(f"[AUTH] Login failed (service={request.service}) - provided: {repr(provided)}, expected: {repr(expected)}")
         raise HTTPException(401, "Wrong password")
 
 # ============== ENDPOINTS ==============

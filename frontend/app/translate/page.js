@@ -54,7 +54,7 @@ export default function TranslatePage() {
     fetch(`${UPLOAD_URL}/api/auth`, {
       method: "POST",
       headers: { "Content-Type": "application/json", "X-App-Password": pw },
-      body: JSON.stringify({ password: pw }),
+      body: JSON.stringify({ password: pw, service: "translate" }),
     }).then((r) => { if (r.ok) setIsAuthenticated(true); setAuthChecked(true); })
       .catch(() => setAuthChecked(true));
   }, []);
@@ -66,7 +66,7 @@ export default function TranslatePage() {
       const res = await fetch(`${UPLOAD_URL}/api/auth`, {
         method: "POST",
         headers: { "Content-Type": "application/json", "X-App-Password": pw },
-        body: JSON.stringify({ password: pw }),
+        body: JSON.stringify({ password: pw, service: "translate" }),
       });
       if (res.ok) { sessionStorage.setItem("translate_password", pw); setIsAuthenticated(true); }
       else setLoginError("Λάθος κωδικός");
