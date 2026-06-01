@@ -2865,6 +2865,10 @@ if not APP_PASSWORD:
 else:
     print(f"[SECURITY] Password protection ACTIVE (password: {APP_PASSWORD[:3]}...)")
 
+TRANSLATE_PASSWORD = os.getenv("TRANSLATE_PASSWORD", APP_PASSWORD).strip()
+if TRANSLATE_PASSWORD != APP_PASSWORD:
+    print(f"[SECURITY] Separate TRANSLATE_PASSWORD set (password: {TRANSLATE_PASSWORD[:3]}...)")
+
 # Daily spending cap in USD (set in .env, default $5)
 DAILY_SPEND_CAP = float(os.getenv("DAILY_SPEND_CAP", "5.0"))
 
@@ -2956,7 +2960,10 @@ class PasswordMiddleware(BaseHTTPMiddleware):
             request.cookies.get("app_password", "")
         )
 
-        if provided != APP_PASSWORD:
+        # Translate endpoints use TRANSLATE_PASSWORD; all others use APP_PASSWORD
+        expected = TRANSLATE_PASSWORD if path.startswith("/api/translate") else APP_PASSWORD
+
+        if provided != expected:
             print(f"[AUTH] Blocked {request.method} {path} - wrong password")
             return JSONResponse(
                 status_code=401,
