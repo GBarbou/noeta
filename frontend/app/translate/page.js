@@ -19,7 +19,7 @@ const UPLOAD_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 // ============================================
 function getStoredPassword() {
   if (typeof window === "undefined") return "";
-  return sessionStorage.getItem("app_password") || "";
+  return sessionStorage.getItem("translate_password") || "";
 }
 
 async function authFetch(url, options = {}) {
@@ -27,7 +27,7 @@ async function authFetch(url, options = {}) {
   const headers = { ...(options.headers || {}) };
   if (pw) headers["X-App-Password"] = pw;
   const res = await fetch(url, { ...options, headers });
-  if (res.status === 401) { sessionStorage.removeItem("app_password"); window.location.reload(); }
+  if (res.status === 401) { sessionStorage.removeItem("translate_password"); window.location.reload(); }
   return res;
 }
 
@@ -50,7 +50,7 @@ export default function TranslatePage() {
   const [loginError, setLoginError] = useState("");
 
   useEffect(() => {
-    const pw = sessionStorage.getItem("app_password") || "";
+    const pw = sessionStorage.getItem("translate_password") || "";
     fetch(`${UPLOAD_URL}/api/auth`, {
       method: "POST",
       headers: { "Content-Type": "application/json", "X-App-Password": pw },
@@ -68,7 +68,7 @@ export default function TranslatePage() {
         headers: { "Content-Type": "application/json", "X-App-Password": pw },
         body: JSON.stringify({ password: pw }),
       });
-      if (res.ok) { sessionStorage.setItem("app_password", pw); setIsAuthenticated(true); }
+      if (res.ok) { sessionStorage.setItem("translate_password", pw); setIsAuthenticated(true); }
       else setLoginError("Λάθος κωδικός");
     } catch { setLoginError("Σφάλμα σύνδεσης"); }
   };
