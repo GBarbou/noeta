@@ -1090,15 +1090,13 @@ class TranslationSession:
                     for rescue_attempt in range(3):
                         try:
                             print(f"[RESCUE] Group {rc_idx+1}/{len(rescue_chunks)} ({len(rc_indices)} paras, attempt {rescue_attempt+1})...")
-                            rescue_prompt = f"""Μετάφρασε ΑΚΡΙΒΩΣ {len(rc_indices)} παραγράφους. 
+                            ctx_section = (
+                                f"\nΠΡΟΗΓΟΥΜΕΝΟ ΠΛΑΙΣΙΟ (για συνέχεια ύφους — ΜΗΝ το μεταφράσεις ξανά):\n<<<\n{ctx_before[-1500:]}\n>>>\n"
+                                if ctx_before else ""
+                            )
+                            rescue_prompt = f"""Μετάφρασε ΑΚΡΙΒΩΣ {len(rc_indices)} παραγράφους.
 Δώσε ΜΟΝΟ τη μετάφραση σε ΑΚΡΙΒΩΣ {len(rc_indices)} παραγράφους (χωρισμένες με κενή γραμμή).
-{f"""
-ΠΡΟΗΓΟΥΜΕΝΟ ΠΛΑΙΣΙΟ (για συνέχεια ύφους — ΜΗΝ το μεταφράσεις ξανά):
-<<<
-{ctx_before[-1500:]}
->>>
-""" if ctx_before else ""}
-ΚΕΙΜΕΝΟ ΠΡΟΣ ΜΕΤΑΦΡΑΣΗ:
+{ctx_section}ΚΕΙΜΕΝΟ ΠΡΟΣ ΜΕΤΑΦΡΑΣΗ:
 <<<
 {rc_content}
 >>>"""
