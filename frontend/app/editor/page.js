@@ -94,7 +94,7 @@ const ProofreadEditor = dynamic(() => import("../components/ProofreadEditor"), {
 
 
 
-const API_URL = "";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 
 // Upload goes directly to the backend to bypass the Next.js proxy body-size limit.

@@ -10,7 +10,7 @@ import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-const API_URL = "";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 // Upload goes directly to the backend to bypass the Next.js proxy body-size limit.
 const UPLOAD_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
