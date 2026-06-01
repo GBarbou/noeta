@@ -2974,6 +2974,8 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "http://127.0.0.1:3000",
+        "https://noeta.vercel.app",
+        "https://noeta-lkno4gg66-gbarbous-projects.vercel.app",
         "*",  # Cloudflare tunnel URLs are dynamic — keep wildcard for tunnel access
     ],
     allow_credentials=True,
