@@ -182,17 +182,11 @@ async function authFetch(url, options = {}) {
 
 
 function downloadUrl(path) {
-
-
+  const base = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
   const pw = getStoredPassword();
-
-
   const separator = path.includes("?") ? "&" : "?";
-
-
-  return pw ? `${path}${separator}pw=${encodeURIComponent(pw)}` : path;
-
-
+  const fullPath = `${base}${path}`;
+  return pw ? `${fullPath}${separator}pw=${encodeURIComponent(pw)}` : fullPath;
 }
 
 
