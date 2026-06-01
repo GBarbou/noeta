@@ -51,7 +51,7 @@ export default function TranslatePage() {
 
   useEffect(() => {
     const pw = sessionStorage.getItem("app_password") || "";
-    fetch("/api/auth", {
+    fetch(`${UPLOAD_URL}/api/auth`, {
       method: "POST",
       headers: { "Content-Type": "application/json", "X-App-Password": pw },
       body: JSON.stringify({ password: pw }),
@@ -63,7 +63,7 @@ export default function TranslatePage() {
     setLoginError("");
     try {
       const pw = loginPassword.trim();
-      const res = await fetch("/api/auth", {
+      const res = await fetch(`${UPLOAD_URL}/api/auth`, {
         method: "POST",
         headers: { "Content-Type": "application/json", "X-App-Password": pw },
         body: JSON.stringify({ password: pw }),

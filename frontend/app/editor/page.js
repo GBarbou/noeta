@@ -649,7 +649,7 @@ export default function EditorPage() {
     const pw = sessionStorage.getItem("app_password") || "";
 
 
-    fetch("/api/auth", {
+    fetch(`${UPLOAD_URL}/api/auth`, {
 
 
       method: "POST",
@@ -703,7 +703,7 @@ export default function EditorPage() {
       const pw = loginPassword.trim();
 
 
-      const res = await fetch("/api/auth", {
+      const res = await fetch(`${UPLOAD_URL}/api/auth`, {
 
 
         method: "POST",
