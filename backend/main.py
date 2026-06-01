@@ -49,7 +49,7 @@ load_dotenv(Path(__file__).parent / "backend" / ".env")  # Try backend subdir
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "").strip()
 if not OPENROUTER_API_KEY:
-    raise RuntimeError("Missing OPENROUTER_API_KEY in backend/.env")
+    print("WARNING: OPENROUTER_API_KEY is not set", flush=True)
 
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
