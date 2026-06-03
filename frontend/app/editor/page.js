@@ -5474,86 +5474,21 @@ export default function EditorPage() {
 
 
   if (!isAuthenticated) {
-
-
     return (
-
-
-      <div className="min-h-screen flex items-center justify-center relative overflow-hidden" style={{ backgroundColor: "var(--bg)" }}>
-
-
-        <div className="absolute inset-0 pointer-events-none">
-
-
-          <div className="absolute top-[-15%] left-[-10%] w-[45%] h-[45%] rounded-full blur-[120px] opacity-30" style={{ background: "radial-gradient(circle, #3b82f6, transparent 70%)" }} />
-
-
-          <div className="absolute bottom-[-15%] right-[-10%] w-[50%] h-[50%] rounded-full blur-[130px] opacity-25" style={{ background: "radial-gradient(circle, var(--primary), transparent 70%)" }} />
-
-
-        </div>
-
-
-        <div className="relative z-10 border rounded-2xl p-10 shadow-2xl backdrop-blur-xl" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", maxWidth: "420px", width: "100%" }}>
-
-
-          <div className="flex flex-col items-center gap-4 mb-8">
-
-
-            <div className="h-14 w-14 border rounded-xl flex items-center justify-center" style={{ borderColor: "var(--primary)", backgroundColor: "var(--primary-muted)" }}>
-
-
-              <span className="text-xl font-bold tracking-widest" style={{ color: "var(--primary)" }}>PA</span>
-
-
-            </div>
-
-
-            <div className="text-center">
-
-
-              <div className="text-2xl font-bold tracking-tight" style={{ color: "var(--text)" }}>ProofreadAI</div>
-
-
-              <div className="text-sm mt-1" style={{ color: "var(--text-muted)" }}>Απαιτείται κωδικός</div>
-
-
-            </div>
-
-
+      <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "var(--bg)", padding: "40px 24px" }}>
+        <div style={{ width: "100%", maxWidth: 400, border: "1px solid var(--rule)", borderRadius: "var(--r-sm)", padding: 40, background: "var(--surface)" }}>
+          <div style={{ fontFamily: "var(--display)", fontSize: 28, fontWeight: 300, letterSpacing: "-0.02em", marginBottom: 8 }}>
+            Noëta<span style={{ display: "inline-block", width: 5, height: 5, background: "var(--accent)", borderRadius: "50%", transform: "translateY(-3px)", marginLeft: 4 }} />
           </div>
-
-
+          <div style={{ fontFamily: "var(--mono)", fontSize: 11, color: "var(--mid)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 32 }}>Απαιτείται κωδικός</div>
           <input type="password" value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)}
-
-
             onKeyDown={(e) => { if (e.key === "Enter") handleLogin(); }} placeholder="Κωδικός πρόσβασης"
-
-
-            className="w-full px-5 py-4 border rounded-xl text-sm mb-4 outline-none bg-transparent focus:ring-2 focus:ring-[var(--primary)]/50"
-
-
-            style={{ borderColor: "var(--border)", color: "var(--text)" }} autoFocus />
-
-
-          {loginError && <div className="text-sm mb-4 text-center font-medium" style={{ color: "var(--error)" }}>{loginError}</div>}
-
-
-          <button onClick={handleLogin} className="w-full py-4 rounded-xl text-sm font-bold tracking-wide transition-all shadow-lg hover:opacity-90"
-
-
-            style={{ backgroundColor: "var(--primary)", color: "#ffffff" }}>Είσοδος</button>
-
-
+            style={{ width: "100%", border: "1px solid var(--rule)", borderRadius: "var(--r-xs)", padding: "12px 16px", fontSize: 14, background: "transparent", color: "var(--ink)", outline: "none", marginBottom: 12 }} autoFocus />
+          {loginError && <div style={{ fontSize: 13, color: "var(--rust)", marginBottom: 12, textAlign: "center" }}>{loginError}</div>}
+          <button onClick={handleLogin} className="editor-pill primary" style={{ width: "100%", justifyContent: "center", padding: "12px" }}>Είσοδος</button>
         </div>
-
-
       </div>
-
-
     );
-
-
   }
 
 
