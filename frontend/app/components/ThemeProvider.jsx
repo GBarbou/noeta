@@ -13,7 +13,7 @@ export function useTheme() {
 }
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export function ThemeProvider({ children }) {
     if (stored) {
       setTheme(stored);
     } else {
-      setTheme("dark");
+      setTheme("light");
     }
   }, []);
 
