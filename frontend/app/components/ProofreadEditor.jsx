@@ -133,6 +133,33 @@ const ProofreadEditor = forwardRef(function ProofreadEditor(
     catch (e) { isProgrammatic.current = false; return false; }
   }, [editor, corrections]);
 
+  const undoCorrection = useCallback((correctionId) => {
+    if (!editor) return false;
+    const corr = corrections.find(c => c.id === correctionId);
+    if (!corr || !corr.original) return false;
+    const { original, suggested = "", paragraph_number: targetPara = 0, anchor = "" } = corr;
+    if (targetPara > 0) {
+      let n = 0, found = false;
+      editor.state.doc.forEach((node, offset) => {
+        if (found || node.type.name !== "paragraph" || !node.textContent.trim()) return;
+        if (++n !== targetPara) return;
+        const { paraText, posMap } = buildParaPositionMap(node, offset);
+        const idx = paraText.indexOf(suggested);
+        if (idx === -1) return;
+        isProgrammatic.current = true;
+        try { editor.chain().setTextSelection({ from: posMap[idx], to: posMap[idx + suggested.length - 1] + 1 }).deleteSelection().insertContent(original).run(); found = true; } catch (e) {}
+        setTimeout(() => { isProgrammatic.current = false; }, 50);
+      });
+      if (found) return true;
+    }
+    const { fullText, posMap } = buildDocPositionMap(editor);
+    const idx = fullText.indexOf(suggested);
+    if (idx === -1) return false;
+    isProgrammatic.current = true;
+    try { editor.chain().setTextSelection({ from: posMap[idx], to: posMap[idx + suggested.length - 1] + 1 }).deleteSelection().insertContent(original).run(); setTimeout(() => { isProgrammatic.current = false; }, 50); return true; }
+    catch (e) { isProgrammatic.current = false; return false; }
+  }, [editor, corrections]);
+
   const getEditorParagraphs = useCallback(() => {
     if (!editor) return [];
     const result = []; let n = 1;
@@ -236,7 +263,7 @@ const ProofreadEditor = forwardRef(function ProofreadEditor(
 
   useImperativeHandle(ref, () => ({
     getEditor: () => editor, getContent: () => editor?.getHTML() || "", getText: () => editor?.getText() || "",
-    applyCorrection, getEditorParagraphs, refreshHighlights: applyHighlights, removeSingleHighlight, markCorrectionAccepted, focus: () => editor?.commands.focus(),
+    applyCorrection, undoCorrection, getEditorParagraphs, refreshHighlights: applyHighlights, removeSingleHighlight, markCorrectionAccepted, focus: () => editor?.commands.focus(),
   }));
 
   useEffect(() => {

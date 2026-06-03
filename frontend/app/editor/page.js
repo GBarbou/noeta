@@ -6157,6 +6157,22 @@ export default function EditorPage() {
                 <>
 
 
+                  <button className="editor-pill" onClick={() => {
+                    const lastAccepted = [...corrections].reverse().find(c => c.status === "accepted" && c.type === "fix");
+                    if (!lastAccepted) { setError("Δεν υπάρχει διόρθωση για αναίρεση"); return; }
+                    const ok = editorRef.current?.undoCorrection?.(lastAccepted.id);
+                    if (!ok) { setError("Δεν βρέθηκε το διορθωμένο κείμενο για αναίρεση"); return; }
+                    setCorrections(prev => prev.map(x => x.id === lastAccepted.id ? { ...x, status: "pending" } : x));
+                    editorRef.current?.refreshHighlights?.();
+                    authFetch(`${API_URL}/api/correction-status/${sessionId}`, {
+                      method: "POST", headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ correction_id: lastAccepted.id, status: "pending" }),
+                    }).catch(() => {});
+                  }} disabled={!corrections.some(c => c.status === "accepted" && c.type === "fix")}>
+                    ↶ Αναίρεση
+                  </button>
+
+
                   <button className="editor-pill" onClick={handleDownloadClick} disabled={downloadLoading}>
 
 
@@ -6497,29 +6513,16 @@ export default function EditorPage() {
 
 
                           <button style={{ fontFamily: "var(--mono)", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--mid)", cursor: "pointer" }}
-
-
                             onClick={(e) => {
-
-
                               e.stopPropagation();
-
-
+                              const ok = editorRef.current?.undoCorrection?.(c.id);
+                              if (!ok) { setError("Δεν βρέθηκε το διορθωμένο κείμενο για αναίρεση"); return; }
                               setCorrections(prev => prev.map(x => x.id === c.id ? { ...x, status: "pending" } : x));
-
-
+                              editorRef.current?.refreshHighlights?.();
                               authFetch(`${API_URL}/api/correction-status/${sessionId}`, {
-
-
                                 method: "POST", headers: { "Content-Type": "application/json" },
-
-
                                 body: JSON.stringify({ correction_id: c.id, status: "pending" }),
-
-
                               }).catch(() => {});
-
-
                             }}>Αναίρεση</button>
 
 
