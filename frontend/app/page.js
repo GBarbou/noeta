@@ -129,6 +129,48 @@ export default function HomePage() {
   );
   const [focusedId, setFocusedId] = useState(null);
 
+  /* ── Contact form state ── */
+  const [contactForm, setContactForm] = useState({ name: "", role: "", email: "", phone: "", message: "" });
+  const [contactStatus, setContactStatus] = useState("idle"); // idle | sending | success | error
+  const [contactError, setContactError] = useState("");
+
+  const handleContactChange = (field) => (e) => setContactForm((f) => ({ ...f, [field]: e.target.value }));
+
+  const handleContactSubmit = async (e) => {
+    e.preventDefault();
+    setContactError("");
+    if (!contactForm.name.trim() || !contactForm.email.trim() || !contactForm.message.trim()) {
+      setContactError("Συμπληρώστε όνομα, email και μήνυμα.");
+      return;
+    }
+    setContactStatus("sending");
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/noetaapp@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          name: contactForm.name,
+          role: contactForm.role,
+          email: contactForm.email,
+          phone: contactForm.phone,
+          message: contactForm.message,
+          _subject: `Νέο μήνυμα από Noëta — ${contactForm.name}`,
+          _template: "table",
+        }),
+      });
+      if (res.ok) {
+        setContactStatus("success");
+        setContactForm({ name: "", role: "", email: "", phone: "", message: "" });
+      } else {
+        setContactStatus("error");
+        setContactError("Αποτυχία αποστολής. Δοκιμάστε ξανά.");
+      }
+    } catch {
+      setContactStatus("error");
+      setContactError("Σφάλμα σύνδεσης. Δοκιμάστε ξανά.");
+    }
+  };
+
   const accept = (id) => setCorrStates((s) => ({ ...s, [id]: "accepted" }));
   const reject = (id) => setCorrStates((s) => ({ ...s, [id]: "rejected" }));
 
@@ -354,11 +396,44 @@ export default function HomePage() {
             <p style={{ fontFamily: "var(--display)", fontSize: 20, fontWeight: 300, lineHeight: 1.55, color: "var(--ink-soft)", maxWidth: 580, marginTop: 40 }}>
               Κάθε κείμενο είναι διαφορετικό. Επικοινωνήστε μαζί μας για προσφορά προσαρμοσμένη στις ανάγκες σας.
             </p>
-            <div style={{ marginTop: 56, display: "flex", alignItems: "center", gap: 56, flexWrap: "wrap" }}>
-              <a href="mailto:hello@noeta.app" className="btn-editorial">
-                <span className="arrow" /><span>Επικοινωνία</span>
-              </a>
-            </div>
+            <form onSubmit={handleContactSubmit} style={{ marginTop: 56, maxWidth: 640, display: "grid", gap: 24 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+                <label style={{ display: "grid", gap: 8 }}>
+                  <span style={{ fontFamily: "var(--mono)", fontSize: 10, textTransform: "uppercase", letterSpacing: "0.14em", color: "var(--mid)" }}>Όνομα *</span>
+                  <input type="text" value={contactForm.name} onChange={handleContactChange("name")} required
+                    style={{ background: "transparent", border: "none", borderBottom: "1px solid var(--rule)", padding: "10px 0", fontFamily: "var(--display)", fontSize: 16, color: "var(--ink)", outline: "none" }} />
+                </label>
+                <label style={{ display: "grid", gap: 8 }}>
+                  <span style={{ fontFamily: "var(--mono)", fontSize: 10, textTransform: "uppercase", letterSpacing: "0.14em", color: "var(--mid)" }}>Ιδιότητα</span>
+                  <input type="text" value={contactForm.role} onChange={handleContactChange("role")}
+                    style={{ background: "transparent", border: "none", borderBottom: "1px solid var(--rule)", padding: "10px 0", fontFamily: "var(--display)", fontSize: 16, color: "var(--ink)", outline: "none" }} />
+                </label>
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+                <label style={{ display: "grid", gap: 8 }}>
+                  <span style={{ fontFamily: "var(--mono)", fontSize: 10, textTransform: "uppercase", letterSpacing: "0.14em", color: "var(--mid)" }}>Email *</span>
+                  <input type="email" value={contactForm.email} onChange={handleContactChange("email")} required
+                    style={{ background: "transparent", border: "none", borderBottom: "1px solid var(--rule)", padding: "10px 0", fontFamily: "var(--display)", fontSize: 16, color: "var(--ink)", outline: "none" }} />
+                </label>
+                <label style={{ display: "grid", gap: 8 }}>
+                  <span style={{ fontFamily: "var(--mono)", fontSize: 10, textTransform: "uppercase", letterSpacing: "0.14em", color: "var(--mid)" }}>Τηλέφωνο</span>
+                  <input type="tel" value={contactForm.phone} onChange={handleContactChange("phone")}
+                    style={{ background: "transparent", border: "none", borderBottom: "1px solid var(--rule)", padding: "10px 0", fontFamily: "var(--display)", fontSize: 16, color: "var(--ink)", outline: "none" }} />
+                </label>
+              </div>
+              <label style={{ display: "grid", gap: 8 }}>
+                <span style={{ fontFamily: "var(--mono)", fontSize: 10, textTransform: "uppercase", letterSpacing: "0.14em", color: "var(--mid)" }}>Μήνυμα *</span>
+                <textarea value={contactForm.message} onChange={handleContactChange("message")} required rows={5}
+                  style={{ background: "transparent", border: "1px solid var(--rule)", borderRadius: 2, padding: "14px 16px", fontFamily: "var(--display)", fontSize: 16, color: "var(--ink)", outline: "none", resize: "vertical", minHeight: 120 }} />
+              </label>
+              {contactError && <div style={{ fontFamily: "var(--mono)", fontSize: 12, color: "var(--accent, #c41e1e)" }}>{contactError}</div>}
+              {contactStatus === "success" && <div style={{ fontFamily: "var(--mono)", fontSize: 12, color: "var(--ink)" }}>✓ Το μήνυμά σας στάλθηκε. Θα επικοινωνήσουμε σύντομα.</div>}
+              <div style={{ marginTop: 16, display: "flex", alignItems: "center", gap: 24 }}>
+                <button type="submit" disabled={contactStatus === "sending"} className="btn-editorial" style={{ background: "transparent", border: "none", cursor: contactStatus === "sending" ? "not-allowed" : "pointer", opacity: contactStatus === "sending" ? 0.5 : 1, padding: 0 }}>
+                  <span className="arrow" /><span>{contactStatus === "sending" ? "Αποστολή..." : "Αποστολή μηνύματος"}</span>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
