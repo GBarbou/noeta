@@ -95,6 +95,7 @@ AVAILABLE_MODELS = {
     "claude-sonnet-latest":   {"name": "Claude Sonnet — latest",           "model_id": "~anthropic/claude-sonnet-latest"},
     "claude-opus-latest":     {"name": "Claude Opus — latest",             "model_id": "~anthropic/claude-opus-latest"},
     # ── Pinned versions ──
+    "claude-fable-5": {"name": "Claude Fable 5", "model_id": "anthropic/claude-fable-5"},
     "claude-sonnet-4.6": {"name": "Claude Sonnet 4.6", "model_id": "anthropic/claude-sonnet-4.6"},
     "claude-opus-4.6": {"name": "Claude Opus 4.6", "model_id": "anthropic/claude-opus-4.6"},
     "claude-sonnet-4": {"name": "Claude Sonnet 4.5", "model_id": "anthropic/claude-sonnet-4.5"},
@@ -2866,8 +2867,14 @@ else:
     print(f"[SECURITY] Password protection ACTIVE (password: {APP_PASSWORD[:3]}...)")
 
 TRANSLATE_PASSWORD = os.getenv("TRANSLATE_PASSWORD", APP_PASSWORD).strip()
+# Debug: log whether TRANSLATE_PASSWORD env var was found
+_raw_translate_pw = os.getenv("TRANSLATE_PASSWORD")
+print(f"[DEBUG] os.getenv('TRANSLATE_PASSWORD') -> {repr(_raw_translate_pw)}", flush=True)
+print(f"[DEBUG] APP_PASSWORD={repr(APP_PASSWORD[:3])}..., TRANSLATE_PASSWORD={repr(TRANSLATE_PASSWORD[:3])}...", flush=True)
 if TRANSLATE_PASSWORD != APP_PASSWORD:
-    print(f"[SECURITY] Separate TRANSLATE_PASSWORD set (password: {TRANSLATE_PASSWORD[:3]}...)")
+    print(f"[SECURITY] Separate TRANSLATE_PASSWORD set (password: {TRANSLATE_PASSWORD[:3]}...)", flush=True)
+else:
+    print(f"[SECURITY] TRANSLATE_PASSWORD equals APP_PASSWORD (fallback)", flush=True)
 
 # Daily spending cap in USD (set in .env, default $5)
 DAILY_SPEND_CAP = float(os.getenv("DAILY_SPEND_CAP", "5.0"))
