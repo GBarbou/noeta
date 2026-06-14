@@ -492,24 +492,32 @@ R7. ΜΗΝ αλλάζεις παθητική σε ενεργητική φωνή 
     γραμματικώς σωστά. ΜΗΝ αλλάζεις να-πρόταση σε ονοματοποίηση χωρίς
     γραμματικό λόγο. Είναι υφολογικές επιλογές, όχι γραμματικά λάθη.
 
-# Fix A — άρθρο/επίθετο ↔ ουσιαστικό agreement (NP case/number guard)
-R8. ΜΗΝ αλλάζεις την πτώση ή τον αριθμό μεμονωμένης λέξης (ουσιαστικό/
-    επίθετο/μετοχή) αν η αλλαγή αφήνει το άρθρο ή το επίθετο/μετοχή της
-    ΙΔΙΑΣ ονοματικής φράσης σε διαφορετική πτώση/αριθμό.
-    ΠΡΙΝ προτείνεις τέτοια αλλαγή: εντόπισε ΟΛΗ την ονοματική φράση
-    (άρθρο + επίθετο/μετοχή + ουσιαστικό + εξαρτήματα) και έλεγξε αν ΗΔΗ
-    συμφωνεί.
-    - Αν η φράση ήδη συμφωνεί στην τρέχουσα μορφή → ΜΗΝ την αγγίξεις.
-    - Αν προτείνεις αλλαγή πτώσης/αριθμού, πρέπει να φέρει ΟΛΗ τη φράση
-      σε συμφωνία (αλλάζοντας μαζί και το άρθρο/επίθετο — δες R6 για
-      επέκταση original+suggested). Αλλιώς ΜΗΝ εκδώσεις finding.
+# Fix A — η πτώση κρίνεται από συμφωνία με το άρθρο/μετοχή, ΟΧΙ από το ρήμα
+R8. ΠΡΙΝ προτείνεις ΟΠΟΙΑΔΗΠΟΤΕ αλλαγή πτώσης/αριθμού σε ουσιαστικό/επίθετο/
+    μετοχή, εκτέλεσε ΥΠΟΧΡΕΩΤΙΚΑ αυτόν τον έλεγχο:
+    1) Βρες το άρθρο ή τη μετοχή/επίθετο που ανήκει στην ΙΔΙΑ ονοματική
+       φράση με τη λέξη (συνήθως αριστερά της: ο/η/το/οι/τα/του/της/των/
+       τον/την/τους/τις...).
+    2) Η πτώση της λέξης καθορίζεται από τη ΣΥΜΦΩΝΙΑ με αυτό το άρθρο/μετοχή
+       — ΟΧΙ από το ρήμα.
+    3) Αν η λέξη ΗΔΗ συμφωνεί με το άρθρο/μετοχή της, η πτώση είναι ΣΩΣΤΗ.
+       ΜΗΝ την αλλάξεις, ΑΚΟΜΗ κι αν:
+       - ένα ρήμα φαίνεται μεταβατικό και «θέλει» αιτιατική, ή
+       - το «ως»/«σαν» φαίνεται να «θέλει» ονομαστική.
+       Το άρθρο/μετοχή ΥΠΕΡΙΣΧΥΕΙ του ρήματος ως κριτήριο πτώσης.
+    Αν όντως αλλάζεις πτώση, πρέπει να φέρεις σε συμφωνία ΟΛΗ τη φράση (μαζί
+    το άρθρο/επίθετο — δες R6). Αλλιώς ΜΗΝ εκδώσεις finding.
 
-    ΠΑΡΑΔΕΙΓΜΑΤΑ ΣΩΣΤΟΥ (μην τα αλλάξεις):
-    «οι ... κλάδοι ... παρακολουθούν» — ονομαστική πληθυντικού
-    (υποκείμενο). ΜΗΝ το κάνεις «κλάδους»: το «οι» είναι ονομαστική και
-    το «κλάδους» (αιτιατική) σπάει τη συμφωνία.
-    «της δυνάμενης ... ως τελολογικής» — όλη η αλυσίδα σε γενική. ΜΗΝ το
-    κάνεις «τελολογική» (ονομαστική): σπάει τη συμφωνία με «της δυνάμενης».
+    ΑΝΤΙΠΑΡΑΔΕΙΓΜΑΤΑ (είναι ΣΩΣΤΑ — ΜΗΝ τα διορθώσεις):
+    α) «οι αναφερθέντες δύο κλάδοι παρακολουθούν...»
+       Το «κλάδοι» είναι ΥΠΟΚΕΙΜΕΝΟ και συμφωνεί με «οι/αναφερθέντες»
+       (ονομαστική). Λάθος σκέψη: «το παρακολουθώ είναι μεταβατικό, άρα
+       κλάδους». ΟΧΙ — το «κλάδοι» ΔΕΝ είναι αντικείμενο, είναι το υποκείμενο
+       του «παρακολουθούν».
+    β) «...προοπτικής, της δυνάμενης να χαρακτηριστεί ως τελολογικής»
+       Το «τελολογικής» συμφωνεί με «της δυνάμενης» (γενική). Λάθος σκέψη:
+       «χαρακτηρίζεται ως → ονομαστική, άρα τελολογική». ΟΧΙ — το κατηγορούμενο
+       έλκεται στη γενική της μετοχικής φράσης «της δυνάμενης».
 
 OUTPUT FORMAT (JSON array):
 [
@@ -1017,6 +1025,124 @@ def validate_correction(
 
 
 # Matches a single word (no whitespace) — used to identify risky grammar edits
+# ============== Fix A: deterministic article–noun concord guard ==============
+# Blocks ONLY the failure pattern reported by the owner: a single-word case
+# change that breaks agreement with the definite article governing the word
+# (e.g. «οι ... κλάδοι» → «κλάδους»). The block fires only when the ORIGINAL
+# already agrees with its article and the SUGGESTED cannot — so genuine
+# agreement fixes (where the original disagrees) are never dropped. Every
+# uncertain case returns True (fail-open) to protect recall.
+
+# Definite-article forms → the grammatical case(s) they can mark.
+_ARTICLE_CASE = {
+    "ο": {"NOM"}, "η": {"NOM"}, "οι": {"NOM"},
+    "το": {"NOM", "ACC"}, "τα": {"NOM", "ACC"},   # ambiguous → rarely blocks
+    "του": {"GEN"}, "της": {"GEN"}, "των": {"GEN"},
+    "τον": {"ACC"}, "την": {"ACC"}, "τους": {"ACC"}, "τις": {"ACC"}, "τες": {"ACC"},
+}
+
+# Numerals that may sit between an article and its noun (skipped while scanning).
+_NUMERAL_WORDS = {
+    "δύο", "δυο", "τρεις", "τρία", "τέσσερις", "τέσσερα", "πέντε", "έξι",
+    "εφτά", "επτά", "οκτώ", "οχτώ", "εννέα", "εννιά", "δέκα",
+}
+
+# High-confidence case endings (unaccented final cluster → case set), longest
+# first. Ambiguous endings map to multi-case sets so they cannot yield a clean
+# "breaks concord" verdict.
+_CASE_ENDINGS = [
+    ("ους", {"ACC"}),
+    ("εις", {"NOM", "ACC"}),
+    ("οι", {"NOM"}),
+    ("ος", {"NOM"}),
+    ("ου", {"GEN"}),
+    ("ων", {"GEN"}),
+    ("ον", {"ACC"}),
+    ("ης", {"NOM", "GEN"}),
+    ("ες", {"NOM", "ACC"}),
+]
+
+# Adjective/participle endings — such a token is a modifier inside the NP and is
+# skipped while scanning left toward the governing article.
+_MODIFIER_ENDINGS = (
+    "ντες", "ντων", "μένος", "μένη", "μένο", "μένοι", "μένες", "μένα",
+    "ικός", "ικής", "ικών", "ικούς", "ος", "ους", "ων", "οι", "ης", "ου", "ες", "εις",
+)
+
+
+def _ending_case(word: str):
+    """Return the set of cases a word's ending is consistent with, or None."""
+    w = word.strip().lower()
+    for suf, cases in _CASE_ENDINGS:
+        if w.endswith(suf) and len(w) > len(suf):
+            return cases
+    return None
+
+
+def _shares_stem(a: str, b: str, min_stem: int = 3) -> bool:
+    """True if a and b look like two inflected forms of the same word."""
+    a, b = a.lower(), b.lower()
+    n = 0
+    for ca, cb in zip(a, b):
+        if ca != cb:
+            break
+        n += 1
+    return n >= min_stem
+
+
+def np_article_concord_ok(original: str, suggested: str, text: str, offset: int) -> bool:
+    """
+    Fix A guard. Returns False ONLY when a single-word case change would break
+    agreement with the definite article governing the word — the ORIGINAL agrees
+    with the article and the SUGGESTED cannot. All uncertain cases return True.
+    """
+    orig = (original or "").strip()
+    sugg = (suggested or "").strip()
+    # Only single-word inflectional changes are in scope.
+    if not orig or not sugg or " " in orig or " " in sugg:
+        return True
+    if not _shares_stem(orig, sugg):
+        return True
+    orig_cases = _ending_case(orig)
+    sugg_cases = _ending_case(sugg)
+    if not orig_cases or not sugg_cases:
+        return True  # unrecognized ending → cannot judge → allow
+
+    # Locate the word and the left context within the same clause.
+    if offset is None or offset < 0 or text[offset:offset + len(original)] != original:
+        offset = text.find(original)
+        if offset < 0:
+            return True
+    left = text[:offset]
+    seg = re.split(r"[.;·!?\n]", left)[-1]
+    toks = re.findall(r"[^\W\d_]+", seg, re.UNICODE)
+    if not toks:
+        return True
+
+    # Scan left for the governing article, skipping numerals/modifiers.
+    article = None
+    skipped = 0
+    for tok in reversed(toks):
+        tl = tok.lower()
+        if tl in _ARTICLE_CASE:
+            article = tl
+            break
+        if skipped >= 6:
+            break
+        if tl in _NUMERAL_WORDS or any(tl.endswith(e) for e in _MODIFIER_ENDINGS):
+            skipped += 1
+            continue
+        break  # verb / preposition / particle / noun → stop (no governing article)
+    if article is None:
+        return True
+
+    art_cases = _ARTICLE_CASE[article]
+    # Block only when the original agrees with the article but the suggested cannot.
+    if (orig_cases & art_cases) and not (sugg_cases & art_cases):
+        return False
+    return True
+
+
 _SINGLE_WORD_RE = re.compile(r'^\S+$')
 
 
@@ -3634,6 +3760,11 @@ async def analyze_document(request: AnalyzeRequest):
                     )
                     occurrence_counter[occ_key] = occ_idx + 1
 
+                    # Fix A. Deterministic article-concord guard (footnote text).
+                    if not np_article_concord_ok(original, suggested, fn_text, exact_offset):
+                        print(f"[NP-GUARD] Rejected fn:{fid} '{original}' -> '{suggested}': breaks article concord")
+                        continue
+
                     # B. Dedupe key includes exact_offset — preserves separate corrections for repeated errors
                     # Old key: f"fn:{fid}|{original}|{suggested}"
                     # New key: f"f:{fid}|{original}|{suggested}|{exact_offset}"
@@ -3702,6 +3833,12 @@ async def analyze_document(request: AnalyzeRequest):
                         else (offsets[0] if offsets else -1)
                     )
                     occurrence_counter[occ_key] = occ_idx + 1
+
+                    # Fix A. Deterministic article-concord guard (blocks case changes
+                    # that would break agreement with the governing definite article).
+                    if not np_article_concord_ok(original, suggested, para["text"], exact_offset):
+                        print(f"[NP-GUARD] Rejected para:{para_num} '{original}' -> '{suggested}': breaks article concord")
+                        continue
 
                     # G. Grammar verifier for risky single-word changes (opt-in via ENABLE_GRAMMAR_VERIFIER)
                     if ENABLE_GRAMMAR_VERIFIER and _SINGLE_WORD_RE.match(original.strip()):
