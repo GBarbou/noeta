@@ -6710,6 +6710,15 @@ export default function EditorPage() {
               )}
 
 
+              {corrections.some(c => c.status === "pending") && (
+                <button onClick={() => { window.open(downloadUrl(`/api/download/${sessionId}/comments`), "_blank"); setShowDownloadModal(false); }}
+                  style={{ padding: "14px 18px", border: "1px solid var(--amber)", borderRadius: "var(--r-sm)", textAlign: "left", background: "transparent", color: "var(--amber)", cursor: "pointer" }}>
+                  <div style={{ fontFamily: "var(--sans)", fontSize: 13, fontWeight: 500 }}>Προτάσεις (σχόλια)</div>
+                  <div style={{ fontFamily: "var(--mono)", fontSize: 10, marginTop: 4, opacity: 0.7 }}>Ως σχόλια στο περιθώριο</div>
+                </button>
+              )}
+
+
             </div>
 
 

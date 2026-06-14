@@ -2094,6 +2094,194 @@ def _apply_revision_at_span_xml(fn_elem, exact_offset, original, suggested, chan
     return True
 
 
+def _wrap_span_with_comment(paragraph, span_start, span_end, comment_id):
+    """
+    Wrap paragraph text [span_start, span_end) with commentRangeStart/End markers.
+
+    The original runs are preserved unchanged — no text is deleted or replaced.
+    Boundary runs are split at the span edges so the comment range aligns exactly.
+    span_start/span_end are offsets into paragraph.text (concat of runs, NOT stripped).
+    """
+    from docx.oxml import OxmlElement
+    from docx.oxml.ns import qn
+    from copy import deepcopy
+
+    pos = 0
+    run_spans = []
+    for r in paragraph.runs:
+        t = r.text or ""
+        run_spans.append((r._r, pos, pos + len(t)))
+        pos += len(t)
+
+    overlapping = [(r_el, rs, re) for r_el, rs, re in run_spans if rs < span_end and re > span_start]
+    if not overlapping:
+        return False
+
+    parent = overlapping[0][0].getparent()
+
+    # Split last run at span_end first (preserves first-run index)
+    last_r_el, last_rs, last_re = overlapping[-1]
+    if last_re > span_end:
+        last_t = last_r_el.find(qn('w:t'))
+        if last_t is not None and last_t.text:
+            split_at = span_end - last_rs
+            after_text = last_t.text[split_at:]
+            last_t.text = last_t.text[:split_at]
+            last_t.set(qn('xml:space'), 'preserve')
+            if after_text:
+                rPr = last_r_el.find(qn('w:rPr'))
+                ar = OxmlElement('w:r')
+                if rPr is not None:
+                    ar.append(deepcopy(rPr))
+                at = OxmlElement('w:t')
+                at.set(qn('xml:space'), 'preserve')
+                at.text = after_text
+                ar.append(at)
+                parent.insert(list(parent).index(last_r_el) + 1, ar)
+
+    # Split first run at span_start
+    first_r_el, first_rs, first_re = overlapping[0]
+    if first_rs < span_start:
+        first_t = first_r_el.find(qn('w:t'))
+        if first_t is not None and first_t.text:
+            split_at = span_start - first_rs
+            before_text = first_t.text[:split_at]
+            first_t.text = first_t.text[split_at:]
+            first_t.set(qn('xml:space'), 'preserve')
+            if before_text:
+                rPr = first_r_el.find(qn('w:rPr'))
+                br = OxmlElement('w:r')
+                if rPr is not None:
+                    br.append(deepcopy(rPr))
+                bt = OxmlElement('w:t')
+                bt.set(qn('xml:space'), 'preserve')
+                bt.text = before_text
+                br.append(bt)
+                parent.insert(list(parent).index(first_r_el), br)
+
+    # Insert commentRangeStart before first span run
+    first_idx = list(parent).index(first_r_el)
+    cs = OxmlElement('w:commentRangeStart')
+    cs.set(qn('w:id'), str(comment_id))
+    parent.insert(first_idx, cs)
+
+    # Insert commentRangeEnd + commentReference after last span run
+    last_idx = list(parent).index(last_r_el)
+    ce = OxmlElement('w:commentRangeEnd')
+    ce.set(qn('w:id'), str(comment_id))
+    parent.insert(last_idx + 1, ce)
+
+    ref_r = OxmlElement('w:r')
+    ref = OxmlElement('w:commentReference')
+    ref.set(qn('w:id'), str(comment_id))
+    ref_r.append(ref)
+    parent.insert(last_idx + 2, ref_r)
+
+    return True
+
+
+def _wrap_span_with_comment_xml(fn_elem, exact_offset, original, comment_id):
+    """
+    Wrap a span inside a w:footnote with commentRangeStart/End markers.
+
+    Same offset-based anchoring as _apply_revision_at_span_xml but no del/ins —
+    original text is preserved intact.
+    """
+    from docx.oxml import OxmlElement
+    from docx.oxml.ns import qn
+    from copy import deepcopy
+
+    pos = 0
+    run_spans = []
+    for r_el in fn_elem.findall('.//' + qn('w:r')):
+        t_el = r_el.find(qn('w:t'))
+        t = t_el.text if t_el is not None and t_el.text else ""
+        run_spans.append((r_el, t_el, pos, pos + len(t)))
+        pos += len(t)
+
+    fn_full = "".join(info[1].text if info[1] is not None and info[1].text else "" for info in run_spans)
+    lshift = len(fn_full) - len(fn_full.lstrip())
+
+    span_start = -1
+    deleted_text = original
+
+    if exact_offset >= 0:
+        candidate = exact_offset + lshift
+        if fn_full[candidate:candidate + len(original)] == original:
+            span_start = candidate
+
+    if span_start == -1:
+        found, matched = find_original_in_text(fn_full, original)
+        if found == -1:
+            return False
+        span_start = found
+        deleted_text = matched
+
+    span_end = span_start + len(deleted_text)
+
+    overlapping = [(r_el, t_el, rs, re) for r_el, t_el, rs, re in run_spans if rs < span_end and re > span_start]
+    if not overlapping:
+        return False
+
+    parent = overlapping[0][0].getparent()
+
+    # Split last run at span_end
+    last_r_el, last_t_el, last_rs, last_re = overlapping[-1]
+    if last_re > span_end:
+        if last_t_el is not None and last_t_el.text:
+            split_at = span_end - last_rs
+            after_text = last_t_el.text[split_at:]
+            last_t_el.text = last_t_el.text[:split_at]
+            last_t_el.set(qn('xml:space'), 'preserve')
+            if after_text:
+                rPr = last_r_el.find(qn('w:rPr'))
+                ar = OxmlElement('w:r')
+                if rPr is not None:
+                    ar.append(deepcopy(rPr))
+                at = OxmlElement('w:t')
+                at.set(qn('xml:space'), 'preserve')
+                at.text = after_text
+                ar.append(at)
+                parent.insert(list(parent).index(last_r_el) + 1, ar)
+
+    # Split first run at span_start
+    first_r_el, first_t_el, first_rs, first_re = overlapping[0]
+    if first_rs < span_start:
+        if first_t_el is not None and first_t_el.text:
+            split_at = span_start - first_rs
+            before_text = first_t_el.text[:split_at]
+            first_t_el.text = first_t_el.text[split_at:]
+            first_t_el.set(qn('xml:space'), 'preserve')
+            if before_text:
+                rPr = first_r_el.find(qn('w:rPr'))
+                br = OxmlElement('w:r')
+                if rPr is not None:
+                    br.append(deepcopy(rPr))
+                bt = OxmlElement('w:t')
+                bt.set(qn('xml:space'), 'preserve')
+                bt.text = before_text
+                br.append(bt)
+                parent.insert(list(parent).index(first_r_el), br)
+
+    first_idx = list(parent).index(first_r_el)
+    cs = OxmlElement('w:commentRangeStart')
+    cs.set(qn('w:id'), str(comment_id))
+    parent.insert(first_idx, cs)
+
+    last_idx = list(parent).index(last_r_el)
+    ce = OxmlElement('w:commentRangeEnd')
+    ce.set(qn('w:id'), str(comment_id))
+    parent.insert(last_idx + 1, ce)
+
+    ref_r = OxmlElement('w:r')
+    ref = OxmlElement('w:commentReference')
+    ref.set(qn('w:id'), str(comment_id))
+    ref_r.append(ref)
+    parent.insert(last_idx + 2, ref_r)
+
+    return True
+
+
 def inject_real_comments(docx_path: Path, corrections: list, now_iso: str) -> bool:
     """
     Inject real comments into the docx file.
@@ -2194,6 +2382,50 @@ xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml">
     return xml
     
     return True
+
+
+def create_suggestion_comments_xml(corrections: list, now_iso: str) -> str:
+    """Create comments.xml for suggestions-only export.
+
+    Each comment contains two paragraphs:
+      «original» → «suggested»
+      reason (if present)
+    """
+
+    def escape_xml(text):
+        if not text:
+            return ""
+        return (text
+                .replace("&", "&amp;")
+                .replace("<", "&lt;")
+                .replace(">", "&gt;")
+                .replace('"', "&quot;")
+                .replace("'", "&apos;"))
+
+    xml = ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
+           '<w:comments xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"'
+           ' xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml"'
+           ' xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml">\n')
+
+    for corr in corrections:
+        comment_id = corr["id"]
+        original = escape_xml(corr.get("original", ""))
+        suggested = escape_xml(corr.get("suggested", ""))
+        reason = escape_xml(corr.get("reason", ""))
+
+        arrow_line = f"«{original}» → «{suggested}»"
+
+        xml += (f'<w:comment w:id="{comment_id}" w:author="Noëta" w:date="{now_iso}" w:initials="N">\n'
+                f'<w:p><w:pPr><w:pStyle w:val="CommentText"/></w:pPr>'
+                f'<w:r><w:rPr><w:rStyle w:val="CommentReference"/></w:rPr><w:annotationRef/></w:r>'
+                f'<w:r><w:t xml:space="preserve">{arrow_line}</w:t></w:r></w:p>\n')
+        if reason:
+            xml += (f'<w:p><w:pPr><w:pStyle w:val="CommentText"/></w:pPr>'
+                    f'<w:r><w:t xml:space="preserve">{reason}</w:t></w:r></w:p>\n')
+        xml += '</w:comment>\n'
+
+    xml += '</w:comments>'
+    return xml
 
 
 def calculate_offset_in_text(text: str, original: str) -> int:
@@ -4329,6 +4561,213 @@ Contents:
         path=str(bundle_path),
         filename=f"{filename}_bundle.zip",
         media_type="application/zip",
+    )
+
+
+def create_comments_only_docx(original_path: Path, corrections: list, output_path: Path) -> bool:
+    """
+    Export document with ALL pending corrections as margin comments only.
+
+    The body text is byte-for-byte identical to the original — no del/ins revision marks.
+    Each correction span is wrapped in commentRangeStart/End so the comment appears
+    anchored to the exact word in Word's comment pane.
+    Comment text: «original» → «suggested» + reason on a second line.
+    """
+    from docx import Document
+    from docx.oxml.ns import qn
+
+    try:
+        doc = Document(str(original_path))
+    except Exception as e:
+        print(f"[ERROR] Failed to load document: {e}")
+        return False
+
+    # Build paragraph index map (non-empty paragraphs only, same as track-changes)
+    index_map = []
+    for i, p in enumerate(doc.paragraphs):
+        if p.text and p.text.strip():
+            index_map.append(i)
+
+    # All pending corrections (fix + suggestion — same count as the report)
+    pending = [c for c in corrections if c.get("status") == "pending"]
+
+    if not pending:
+        shutil.copy(original_path, output_path)
+        return True
+
+    comment_id = 0
+    applied_corrections = []
+    now_iso = datetime.utcnow().isoformat() + "Z"
+
+    # Body corrections
+    for corr in pending:
+        if corr.get("target") == "footnote":
+            continue
+
+        para_num = corr.get("paragraph_number", 0)
+        original = corr.get("original", "")
+        suggested = corr.get("suggested", "")
+        reason = corr.get("reason", "")
+        module = corr.get("module", "core")
+        exact_offset = corr.get("exact_offset", -1)
+
+        if not original:
+            continue
+
+        idx = para_num - 1
+        if idx < 0 or idx >= len(index_map):
+            print(f"[WARNING] Paragraph {para_num} out of range, skipping '{original[:30]}'")
+            continue
+
+        paragraph = doc.paragraphs[index_map[idx]]
+        full_text = paragraph.text
+        lshift = len(full_text) - len(full_text.lstrip())
+
+        span_start = -1
+        if exact_offset >= 0:
+            candidate = exact_offset + lshift
+            if full_text[candidate:candidate + len(original)] == original:
+                span_start = candidate
+
+        if span_start == -1:
+            found, matched = find_original_in_text(full_text, original)
+            if found == -1:
+                print(f"[WARNING] Could not locate '{original[:30]}' in paragraph {para_num}")
+                continue
+            span_start = found
+            original = matched
+
+        span_end = span_start + len(original)
+
+        result = _wrap_span_with_comment(paragraph, span_start, span_end, comment_id)
+        if result:
+            applied_corrections.append({
+                "id": comment_id,
+                "module": module,
+                "reason": reason,
+                "original": corr.get("original", ""),
+                "suggested": suggested,
+            })
+            comment_id += 1
+        else:
+            print(f"[WARNING] Could not wrap '{original[:30]}' in paragraph {para_num}")
+
+    # Footnote corrections
+    try:
+        for rel in doc.part.rels.values():
+            if "footnotes" in rel.reltype:
+                footnotes_xml = rel.target_part._element
+                for corr in pending:
+                    if corr.get("target") != "footnote":
+                        continue
+                    original = corr.get("original", "")
+                    if not original:
+                        continue
+                    footnote_id = corr.get("footnote_id", 0)
+                    exact_offset = corr.get("exact_offset", -1)
+                    for fn in footnotes_xml.findall('.//' + qn('w:footnote')):
+                        fn_id = fn.get(qn('w:id'))
+                        if fn_id and int(fn_id) == footnote_id:
+                            result = _wrap_span_with_comment_xml(fn, exact_offset, original, comment_id)
+                            if result:
+                                applied_corrections.append({
+                                    "id": comment_id,
+                                    "module": corr.get("module", "core"),
+                                    "reason": corr.get("reason", ""),
+                                    "original": original,
+                                    "suggested": corr.get("suggested", ""),
+                                })
+                                comment_id += 1
+                            else:
+                                print(f"[WARNING] Could not wrap '{original[:30]}' in footnote {footnote_id}")
+                            break
+                break
+    except Exception as e:
+        print(f"[WARNING] Could not process footnotes: {e}")
+
+    try:
+        doc.save(str(output_path))
+    except Exception as e:
+        print(f"[ERROR] Failed to save document: {e}")
+        return False
+
+    if applied_corrections:
+        try:
+            _inject_suggestion_comments(output_path, applied_corrections, now_iso)
+        except Exception as e:
+            print(f"[WARNING] Could not inject suggestion comments: {e}")
+
+    print(f"[INFO] Suggestions document saved with {comment_id} comments")
+    return True
+
+
+def _inject_suggestion_comments(docx_path: Path, corrections: list, now_iso: str) -> bool:
+    """Inject suggestion-format comments.xml into the docx zip."""
+    try:
+        with zipfile.ZipFile(docx_path, 'r') as zin:
+            file_contents = {name: zin.read(name) for name in zin.namelist()}
+
+        file_contents['word/comments.xml'] = create_suggestion_comments_xml(corrections, now_iso).encode('utf-8')
+
+        content_types = file_contents.get('[Content_Types].xml', b'').decode('utf-8')
+        if 'comments.xml' not in content_types:
+            content_types = content_types.replace(
+                '</Types>',
+                '<Override PartName="/word/comments.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml"/></Types>'
+            )
+            file_contents['[Content_Types].xml'] = content_types.encode('utf-8')
+
+        rels_path = 'word/_rels/document.xml.rels'
+        if rels_path in file_contents:
+            rels = file_contents[rels_path].decode('utf-8')
+            if 'comments.xml' not in rels:
+                import re as _re
+                rids = _re.findall(r'Id="rId(\d+)"', rels)
+                new_rid = max([int(r) for r in rids], default=0) + 1
+                new_rel = (f'<Relationship Id="rId{new_rid}" '
+                           f'Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments" '
+                           f'Target="comments.xml"/>')
+                rels = rels.replace('</Relationships>', new_rel + '</Relationships>')
+                file_contents[rels_path] = rels.encode('utf-8')
+
+        with zipfile.ZipFile(docx_path, 'w', zipfile.ZIP_DEFLATED) as zout:
+            for name, content in file_contents.items():
+                zout.writestr(name, content)
+
+        return True
+    except Exception as e:
+        print(f"[ERROR] Failed to inject suggestion comments: {e}")
+        return False
+
+
+@app.get("/api/download/{session_id}/comments")
+async def download_with_comments(session_id: str):
+    """Download document with all pending corrections as margin comments (no track changes)."""
+    session = sessions.get(session_id)
+    if not session:
+        raise HTTPException(404, "Session not found")
+
+    pending = [c for c in session.corrections if c.get("status") == "pending"]
+    if not pending:
+        raise HTTPException(400, "Δεν υπάρχουν εκκρεμείς διορθώσεις")
+
+    comments_path = OUTPUT_DIR / f"{session_id}_suggestions.docx"
+
+    success = create_comments_only_docx(
+        session.original_path,
+        session.corrections,
+        comments_path,
+    )
+
+    if not success:
+        raise HTTPException(500, "Αποτυχία δημιουργίας εγγράφου προτάσεων")
+
+    filename = session.original_path.name.replace("_original", "").replace(".docx", "")
+
+    return FileResponse(
+        comments_path,
+        filename=f"{filename}_suggestions.docx",
+        media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     )
 
 
