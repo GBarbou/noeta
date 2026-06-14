@@ -1718,56 +1718,64 @@ def create_tracked_changes_docx(original_path: Path, corrections: list, output_p
     for corr in pending_corrections:
         if corr.get("target") == "footnote":
             continue
-        
+
         para_num = corr.get("paragraph_number", 0)
         original = corr.get("original", "")
         suggested = corr.get("suggested", "")
         reason = corr.get("reason", "")
         module = corr.get("module", "core")
-        
+        exact_offset = corr.get("exact_offset", -1)
+
         if not original:
             continue
-        
-        # Find the paragraph
+
+        # Resolve paragraph via paragraph_number (1-based over non-empty paragraphs)
         idx = para_num - 1
-        paragraph = None
-        
-        if idx >= 0 and idx < len(index_map):
-            paragraph = doc.paragraphs[index_map[idx]]
-        else:
-            # Try to find by searching
-            for real_idx in index_map:
-                if original in doc.paragraphs[real_idx].text:
-                    paragraph = doc.paragraphs[real_idx]
-                    break
-        
-        if not paragraph:
+        if idx < 0 or idx >= len(index_map):
+            print(f"[WARNING] Paragraph {para_num} out of range, skipping '{original[:30]}'")
             continue
-        
-        # Find the run containing the text
-        done = False
-        for run in paragraph.runs:
-            if run.text and original in run.text:
-                result = apply_track_change_with_comment(
-                    run, original, suggested, reason, module,
-                    change_id, comment_id, now_iso
-                )
-                if result:
-                    change_id += 2
-                    applied_corrections.append({
-                        "id": comment_id,
-                        "module": module,
-                        "reason": reason,
-                        "original": original,
-                        "suggested": suggested
-                    })
-                    comment_id += 1
-                    applied += 1
-                    done = True
-                    break
-        
-        if not done:
-            print(f"[WARNING] Could not find '{original[:30]}...' in paragraph {para_num}")
+
+        paragraph = doc.paragraphs[index_map[idx]]
+        full_text = paragraph.text  # concat of all runs, NOT stripped
+        lshift = len(full_text) - len(full_text.lstrip())
+
+        # Resolve span [span_start, span_end) using exact_offset (paragraph-relative, into stripped text)
+        span_start = -1
+        deleted_text = original
+
+        if exact_offset >= 0:
+            candidate = exact_offset + lshift
+            if full_text[candidate:candidate + len(original)] == original:
+                span_start = candidate
+
+        if span_start == -1:
+            # NFC-normalised fallback: handles NFD diacritics, hyphen-split words
+            found, matched = find_original_in_text(full_text, original)
+            if found == -1:
+                print(f"[WARNING] Could not locate '{original[:30]}' in paragraph {para_num}")
+                continue
+            span_start = found
+            deleted_text = matched
+
+        span_end = span_start + len(deleted_text)
+
+        result = _apply_revision_at_span(
+            paragraph, span_start, span_end, deleted_text, suggested,
+            change_id, comment_id, now_iso
+        )
+        if result:
+            change_id += 2
+            applied_corrections.append({
+                "id": comment_id,
+                "module": module,
+                "reason": reason,
+                "original": original,
+                "suggested": suggested
+            })
+            comment_id += 1
+            applied += 1
+        else:
+            print(f"[WARNING] Failed to apply revision for '{original[:30]}' in paragraph {para_num}")
     
     # Process footnote corrections
     try:
@@ -1779,38 +1787,37 @@ def create_tracked_changes_docx(original_path: Path, corrections: list, output_p
                 for corr in pending_corrections:
                     if corr.get("target") != "footnote":
                         continue
-                    
+
                     original = corr.get("original", "")
                     suggested = corr.get("suggested", "")
                     footnote_id = corr.get("footnote_id", 0)
                     reason = corr.get("reason", "")
                     module = corr.get("module", "core")
-                    
+                    exact_offset = corr.get("exact_offset", -1)
+
                     if not original:
                         continue
-                    
+
                     for fn in footnotes_xml.findall('.//' + qn('w:footnote')):
                         fn_id = fn.get(qn('w:id'))
                         if fn_id and int(fn_id) == footnote_id:
-                            for r_elem in fn.findall('.//' + qn('w:r')):
-                                t_elem = r_elem.find(qn('w:t'))
-                                if t_elem is not None and t_elem.text and original in t_elem.text:
-                                    result = apply_track_change_with_comment_xml(
-                                        r_elem, t_elem, original, suggested, reason, module,
-                                        change_id, comment_id, now_iso
-                                    )
-                                    if result:
-                                        change_id += 2
-                                        applied_corrections.append({
-                                            "id": comment_id,
-                                            "module": module,
-                                            "reason": reason,
-                                            "original": original,
-                                            "suggested": suggested
-                                        })
-                                        comment_id += 1
-                                        applied += 1
-                                    break
+                            result = _apply_revision_at_span_xml(
+                                fn, exact_offset, original, suggested,
+                                change_id, comment_id, now_iso
+                            )
+                            if result:
+                                change_id += 2
+                                applied_corrections.append({
+                                    "id": comment_id,
+                                    "module": module,
+                                    "reason": reason,
+                                    "original": original,
+                                    "suggested": suggested
+                                })
+                                comment_id += 1
+                                applied += 1
+                            else:
+                                print(f"[WARNING] Could not locate '{original[:30]}' in footnote {footnote_id}")
                             break
                 break
     except Exception as e:
@@ -1834,210 +1841,256 @@ def create_tracked_changes_docx(original_path: Path, corrections: list, output_p
     return True
 
 
-def apply_track_change_with_comment(run, original, suggested, reason, module, change_id, comment_id, now_iso):
+def _apply_revision_at_span(paragraph, span_start, span_end, deleted_text, suggested, change_id, comment_id, now_iso):
     """
-    Apply Track Change to a run with comment markers.
-    The comment will be added in post-processing.
+    Replace paragraph text [span_start, span_end) with w:del + w:ins tracked-change elements.
+
+    Works across run boundaries: collects all runs overlapping the span, removes them,
+    and reinserts before/after text runs flanking the revision markup.
+    span_start/span_end are offsets into paragraph.text (= concat of run texts, NOT stripped).
     """
     from docx.oxml import OxmlElement
     from docx.oxml.ns import qn
     from copy import deepcopy
-    
-    text = run.text
-    if not text:
+
+    author = "Noëta"
+
+    # Build (r_element, run_start, run_end) for every run
+    pos = 0
+    run_spans = []
+    for r in paragraph.runs:
+        t = r.text or ""
+        run_spans.append((r._r, pos, pos + len(t)))
+        pos += len(t)
+
+    # Runs that overlap [span_start, span_end)
+    overlapping = [(r_el, rs, re) for r_el, rs, re in run_spans if rs < span_end and re > span_start]
+    if not overlapping:
         return False
-    
-    pos = text.find(original)
-    if pos == -1:
-        return False
-    
-    parent = run._r.getparent()
-    r_el = run._r
-    idx = list(parent).index(r_el)
-    
-    before = text[:pos]
-    after = text[pos + len(original):]
-    
-    # Copy formatting
-    rPr_orig = r_el.find(qn('w:rPr'))
-    
-    # Author for Track Changes
-    author = "ProofreadAI"
-    
-    # If there's text before, update existing run
-    if before:
-        run.text = before
-        insert_pos = idx + 1
-    else:
+
+    first_r_el, first_rs, _ = overlapping[0]
+    last_r_el, last_rs, _ = overlapping[-1]
+    rPr_orig = first_r_el.find(qn('w:rPr'))
+    parent = first_r_el.getparent()
+    insert_pos = list(parent).index(first_r_el)
+
+    # Text before the span within the first run
+    first_t = first_r_el.find(qn('w:t'))
+    first_run_text = first_t.text if first_t is not None and first_t.text else ""
+    before_text = first_run_text[:max(0, span_start - first_rs)]
+
+    # Text after the span within the last run
+    last_t = last_r_el.find(qn('w:t'))
+    last_run_text = last_t.text if last_t is not None and last_t.text else ""
+    after_start = max(0, span_end - last_rs)
+    after_text = last_run_text[after_start:]
+
+    # Remove all overlapping runs from the paragraph
+    for r_el, _, _ in overlapping:
         parent.remove(r_el)
-        insert_pos = idx
-    
-    elements_to_insert = []
-    
-    # 1. Comment Range Start
-    comment_start = OxmlElement('w:commentRangeStart')
-    comment_start.set(qn('w:id'), str(comment_id))
-    elements_to_insert.append(comment_start)
-    
-    # 2. Deletion (original text)
+
+    elements = []
+
+    if before_text:
+        br = OxmlElement('w:r')
+        if rPr_orig is not None:
+            br.append(deepcopy(rPr_orig))
+        bt = OxmlElement('w:t')
+        bt.set(qn('xml:space'), 'preserve')
+        bt.text = before_text
+        br.append(bt)
+        elements.append(br)
+
+    cs = OxmlElement('w:commentRangeStart')
+    cs.set(qn('w:id'), str(comment_id))
+    elements.append(cs)
+
     del_el = OxmlElement('w:del')
     del_el.set(qn('w:id'), str(change_id))
     del_el.set(qn('w:author'), author)
     del_el.set(qn('w:date'), now_iso)
-    
     del_r = OxmlElement('w:r')
     if rPr_orig is not None:
         del_r.append(deepcopy(rPr_orig))
-    del_text = OxmlElement('w:delText')
-    del_text.set(qn('xml:space'), 'preserve')
-    del_text.text = original
-    del_r.append(del_text)
+    del_t = OxmlElement('w:delText')
+    del_t.set(qn('xml:space'), 'preserve')
+    del_t.text = deleted_text
+    del_r.append(del_t)
     del_el.append(del_r)
-    elements_to_insert.append(del_el)
-    
-    # 3. Insertion (suggested text)
+    elements.append(del_el)
+
     ins_el = OxmlElement('w:ins')
     ins_el.set(qn('w:id'), str(change_id + 1))
     ins_el.set(qn('w:author'), author)
     ins_el.set(qn('w:date'), now_iso)
-    
     ins_r = OxmlElement('w:r')
     if rPr_orig is not None:
         ins_r.append(deepcopy(rPr_orig))
-    ins_text = OxmlElement('w:t')
-    ins_text.set(qn('xml:space'), 'preserve')
-    ins_text.text = suggested
-    ins_r.append(ins_text)
+    ins_t = OxmlElement('w:t')
+    ins_t.set(qn('xml:space'), 'preserve')
+    ins_t.text = suggested
+    ins_r.append(ins_t)
     ins_el.append(ins_r)
-    elements_to_insert.append(ins_el)
-    
-    # 4. Comment Range End
-    comment_end = OxmlElement('w:commentRangeEnd')
-    comment_end.set(qn('w:id'), str(comment_id))
-    elements_to_insert.append(comment_end)
-    
-    # 5. Comment Reference
-    comment_ref_run = OxmlElement('w:r')
-    comment_ref = OxmlElement('w:commentReference')
-    comment_ref.set(qn('w:id'), str(comment_id))
-    comment_ref_run.append(comment_ref)
-    elements_to_insert.append(comment_ref_run)
-    
-    # 6. After text (if any)
-    if after:
-        after_r = OxmlElement('w:r')
+    elements.append(ins_el)
+
+    ce = OxmlElement('w:commentRangeEnd')
+    ce.set(qn('w:id'), str(comment_id))
+    elements.append(ce)
+
+    ref_r = OxmlElement('w:r')
+    ref = OxmlElement('w:commentReference')
+    ref.set(qn('w:id'), str(comment_id))
+    ref_r.append(ref)
+    elements.append(ref_r)
+
+    if after_text:
+        ar = OxmlElement('w:r')
         if rPr_orig is not None:
-            after_r.append(deepcopy(rPr_orig))
-        t_after = OxmlElement('w:t')
-        t_after.set(qn('xml:space'), 'preserve')
-        t_after.text = after
-        after_r.append(t_after)
-        elements_to_insert.append(after_r)
-    
-    # Insert all elements
-    for i, elem in enumerate(elements_to_insert):
+            ar.append(deepcopy(rPr_orig))
+        at = OxmlElement('w:t')
+        at.set(qn('xml:space'), 'preserve')
+        at.text = after_text
+        ar.append(at)
+        elements.append(ar)
+
+    for i, elem in enumerate(elements):
         parent.insert(insert_pos + i, elem)
-    
+
     return True
 
 
-def apply_track_change_with_comment_xml(r_elem, t_elem, original, suggested, reason, module, change_id, comment_id, now_iso):
+def _apply_revision_at_span_xml(fn_elem, exact_offset, original, suggested, change_id, comment_id, now_iso):
     """
-    Apply Track Change to a footnote run (raw XML elements).
+    Apply a tracked-change revision inside a w:footnote XML element.
+
+    Builds the full footnote text from all w:r/w:t children, resolves the span
+    using exact_offset (footnote-relative, into stripped text) with NFC fallback,
+    then removes the overlapping runs and reinserts revision markup.
     """
     from docx.oxml import OxmlElement
     from docx.oxml.ns import qn
     from copy import deepcopy
-    
-    text = t_elem.text
-    if not text:
+
+    author = "Noëta"
+
+    # Build (r_el, t_el, run_start, run_end) for all w:r children
+    pos = 0
+    run_spans = []
+    for r_el in fn_elem.findall('.//' + qn('w:r')):
+        t_el = r_el.find(qn('w:t'))
+        t = t_el.text if t_el is not None and t_el.text else ""
+        run_spans.append((r_el, t_el, pos, pos + len(t)))
+        pos += len(t)
+
+    fn_full = "".join(info[1].text if info[1] is not None and info[1].text else "" for info in run_spans)
+    lshift = len(fn_full) - len(fn_full.lstrip())
+
+    span_start = -1
+    deleted_text = original
+
+    if exact_offset >= 0:
+        candidate = exact_offset + lshift
+        if fn_full[candidate:candidate + len(original)] == original:
+            span_start = candidate
+
+    if span_start == -1:
+        found, matched = find_original_in_text(fn_full, original)
+        if found == -1:
+            return False
+        span_start = found
+        deleted_text = matched
+
+    span_end = span_start + len(deleted_text)
+
+    overlapping = [(r_el, t_el, rs, re) for r_el, t_el, rs, re in run_spans if rs < span_end and re > span_start]
+    if not overlapping:
         return False
-    
-    pos = text.find(original)
-    if pos == -1:
-        return False
-    
-    parent = r_elem.getparent()
-    idx = list(parent).index(r_elem)
-    
-    before = text[:pos]
-    after = text[pos + len(original):]
-    
-    rPr_orig = r_elem.find(qn('w:rPr'))
-    author = "ProofreadAI"
-    
-    if before:
-        t_elem.text = before
-        insert_pos = idx + 1
-    else:
-        parent.remove(r_elem)
-        insert_pos = idx
-    
-    elements_to_insert = []
-    
-    # Comment Range Start
-    comment_start = OxmlElement('w:commentRangeStart')
-    comment_start.set(qn('w:id'), str(comment_id))
-    elements_to_insert.append(comment_start)
-    
-    # Deletion
+
+    first_r_el = overlapping[0][0]
+    rPr_orig = first_r_el.find(qn('w:rPr'))
+    parent = first_r_el.getparent()
+    insert_pos = list(parent).index(first_r_el)
+
+    first_t_el = overlapping[0][1]
+    first_rs = overlapping[0][2]
+    first_run_text = first_t_el.text if first_t_el is not None and first_t_el.text else ""
+    before_text = first_run_text[:max(0, span_start - first_rs)]
+
+    last_t_el = overlapping[-1][1]
+    last_rs = overlapping[-1][2]
+    last_run_text = last_t_el.text if last_t_el is not None and last_t_el.text else ""
+    after_text = last_run_text[max(0, span_end - last_rs):]
+
+    for r_el, _, _, _ in overlapping:
+        parent.remove(r_el)
+
+    elements = []
+
+    if before_text:
+        br = OxmlElement('w:r')
+        if rPr_orig is not None:
+            br.append(deepcopy(rPr_orig))
+        bt = OxmlElement('w:t')
+        bt.set(qn('xml:space'), 'preserve')
+        bt.text = before_text
+        br.append(bt)
+        elements.append(br)
+
+    cs = OxmlElement('w:commentRangeStart')
+    cs.set(qn('w:id'), str(comment_id))
+    elements.append(cs)
+
     del_el = OxmlElement('w:del')
     del_el.set(qn('w:id'), str(change_id))
     del_el.set(qn('w:author'), author)
     del_el.set(qn('w:date'), now_iso)
-    
     del_r = OxmlElement('w:r')
     if rPr_orig is not None:
         del_r.append(deepcopy(rPr_orig))
-    del_text = OxmlElement('w:delText')
-    del_text.set(qn('xml:space'), 'preserve')
-    del_text.text = original
-    del_r.append(del_text)
+    del_t = OxmlElement('w:delText')
+    del_t.set(qn('xml:space'), 'preserve')
+    del_t.text = deleted_text
+    del_r.append(del_t)
     del_el.append(del_r)
-    elements_to_insert.append(del_el)
-    
-    # Insertion
+    elements.append(del_el)
+
     ins_el = OxmlElement('w:ins')
     ins_el.set(qn('w:id'), str(change_id + 1))
     ins_el.set(qn('w:author'), author)
     ins_el.set(qn('w:date'), now_iso)
-    
     ins_r = OxmlElement('w:r')
     if rPr_orig is not None:
         ins_r.append(deepcopy(rPr_orig))
-    ins_text = OxmlElement('w:t')
-    ins_text.set(qn('xml:space'), 'preserve')
-    ins_text.text = suggested
-    ins_r.append(ins_text)
+    ins_t = OxmlElement('w:t')
+    ins_t.set(qn('xml:space'), 'preserve')
+    ins_t.text = suggested
+    ins_r.append(ins_t)
     ins_el.append(ins_r)
-    elements_to_insert.append(ins_el)
-    
-    # Comment Range End
-    comment_end = OxmlElement('w:commentRangeEnd')
-    comment_end.set(qn('w:id'), str(comment_id))
-    elements_to_insert.append(comment_end)
-    
-    # Comment Reference
-    comment_ref_run = OxmlElement('w:r')
-    comment_ref = OxmlElement('w:commentReference')
-    comment_ref.set(qn('w:id'), str(comment_id))
-    comment_ref_run.append(comment_ref)
-    elements_to_insert.append(comment_ref_run)
-    
-    # After text
-    if after:
-        after_r = OxmlElement('w:r')
+    elements.append(ins_el)
+
+    ce = OxmlElement('w:commentRangeEnd')
+    ce.set(qn('w:id'), str(comment_id))
+    elements.append(ce)
+
+    ref_r = OxmlElement('w:r')
+    ref = OxmlElement('w:commentReference')
+    ref.set(qn('w:id'), str(comment_id))
+    ref_r.append(ref)
+    elements.append(ref_r)
+
+    if after_text:
+        ar = OxmlElement('w:r')
         if rPr_orig is not None:
-            after_r.append(deepcopy(rPr_orig))
-        t_after = OxmlElement('w:t')
-        t_after.set(qn('xml:space'), 'preserve')
-        t_after.text = after
-        after_r.append(t_after)
-        elements_to_insert.append(after_r)
-    
-    for i, elem in enumerate(elements_to_insert):
+            ar.append(deepcopy(rPr_orig))
+        at = OxmlElement('w:t')
+        at.set(qn('xml:space'), 'preserve')
+        at.text = after_text
+        ar.append(at)
+        elements.append(ar)
+
+    for i, elem in enumerate(elements):
         parent.insert(insert_pos + i, elem)
-    
+
     return True
 
 
@@ -2120,15 +2173,15 @@ xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml">
         original = corr.get("original", "")
         suggested = corr.get("suggested", "")
         
-        # Create comment text
+        # Create comment text (no internal module prefix visible to user)
         if reason:
-            comment_text = f"[{module}] {reason}"
+            comment_text = reason
         else:
-            comment_text = f"[{module}] Αλλαγή: «{original}» → «{suggested}»"
-        
+            comment_text = f"Αλλαγή: «{original}» → «{suggested}»"
+
         comment_text = escape_xml(comment_text)
-        
-        xml += f'''<w:comment w:id="{comment_id}" w:author="ProofreadAI" w:date="{now_iso}" w:initials="AI">
+
+        xml += f'''<w:comment w:id="{comment_id}" w:author="Noëta" w:date="{now_iso}" w:initials="N">
 <w:p>
 <w:pPr><w:pStyle w:val="CommentText"/></w:pPr>
 <w:r><w:rPr><w:rStyle w:val="CommentReference"/></w:rPr><w:annotationRef/></w:r>
