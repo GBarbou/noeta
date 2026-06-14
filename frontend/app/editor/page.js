@@ -3106,19 +3106,20 @@ export default function EditorPage() {
       const res = await authFetch(`${API_URL}/api/v1/report/generate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ session_id: sessionId, format: "pdf" }),
+        body: JSON.stringify({ session_id: sessionId, format: "html" }),
       });
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
         throw new Error(err.detail || "Αποτυχία δημιουργίας αναφοράς");
       }
-      const blob = await res.blob();
+      const html = await res.text();
+      // Inject auto-print trigger so the browser opens the print dialog immediately
+      const printable = html.replace("</body>", "<script>window.addEventListener('load',()=>window.print())<\/script></body>");
+      const blob = new Blob([printable], { type: "text/html; charset=utf-8" });
       const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `noeta-report.pdf`;
-      a.click();
-      URL.revokeObjectURL(url);
+      window.open(url, "_blank");
+      // Revoke after a delay to allow the new tab to load
+      setTimeout(() => URL.revokeObjectURL(url), 30000);
     } catch (err) {
       setError(err.message);
     } finally {
