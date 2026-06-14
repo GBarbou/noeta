@@ -27,7 +27,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response
 from pydantic import BaseModel
 
 import docx
@@ -4933,6 +4933,62 @@ async def paraphrase_download(session_id: str):
         media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     )
     
+# ============== REPORT ENDPOINT ==============
+
+class ReportRequest(BaseModel):
+    session_id: str
+    format: str = "pdf"          # "pdf" | "html"
+    teaser_enabled: bool = False
+    teaser_show_first: int = 3
+
+
+@app.post("/api/v1/report/generate")
+async def generate_report(request: ReportRequest):
+    """
+    Generate a read-only corrections report (HTML or PDF) from a session.
+    POST body: { session_id, format: "pdf"|"html", teaser_enabled?, teaser_show_first? }
+    """
+    from report import build_report_payload, render_html, render_pdf
+
+    session = sessions.get(request.session_id)
+    if not session:
+        raise HTTPException(404, "Session not found")
+
+    # Ensure paragraphs are loaded
+    paragraphs = session.paragraphs
+    if not paragraphs and session.working_path.exists():
+        paragraphs = extract_paragraphs(session.working_path)
+
+    filename = session.original_path.name if session.original_path else ""
+
+    try:
+        payload = build_report_payload(
+            corrections=session.corrections,
+            paragraphs=paragraphs,
+            filename=filename,
+            teaser_enabled=request.teaser_enabled,
+            teaser_show_first=request.teaser_show_first,
+        )
+        html = render_html(payload)
+    except Exception as e:
+        raise HTTPException(500, f"Report generation failed: {e}")
+
+    if request.format == "html":
+        return Response(content=html, media_type="text/html; charset=utf-8")
+
+    try:
+        pdf_bytes = render_pdf(html)
+    except Exception as e:
+        raise HTTPException(500, f"PDF rendering failed: {e}")
+
+    ref = payload["document"]["ref"]
+    return Response(
+        content=pdf_bytes,
+        media_type="application/pdf",
+        headers={"Content-Disposition": f'attachment; filename="noeta-report-{ref}.pdf"'},
+    )
+
+
 if __name__ == "__main__":
     import uvicorn
     print("\n" + "=" * 50)

@@ -903,7 +903,7 @@ export default function EditorPage() {
 
   const [downloadLoading, setDownloadLoading] = useState(false);
 
-
+  const [reportLoading, setReportLoading] = useState(false);
 
 
 
@@ -3097,6 +3097,33 @@ export default function EditorPage() {
     }
 
 
+  };
+
+  const handleReportClick = async () => {
+    if (!sessionId) return;
+    setReportLoading(true);
+    try {
+      const res = await authFetch(`${API_URL}/api/v1/report/generate`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ session_id: sessionId, format: "pdf" }),
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.detail || "Αποτυχία δημιουργίας αναφοράς");
+      }
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `noeta-report.pdf`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setReportLoading(false);
+    }
   };
 
 
@@ -6181,6 +6208,9 @@ export default function EditorPage() {
 
                   </button>
 
+                  <button className="editor-pill" onClick={handleReportClick} disabled={reportLoading} title="Read-only αναφορά διορθώσεων (PDF)">
+                    {reportLoading ? "..." : "Αναφορά PDF"}
+                  </button>
 
                   <button className="editor-pill primary" onClick={acceptAll} disabled={counts.pending === 0}>
 
