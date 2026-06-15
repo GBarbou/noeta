@@ -1851,6 +1851,163 @@ def apply_footnote_correction(doc_path: Path, footnote_id: int, original: str, s
         return False
 
 
+def _apply_fn_revisions_zip(
+    docx_path: Path,
+    fn_corrections: list,
+    start_change_id: int,
+    start_comment_id: int,
+    now_iso: str,
+) -> list:
+    """
+    Post-process the saved docx zip: apply del+ins tracked-change markup inside
+    word/footnotes.xml for each footnote correction.
+
+    Uses the same _apply_revision_at_span_xml logic as the body path, but reads
+    and writes footnotes.xml directly (python-docx exposes footnotes as a BlobPart
+    that has no _element, so we must manipulate the zip after doc.save()).
+
+    Returns a list of applied-correction dicts (shape: {id, module, reason,
+    original, suggested}) for inclusion in comments.xml.
+    """
+    if not fn_corrections or not USING_LXML:
+        return []
+    applied = []
+    try:
+        from docx.oxml.ns import qn as _qn
+        with zipfile.ZipFile(docx_path, 'r') as zin:
+            file_contents = {name: zin.read(name) for name in zin.namelist()}
+        if 'word/footnotes.xml' not in file_contents:
+            return []
+        fn_root = ET.fromstring(file_contents['word/footnotes.xml'])
+        change_id = start_change_id
+        comment_id = start_comment_id
+        for corr in fn_corrections:
+            original = corr.get('original', '')
+            suggested = corr.get('suggested', '')
+            fid = corr.get('footnote_id', 0)
+            exact_offset = corr.get('exact_offset', -1)
+            if not original:
+                continue
+            for fn_elem in fn_root.findall('.//' + _qn('w:footnote')):
+                if fn_elem.get(_qn('w:id')) == str(fid):
+                    ok = _apply_revision_at_span_xml(
+                        fn_elem, exact_offset, original, suggested,
+                        change_id, comment_id, now_iso,
+                    )
+                    if ok:
+                        applied.append({
+                            'id': comment_id,
+                            'module': corr.get('module', 'core'),
+                            'reason': corr.get('reason', ''),
+                            'original': original,
+                            'suggested': suggested,
+                        })
+                        change_id += 2
+                        comment_id += 1
+                    else:
+                        print(f"[WARNING] TC-fn: '{original[:30]}' not found in footnote {fid}")
+                    break
+        if applied:
+            file_contents['word/footnotes.xml'] = ET.tostring(
+                fn_root, xml_declaration=True, encoding='UTF-8', standalone=True
+            )
+            _ensure_fn_comments_rels(file_contents)
+            with zipfile.ZipFile(docx_path, 'w', zipfile.ZIP_DEFLATED) as zout:
+                for name, content in file_contents.items():
+                    zout.writestr(name, content)
+    except Exception as e:
+        print(f"[WARNING] _apply_fn_revisions_zip: {e}")
+        import traceback; traceback.print_exc()
+        applied = []
+    return applied
+
+
+def _apply_fn_comment_ranges_zip(
+    docx_path: Path,
+    fn_corrections: list,
+    start_comment_id: int,
+    now_iso: str,
+) -> list:
+    """
+    Post-process the saved docx zip: add commentRangeStart/End anchors inside
+    word/footnotes.xml for each footnote correction (comments-only export).
+
+    Same pattern as _apply_fn_revisions_zip but calls _wrap_span_with_comment_xml
+    instead of _apply_revision_at_span_xml (text is preserved, only markers added).
+    """
+    if not fn_corrections or not USING_LXML:
+        return []
+    applied = []
+    try:
+        from docx.oxml.ns import qn as _qn
+        with zipfile.ZipFile(docx_path, 'r') as zin:
+            file_contents = {name: zin.read(name) for name in zin.namelist()}
+        if 'word/footnotes.xml' not in file_contents:
+            return []
+        fn_root = ET.fromstring(file_contents['word/footnotes.xml'])
+        comment_id = start_comment_id
+        for corr in fn_corrections:
+            original = corr.get('original', '')
+            fid = corr.get('footnote_id', 0)
+            exact_offset = corr.get('exact_offset', -1)
+            if not original:
+                continue
+            for fn_elem in fn_root.findall('.//' + _qn('w:footnote')):
+                if fn_elem.get(_qn('w:id')) == str(fid):
+                    ok = _wrap_span_with_comment_xml(fn_elem, exact_offset, original, comment_id)
+                    if ok:
+                        applied.append({
+                            'id': comment_id,
+                            'module': corr.get('module', 'core'),
+                            'reason': corr.get('reason', ''),
+                            'original': original,
+                            'suggested': corr.get('suggested', ''),
+                        })
+                        comment_id += 1
+                    else:
+                        print(f"[WARNING] CM-fn: '{original[:30]}' not found in footnote {fid}")
+                    break
+        if applied:
+            file_contents['word/footnotes.xml'] = ET.tostring(
+                fn_root, xml_declaration=True, encoding='UTF-8', standalone=True
+            )
+            _ensure_fn_comments_rels(file_contents)
+            with zipfile.ZipFile(docx_path, 'w', zipfile.ZIP_DEFLATED) as zout:
+                for name, content in file_contents.items():
+                    zout.writestr(name, content)
+    except Exception as e:
+        print(f"[WARNING] _apply_fn_comment_ranges_zip: {e}")
+        import traceback; traceback.print_exc()
+        applied = []
+    return applied
+
+
+def _ensure_fn_comments_rels(file_contents: dict) -> None:
+    """
+    Ensure word/_rels/footnotes.xml.rels declares a relationship to comments.xml.
+    Word requires this to resolve commentReference elements inside footnotes.xml.
+    Mutates file_contents in-place.
+    """
+    fn_rels_path = 'word/_rels/footnotes.xml.rels'
+    COMMENTS_TYPE = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments'
+    if fn_rels_path in file_contents:
+        rels = file_contents[fn_rels_path].decode('utf-8')
+        if 'comments.xml' in rels:
+            return
+        rids = re.findall(r'Id="rId(\d+)"', rels)
+        new_rid = max((int(r) for r in rids), default=0) + 1
+        new_rel = f'<Relationship Id="rId{new_rid}" Type="{COMMENTS_TYPE}" Target="comments.xml"/>'
+        rels = rels.replace('</Relationships>', new_rel + '</Relationships>')
+        file_contents[fn_rels_path] = rels.encode('utf-8')
+    else:
+        file_contents[fn_rels_path] = (
+            '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+            '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+            f'<Relationship Id="rId1" Type="{COMMENTS_TYPE}" Target="comments.xml"/>'
+            '</Relationships>'
+        ).encode('utf-8')
+
+
 def create_tracked_changes_docx(original_path: Path, corrections: list, output_path: Path) -> bool:
     """
     Create a copy of the document with all pending corrections as Track Changes + Real Comments.
@@ -1966,67 +2123,30 @@ def create_tracked_changes_docx(original_path: Path, corrections: list, output_p
         else:
             print(f"[WARNING] Failed to apply revision for '{original[:30]}' in paragraph {para_num}")
     
-    # Process footnote corrections
-    try:
-        for rel in doc.part.rels.values():
-            if "footnotes" in rel.reltype:
-                footnotes_part = rel.target_part
-                footnotes_xml = footnotes_part._element
-                
-                for corr in pending_corrections:
-                    if corr.get("target") != "footnote":
-                        continue
+    fn_corrections = [c for c in pending_corrections if c.get("target") == "footnote"]
 
-                    original = corr.get("original", "")
-                    suggested = corr.get("suggested", "")
-                    footnote_id = corr.get("footnote_id", 0)
-                    reason = corr.get("reason", "")
-                    module = corr.get("module", "core")
-                    exact_offset = corr.get("exact_offset", -1)
-
-                    if not original:
-                        continue
-
-                    for fn in footnotes_xml.findall('.//' + qn('w:footnote')):
-                        fn_id = fn.get(qn('w:id'))
-                        if fn_id and int(fn_id) == footnote_id:
-                            result = _apply_revision_at_span_xml(
-                                fn, exact_offset, original, suggested,
-                                change_id, comment_id, now_iso
-                            )
-                            if result:
-                                change_id += 2
-                                applied_corrections.append({
-                                    "id": comment_id,
-                                    "module": module,
-                                    "reason": reason,
-                                    "original": original,
-                                    "suggested": suggested
-                                })
-                                comment_id += 1
-                                applied += 1
-                            else:
-                                print(f"[WARNING] Could not locate '{original[:30]}' in footnote {footnote_id}")
-                            break
-                break
-    except Exception as e:
-        print(f"[WARNING] Could not process footnotes: {e}")
-    
-    # Save the document first
+    # Save body changes first (python-docx only covers document.xml)
     try:
         doc.save(str(output_path))
     except Exception as e:
         print(f"[ERROR] Failed to save document: {e}")
         return False
-    
-    # Now inject comments via post-processing
-    if applied_corrections:
+
+    # Apply footnote revisions via direct zip manipulation (footnotes part is a
+    # BlobPart in python-docx — _element is unavailable; must post-process the zip)
+    fn_applied = _apply_fn_revisions_zip(output_path, fn_corrections, change_id, comment_id, now_iso)
+    applied += len(fn_applied)
+
+    # Inject comments.xml covering both body and footnote corrections
+    all_applied = applied_corrections + fn_applied
+    if all_applied:
         try:
-            inject_real_comments(output_path, applied_corrections, now_iso)
+            inject_real_comments(output_path, all_applied, now_iso)
         except Exception as e:
             print(f"[WARNING] Could not inject comments: {e}")
-    
-    print(f"[INFO] Track Changes document saved with {applied} corrections")
+
+    print(f"[INFO] Track Changes document saved with {applied} corrections "
+          f"({len(applied_corrections)} body, {len(fn_applied)} footnote)")
     return True
 
 
@@ -4898,52 +5018,28 @@ def create_comments_only_docx(original_path: Path, corrections: list, output_pat
         else:
             print(f"[WARNING] Could not wrap '{original[:30]}' in paragraph {para_num}")
 
-    # Footnote corrections
-    try:
-        for rel in doc.part.rels.values():
-            if "footnotes" in rel.reltype:
-                footnotes_xml = rel.target_part._element
-                for corr in pending:
-                    if corr.get("target") != "footnote":
-                        continue
-                    original = corr.get("original", "")
-                    if not original:
-                        continue
-                    footnote_id = corr.get("footnote_id", 0)
-                    exact_offset = corr.get("exact_offset", -1)
-                    for fn in footnotes_xml.findall('.//' + qn('w:footnote')):
-                        fn_id = fn.get(qn('w:id'))
-                        if fn_id and int(fn_id) == footnote_id:
-                            result = _wrap_span_with_comment_xml(fn, exact_offset, original, comment_id)
-                            if result:
-                                applied_corrections.append({
-                                    "id": comment_id,
-                                    "module": corr.get("module", "core"),
-                                    "reason": corr.get("reason", ""),
-                                    "original": original,
-                                    "suggested": corr.get("suggested", ""),
-                                })
-                                comment_id += 1
-                            else:
-                                print(f"[WARNING] Could not wrap '{original[:30]}' in footnote {footnote_id}")
-                            break
-                break
-    except Exception as e:
-        print(f"[WARNING] Could not process footnotes: {e}")
+    fn_corrections = [c for c in pending if c.get("target") == "footnote"]
 
+    # Save body changes (python-docx covers document.xml only)
     try:
         doc.save(str(output_path))
     except Exception as e:
         print(f"[ERROR] Failed to save document: {e}")
         return False
 
-    if applied_corrections:
+    # Apply footnote comment ranges via direct zip manipulation
+    fn_applied = _apply_fn_comment_ranges_zip(output_path, fn_corrections, comment_id, now_iso)
+
+    all_applied = applied_corrections + fn_applied
+    if all_applied:
         try:
-            _inject_suggestion_comments(output_path, applied_corrections, now_iso)
+            _inject_suggestion_comments(output_path, all_applied, now_iso)
         except Exception as e:
             print(f"[WARNING] Could not inject suggestion comments: {e}")
 
-    print(f"[INFO] Suggestions document saved with {comment_id} comments")
+    total = len(all_applied)
+    print(f"[INFO] Suggestions document saved with {total} comments "
+          f"({len(applied_corrections)} body, {len(fn_applied)} footnote)")
     return True
 
 
