@@ -816,6 +816,29 @@ def create_chunks(paragraphs: list, size: int = 8, overlap: int = 2) -> list:
     return chunks
 
 
+def chunk_footnotes(footnotes: list, max_chars: int = 6000) -> list:
+    """
+    Group footnotes into chunks by character budget, keeping each footnote
+    whole and without overlap (footnotes are independent units). Returns a list
+    of footnote-lists. Used so footnotes are sent to the model ONCE each, rather
+    than re-broadcast with every body chunk.
+    """
+    chunks = []
+    current = []
+    size = 0
+    for fn in footnotes:
+        length = len(fn.get("text", "")) + 20  # +label overhead
+        if current and size + length > max_chars:
+            chunks.append(current)
+            current = []
+            size = 0
+        current.append(fn)
+        size += length
+    if current:
+        chunks.append(current)
+    return chunks
+
+
 def format_chunk(chunk: list) -> str:
     return "\n\n".join(f"[Παράγραφος {p['number']}]\n{p['text']}" for p in chunk)
 
@@ -863,7 +886,7 @@ def parse_response(text: str) -> list:
     return []
 
 
-async def call_llm(system: str, user: str, model_id: str, session=None) -> str:
+async def call_llm(system: str, user: str, model_id: str, session=None, pass_label: str = None) -> str:
     try:
         # All Gemini models may need more output tokens
         # Gemini 3 uses reasoning tokens (needs even more)
@@ -889,6 +912,16 @@ async def call_llm(system: str, user: str, model_id: str, session=None) -> str:
             session.tokens_used["prompt"] += getattr(u, 'prompt_tokens', 0) or 0
             session.tokens_used["completion"] += getattr(u, 'completion_tokens', 0) or 0
             session.tokens_used["total"] += getattr(u, 'total_tokens', 0) or 0
+            # Instrumentation: per-pass attribution (Phase 1 — measurement only)
+            if pass_label is not None:
+                bd = getattr(session, 'token_breakdown', None)
+                if bd is None:
+                    bd = session.token_breakdown = {}
+                slot = bd.setdefault(pass_label, {"calls": 0, "prompt": 0, "completion": 0, "total": 0})
+                slot["calls"] += 1
+                slot["prompt"] += getattr(u, 'prompt_tokens', 0) or 0
+                slot["completion"] += getattr(u, 'completion_tokens', 0) or 0
+                slot["total"] += getattr(u, 'total_tokens', 0) or 0
         
         content = response.choices[0].message.content
         
@@ -3220,6 +3253,7 @@ class SessionData:
         self.total_chunks = 0
         self.error_message = None
         self.tokens_used = {"prompt": 0, "completion": 0, "total": 0}
+        self.token_breakdown = {}  # Instrumentation: per-pass {calls, prompt, completion, total}
 
         # Undo/Redo history
         self.history: List[HistoryEntry] = []
@@ -3671,8 +3705,24 @@ async def analyze_document(request: AnalyzeRequest):
     footnotes = session.footnotes or extract_footnotes(session.original_path)
     session.paragraphs = paragraphs
 
-    chunks = create_chunks(paragraphs)
-    session.total_chunks = len(chunks)
+    # Body chunks carry ONLY body text. Footnotes are processed once each, in
+    # their own chunks, instead of being re-broadcast with every body chunk.
+    work_units = [("body", ch) for ch in create_chunks(paragraphs)]
+    if footnotes:
+        work_units += [("footnote", fch) for fch in chunk_footnotes(footnotes)]
+    chunks = work_units  # back-compat alias for downstream len() / logging
+    session.total_chunks = len(work_units)
+
+    # --- Instrumentation (Phase 1: measurement only, no behavior change) ---
+    session.token_breakdown = {}
+    _num_passes = 2 + (1 if pass3_prompt else 0)
+    _sys_chars_per_chunk = len(pass1_prompt) + len(pass2_prompt) + (len(pass3_prompt) if pass3_prompt else 0)
+    _n_body = sum(1 for k, _ in work_units if k == "body")
+    _n_fn = len(work_units) - _n_body
+    _instr = {"body": 0, "footnotes": 0, "system": 0}
+    print(f"[TOKENS] doc: paragraphs={len(paragraphs)} footnotes={len(footnotes)} "
+          f"body_chunks={_n_body} footnote_chunks={_n_fn} passes/chunk={_num_passes} "
+          f"expected_calls={len(work_units)*_num_passes}")
 
     all_corrections = []
     seen = set()
@@ -3681,28 +3731,39 @@ async def analyze_document(request: AnalyzeRequest):
     session.analysis_paused = False
 
     try:
-        for i, chunk in enumerate(chunks):
+        for i, (unit_kind, chunk) in enumerate(work_units):
             # Check for pause
             if getattr(session, 'analysis_paused', False):
                 session.status = "paused"
-                print(f"[ANALYSIS] Paused at chunk {i+1}/{len(chunks)}")
+                print(f"[ANALYSIS] Paused at chunk {i+1}/{len(work_units)}")
                 break
 
             session.progress = i + 1
 
-            chunk_text = format_chunk(chunk)
-            if footnotes:
-                chunk_text += "\n\n=== ΥΠΟΣΗΜΕΙΩΣΕΙΣ ===\n\n" + format_footnotes(footnotes)
+            if unit_kind == "body":
+                body_paras = chunk
+                chunk_text = format_chunk(chunk)
+            else:
+                body_paras = []
+                chunk_text = "=== ΥΠΟΣΗΜΕΙΩΣΕΙΣ ===\n\n" + format_footnotes(chunk)
 
             user_prompt = generate_user_prompt(chunk_text)
 
+            # Instrumentation: input-char breakdown of what is actually sent (×passes)
+            _unit_chars = len(chunk_text)
+            _instr["body" if unit_kind == "body" else "footnotes"] += _unit_chars * _num_passes
+            _instr["system"] += _sys_chars_per_chunk
+            if i < 3 or unit_kind == "footnote":
+                print(f"[TOKENS] {unit_kind} unit {i+1}/{len(work_units)}: "
+                      f"{_unit_chars} chars ×{_num_passes} passes")
+
             # Fire all active passes in parallel
             active_passes = [
-                call_llm(pass1_prompt, user_prompt, model_id, session=session),
-                call_llm(pass2_prompt, user_prompt, model_id, session=session),
+                call_llm(pass1_prompt, user_prompt, model_id, session=session, pass_label="pass1_mechanical"),
+                call_llm(pass2_prompt, user_prompt, model_id, session=session, pass_label="pass2_grammar"),
             ]
             if pass3_prompt:
-                active_passes.append(call_llm(pass3_prompt, user_prompt, model_id, session=session))
+                active_passes.append(call_llm(pass3_prompt, user_prompt, model_id, session=session, pass_label="pass3_semantic"))
 
             responses = await asyncio.gather(*active_passes)
             print(f"[MULTIPASS] Chunk {i+1}: got {len(responses)} pass responses")
@@ -3801,7 +3862,7 @@ async def analyze_document(request: AnalyzeRequest):
 
                 else:
                     para_num = corr.get("paragraph", 0)
-                    matching = [p for p in chunk if p["number"] == para_num]
+                    matching = [p for p in body_paras if p["number"] == para_num]
                     if not matching:
                         continue
                     para = matching[0]
@@ -3891,6 +3952,23 @@ async def analyze_document(request: AnalyzeRequest):
             # Save corrections incrementally (for live display)
             session.corrections = list(all_corrections)
 
+        # --- Instrumentation summary (Phase 1: measurement only) ---
+        _ic = _instr["body"] + _instr["footnotes"] + _instr["system"]
+        print("=" * 64)
+        print(f"[TOKENS] SUMMARY chunks={len(chunks)} passes/chunk={_num_passes} total_calls={len(chunks)*_num_passes}")
+        if _ic:
+            print(f"[TOKENS] INPUT chars sent ~{_ic:,}: "
+                  f"body={_instr['body']:,} ({_instr['body']/_ic*100:.0f}%) "
+                  f"footnotes={_instr['footnotes']:,} ({_instr['footnotes']/_ic*100:.0f}%) "
+                  f"system={_instr['system']:,} ({_instr['system']/_ic*100:.0f}%)")
+        for _label, _s in (getattr(session, 'token_breakdown', {}) or {}).items():
+            print(f"[TOKENS] {_label}: calls={_s['calls']} prompt={_s['prompt']:,} "
+                  f"completion={_s['completion']:,} total={_s['total']:,}")
+        _tu = getattr(session, 'tokens_used', {})
+        print(f"[TOKENS] TOTAL usage: prompt={_tu.get('prompt',0):,} "
+              f"completion={_tu.get('completion',0):,} total={_tu.get('total',0):,}")
+        print("=" * 64)
+
         # Demote stylistic findings (e.g. "πιο φυσικό" without grammar grounding) to minor
         all_corrections = downgrade_stylistic_findings(all_corrections)
         if ONLY_SERIOUS_ERRORS:
@@ -3954,6 +4032,7 @@ async def get_status(session_id: str):
         "can_undo": session.can_undo(),
         "can_redo": session.can_redo(),
         "tokens_used": getattr(session, 'tokens_used', {"prompt": 0, "completion": 0, "total": 0}),
+        "token_breakdown": getattr(session, 'token_breakdown', {}),
     }
 
 
